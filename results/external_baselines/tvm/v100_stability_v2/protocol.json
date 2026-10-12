@@ -1,0 +1,18 @@
+{
+  "purpose": "independent V100 queue-backed stability remeasurement",
+  "initial_results_preserved_at": "results/external_baselines/tvm/v100_unstable_job113124",
+  "fixed_candidates": {
+    "fwd": "fwd_bh4",
+    "bwd_input": "bwd_input_bh1",
+    "bwd_weight": "bwd_weight_t64"
+  },
+  "compile_count_main_shape": 1,
+  "trials": 3,
+  "burnin_cycles": 500,
+  "warmup_cycles_per_trial": 50,
+  "runs_per_phase_per_trial": 100,
+  "unmeasured_queue_lead_in_calls_per_phase": 32,
+  "queue_lead_in_included_in_event_time": false,
+  "between_trial_total_cv_limit_pct": 2.0,
+  "within_trial_phase_cv_limit_pct": 5.0
+}

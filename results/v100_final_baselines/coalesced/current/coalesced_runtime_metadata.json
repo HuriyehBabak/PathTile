@@ -1,0 +1,18 @@
+{
+  "technique": "Global Memory Coalescing",
+  "gpu": "Tesla V100-SXM3-32GB",
+  "compute_capability": "7.0",
+  "pytorch": "2.10.0+cu128",
+  "dtype": "float32",
+  "seed": 42,
+  "B": 16384,
+  "H": 128,
+  "L": 48,
+  "K": 48,
+  "threads_per_block": 512,
+  "ttile": 32,
+  "htile": 16,
+  "warmup_runs": 50,
+  "measured_runs": 100,
+  "notes": "No shared memory, no warp shuffle, no partial reductions. Backward-kernel algorithm retained from frozen Naive baseline."
+}

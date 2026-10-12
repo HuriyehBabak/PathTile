@@ -1,0 +1,2 @@
+gpu_slug,method,trials,fwd_mean_ms,fwd_between_trial_std_ms,bwd_input_mean_ms,bwd_input_between_trial_std_ms,bwd_weight_mean_ms,bwd_weight_between_trial_std_ms,total_mean_ms,total_between_trial_std_ms
+a100,TVM-TIRx,3,3.5798596366246542,0.006026147989367475,3.5221572152773537,0.005685566459706106,4.41594199180603,0.01540329645407343,11.517958843708039,0.005575868609032908

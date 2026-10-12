@@ -1,0 +1,97 @@
+==========================================
+SLURM_JOB_ID = 111695
+SLURM_NODELIST = pascal-node10.l3s.intra
+==========================================
+
+========================================================================================
+GPU
+========================================================================================
+Name:               Tesla V100-SXM3-32GB
+Compute capability: 7.0
+SM count:           80
+Total memory:       31.73 GiB
+Selected profile:   v100_sxm3_32gb
+Peak BW reference:  900.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est    gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers v100_sxm3_32gb                7.0                   0
+ bwd_input                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers v100_sxm3_32gb                7.0                   0
+bwd_weight                256                8               40                     10240              24704                     24832                           3                       24          0.375           shared_memory v100_sxm3_32gb                7.0                   0
+
+========================================================================================
+NVIDIA Tesla V100-SXM3-32GB KERNEL MICROBENCHMARK
+========================================================================================
+B=16384, H=128, L=48, K=48, warmup=50, runs=100
+     phase  runs  mean_ms  median_ms   std_ms   p05_ms   p95_ms  algorithmic_bytes  algorithmic_bandwidth_gbps  pct_of_peak_algorithmic                 technique    gpu_profile          device_name  warps_per_block  bwdk_btile  bwdk_block
+       fwd   100 4.189768   4.155904 0.061409 4.134912 4.276224          805330944                  192.213748                21.357083 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+ bwd_input   100 4.107653   4.100096 0.011918 4.097997 4.125696          805330944                  196.056216                21.784024 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+bwd_weight   100 5.286359   5.261824 0.044305 5.255168 5.386240          805330944                  152.341324                16.926814 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+
+Sum of phase means:   13.5838 ms
+Sum of phase medians: 13.5178 ms
+Note: algorithmic bandwidth uses unique minimum bytes; Nsight Compute is required for actual DRAM traffic.
+
+========================================================================================
+GPU
+========================================================================================
+Name:               Tesla V100-SXM3-32GB
+Compute capability: 7.0
+SM count:           80
+Total memory:       31.73 GiB
+Selected profile:   v100_sxm3_32gb
+Peak BW reference:  900.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est    gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers v100_sxm3_32gb                7.0                   0
+ bwd_input                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers v100_sxm3_32gb                7.0                   0
+bwd_weight                256                8               40                     10240              24704                     24832                           3                       24          0.375           shared_memory v100_sxm3_32gb                7.0                   0
+
+========================================================================================
+NVIDIA Tesla V100-SXM3-32GB KERNEL MICROBENCHMARK
+========================================================================================
+B=16384, H=128, L=48, K=48, warmup=50, runs=100
+     phase  runs  mean_ms  median_ms   std_ms   p05_ms   p95_ms  algorithmic_bytes  algorithmic_bandwidth_gbps  pct_of_peak_algorithmic                 technique    gpu_profile          device_name  warps_per_block  bwdk_btile  bwdk_block
+       fwd   100 4.138250   4.136960 0.013335 4.134861 4.140083          805330944                  194.606637                21.622960 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+ bwd_input   100 4.136694   4.125184 0.032692 4.105216 4.184064          805330944                  194.679858                21.631095 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+bwd_weight   100 5.311304   5.283328 0.046786 5.275648 5.392384          805330944                  151.625851                16.847317 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+
+Sum of phase means:   13.5862 ms
+Sum of phase medians: 13.5455 ms
+Note: algorithmic bandwidth uses unique minimum bytes; Nsight Compute is required for actual DRAM traffic.
+
+========================================================================================
+GPU
+========================================================================================
+Name:               Tesla V100-SXM3-32GB
+Compute capability: 7.0
+SM count:           80
+Total memory:       31.73 GiB
+Selected profile:   v100_sxm3_32gb
+Peak BW reference:  900.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est    gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers v100_sxm3_32gb                7.0                   0
+ bwd_input                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers v100_sxm3_32gb                7.0                   0
+bwd_weight                256                8               40                     10240              24704                     24832                           3                       24          0.375           shared_memory v100_sxm3_32gb                7.0                   0
+
+========================================================================================
+NVIDIA Tesla V100-SXM3-32GB KERNEL MICROBENCHMARK
+========================================================================================
+B=16384, H=128, L=48, K=48, warmup=50, runs=100
+     phase  runs  mean_ms  median_ms   std_ms   p05_ms   p95_ms  algorithmic_bytes  algorithmic_bandwidth_gbps  pct_of_peak_algorithmic                 technique    gpu_profile          device_name  warps_per_block  bwdk_btile  bwdk_block
+       fwd   100 4.172902   4.166656 0.026691 4.137728 4.218880          805330944                  192.990602                21.443400 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+ bwd_input   100 4.108032   4.106240 0.005723 4.104141 4.118579          805330944                  196.038141                21.782016 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+bwd_weight   100 5.304658   5.281280 0.042218 5.275648 5.380147          805330944                  151.815810                16.868423 WarpThread-v100_sxm3_32gb v100_sxm3_32gb Tesla V100-SXM3-32GB               16          64         256
+
+Sum of phase means:   13.5856 ms
+Sum of phase medians: 13.5542 ms
+Note: algorithmic bandwidth uses unique minimum bytes; Nsight Compute is required for actual DRAM traffic.

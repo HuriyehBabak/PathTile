@@ -1,0 +1,2 @@
+technique,epoch,train_wall_time_s,peak_memory_gib,util_gpu_avg_pct,util_gpu_min_pct,util_gpu_max_pct,util_mem_avg_pct,nvml_used_peak_gib,nvml_total_gib
+PyTorch-cuDNN-rtx_a6000,2,0.2910082370508462,0.1669139862060547,17.666666666666668,0.0,53.0,5.0,0.9815673828125,47.98828125

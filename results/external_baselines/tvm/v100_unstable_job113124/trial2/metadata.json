@@ -1,0 +1,286 @@
+{
+  "timestamp_utc": "2026-09-07T15:13:15.300126+00:00",
+  "hostname": "pascal-node10",
+  "technique": "tvm_tirx_autotuned",
+  "python": "3.11.16",
+  "numpy": "1.26.4",
+  "tvm": "0.25.0.post1",
+  "tvm_git_commit": null,
+  "tvm_use_cuda": "ON",
+  "tvm_use_llvm": "ON",
+  "apache_tvm_ffi": "0.1.dev1+g59da4c0b8",
+  "cuda_bindings": "12.9.7",
+  "gpu": "Tesla V100-SXM3-32GB",
+  "compute_capability": "7.0",
+  "global_memory_bytes": 34072559616,
+  "multiprocessor_count": 80,
+  "max_threads_per_block": 1024,
+  "target": "{\"kind\":\"cuda\",\"tag\":\"\",\"keys\":[\"cuda\",\"gpu\"],\"max_num_threads\":1024,\"thread_warp_size\":32,\"arch\":\"sm_70\"}",
+  "dtype": "float32",
+  "B": 16384,
+  "H": 128,
+  "L": 48,
+  "K": 48,
+  "warmup_runs": 50,
+  "measured_runs": 100,
+  "autotune_warmup_runs": 5,
+  "autotune_measured_runs": 20,
+  "seed": 42,
+  "compile_and_autotune_timed": false,
+  "allocation_timed": false,
+  "timing": "CUDA events on the default stream",
+  "semantics": "explicit same padding; left=K//2; output length=L",
+  "pytorch_reference_python": "/home/huriyeh.babak/micromamba/envs/s4convd/bin/python",
+  "pytorch_reference_device": "cuda",
+  "selected_configs": {
+    "forward": {
+      "candidate": "fwd_bh8",
+      "BLOCK_BH": 8,
+      "num_warps": 8,
+      "threads": 256
+    },
+    "backward_input": {
+      "candidate": "bwd_input_bh1",
+      "BLOCK_BH": 1,
+      "num_warps": 1,
+      "threads": 32
+    },
+    "backward_weight": {
+      "candidate": "bwd_weight_t64",
+      "BLOCK_K": 4,
+      "N_PER_CTA": 4096,
+      "BLOCK_N": 64,
+      "num_warps": 2,
+      "partial_threads": 64,
+      "reduce_threads": 256
+    }
+  },
+  "autotune_measurements": {
+    "forward": [
+      {
+        "candidate": "fwd_bh1",
+        "config": {
+          "BLOCK_BH": 1,
+          "num_warps": 1,
+          "threads": 32
+        },
+        "runs": 20,
+        "mean_ms": 6.692966270446777,
+        "median_ms": 6.8782079219818115,
+        "std_ms": 1.1157786678380446,
+        "ci95_low_ms": 6.203954708417292,
+        "ci95_high_ms": 7.181977832476262,
+        "min_ms": 5.2674560546875,
+        "p05_ms": 5.268428635597229,
+        "p95_ms": 8.380364465713502,
+        "max_ms": 8.398847579956055
+      },
+      {
+        "candidate": "fwd_bh2",
+        "config": {
+          "BLOCK_BH": 2,
+          "num_warps": 2,
+          "threads": 64
+        },
+        "runs": 20,
+        "mean_ms": 6.116198396682739,
+        "median_ms": 6.4732160568237305,
+        "std_ms": 0.8563692862790049,
+        "ci95_low_ms": 5.7408780088420235,
+        "ci95_high_ms": 6.491518784523454,
+        "min_ms": 4.9541120529174805,
+        "p05_ms": 4.95508463382721,
+        "p95_ms": 7.124787020683288,
+        "max_ms": 7.315455913543701
+      },
+      {
+        "candidate": "fwd_bh4",
+        "config": {
+          "BLOCK_BH": 4,
+          "num_warps": 4,
+          "threads": 128
+        },
+        "runs": 20,
+        "mean_ms": 6.050816059112549,
+        "median_ms": 6.334463834762573,
+        "std_ms": 0.9051441804174004,
+        "ci95_low_ms": 5.654119131409627,
+        "ci95_high_ms": 6.447512986815471,
+        "min_ms": 4.942848205566406,
+        "p05_ms": 4.942848205566406,
+        "p95_ms": 7.239679956436158,
+        "max_ms": 7.492608070373535
+      },
+      {
+        "candidate": "fwd_bh8",
+        "config": {
+          "BLOCK_BH": 8,
+          "num_warps": 8,
+          "threads": 256
+        },
+        "runs": 20,
+        "mean_ms": 6.058393573760986,
+        "median_ms": 6.193151950836182,
+        "std_ms": 0.889954466827542,
+        "ci95_low_ms": 5.668353831558616,
+        "ci95_high_ms": 6.448433315963356,
+        "min_ms": 4.948991775512695,
+        "p05_ms": 4.949964809417724,
+        "p95_ms": 7.500595235824585,
+        "max_ms": 7.730175971984863
+      }
+    ],
+    "backward_input": [
+      {
+        "candidate": "bwd_input_bh1",
+        "config": {
+          "BLOCK_BH": 1,
+          "num_warps": 1,
+          "threads": 32
+        },
+        "runs": 20,
+        "mean_ms": 5.835161590576172,
+        "median_ms": 5.9212799072265625,
+        "std_ms": 0.8170442563140556,
+        "ci95_low_ms": 5.477076157018351,
+        "ci95_high_ms": 6.193247024133994,
+        "min_ms": 4.844543933868408,
+        "p05_ms": 4.844543933868408,
+        "p95_ms": 6.828800082206726,
+        "max_ms": 7.29088020324707
+      },
+      {
+        "candidate": "bwd_input_bh2",
+        "config": {
+          "BLOCK_BH": 2,
+          "num_warps": 2,
+          "threads": 64
+        },
+        "runs": 20,
+        "mean_ms": 5.928294396400451,
+        "median_ms": 6.065664052963257,
+        "std_ms": 0.9224535145539468,
+        "ci95_low_ms": 5.524011318533713,
+        "ci95_high_ms": 6.33257747426719,
+        "min_ms": 4.899839878082275,
+        "p05_ms": 4.9008129119873045,
+        "p95_ms": 7.432806229591369,
+        "max_ms": 7.522304058074951
+      },
+      {
+        "candidate": "bwd_input_bh4",
+        "config": {
+          "BLOCK_BH": 4,
+          "num_warps": 4,
+          "threads": 128
+        },
+        "runs": 20,
+        "mean_ms": 6.022655987739563,
+        "median_ms": 6.0887041091918945,
+        "std_ms": 0.929711846864483,
+        "ci95_low_ms": 5.615191805480695,
+        "ci95_high_ms": 6.430120169998432,
+        "min_ms": 4.905983924865723,
+        "p05_ms": 4.905983924865723,
+        "p95_ms": 7.4193919658660885,
+        "max_ms": 7.506944179534912
+      },
+      {
+        "candidate": "bwd_input_bh8",
+        "config": {
+          "BLOCK_BH": 8,
+          "num_warps": 8,
+          "threads": 256
+        },
+        "runs": 20,
+        "mean_ms": 5.9698176145553585,
+        "median_ms": 6.211584091186523,
+        "std_ms": 0.8233395841376911,
+        "ci95_low_ms": 5.608973131930495,
+        "ci95_high_ms": 6.330662097180222,
+        "min_ms": 4.91212797164917,
+        "p05_ms": 4.913101005554199,
+        "p95_ms": 6.877695918083191,
+        "max_ms": 6.887423992156982
+      }
+    ],
+    "backward_weight": [
+      {
+        "candidate": "bwd_weight_t64",
+        "config": {
+          "BLOCK_K": 4,
+          "N_PER_CTA": 4096,
+          "BLOCK_N": 64,
+          "num_warps": 2,
+          "partial_threads": 64,
+          "reduce_threads": 256
+        },
+        "runs": 20,
+        "mean_ms": 11.972710466384887,
+        "median_ms": 12.522496223449707,
+        "std_ms": 1.5910368955034244,
+        "ci95_low_ms": 11.275407802385933,
+        "ci95_high_ms": 12.670013130383841,
+        "min_ms": 9.838591575622559,
+        "p05_ms": 9.844428873062133,
+        "p95_ms": 13.805824041366577,
+        "max_ms": 14.238719940185547
+      },
+      {
+        "candidate": "bwd_weight_t128",
+        "config": {
+          "BLOCK_K": 4,
+          "N_PER_CTA": 4096,
+          "BLOCK_N": 128,
+          "num_warps": 4,
+          "partial_threads": 128,
+          "reduce_threads": 256
+        },
+        "runs": 20,
+        "mean_ms": 12.55464963912964,
+        "median_ms": 13.32531213760376,
+        "std_ms": 1.7448976475473448,
+        "ci95_low_ms": 11.789914527405355,
+        "ci95_high_ms": 13.319384750853924,
+        "min_ms": 10.44480037689209,
+        "p05_ms": 10.44480037689209,
+        "p95_ms": 14.57064938545227,
+        "max_ms": 14.78758430480957
+      },
+      {
+        "candidate": "bwd_weight_t256",
+        "config": {
+          "BLOCK_K": 4,
+          "N_PER_CTA": 4096,
+          "BLOCK_N": 256,
+          "num_warps": 8,
+          "partial_threads": 256,
+          "reduce_threads": 256
+        },
+        "runs": 20,
+        "mean_ms": 12.959948873519897,
+        "median_ms": 13.043200016021729,
+        "std_ms": 1.7166678309130063,
+        "ci95_low_ms": 12.207586024437012,
+        "ci95_high_ms": 13.712311722602783,
+        "min_ms": 10.789888381958008,
+        "p05_ms": 10.81031665802002,
+        "p95_ms": 15.152947092056275,
+        "max_ms": 15.343615531921387
+      }
+    ]
+  },
+  "workspace_shape": [
+    128,
+    48,
+    192
+  ],
+  "workspace_bytes": 4718592,
+  "backward_weight_launches_per_call": 2,
+  "generated_cuda_source_chars": {
+    "forward": 0,
+    "backward_input": 0,
+    "backward_weight_partial": 0,
+    "backward_weight_reduce": 0
+  }
+}

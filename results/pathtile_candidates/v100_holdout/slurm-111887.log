@@ -1,0 +1,1703 @@
+==========================================
+SLURM_JOB_ID = 111887
+SLURM_NODELIST = pascal-node10.l3s.intra
+==========================================
+====================================================================================================
+PATHTILE FACTORIZED CANDIDATE SWEEP
+====================================================================================================
+GPU:        Tesla V100-SXM3-32GB
+Preset:     pathtile-holdout
+Trial:      1
+Protocol:   warmup=50, runs=100, strict FP32
+W candidates:     [4, 8, 16]
+BWDK candidates:  [96, 128, 192, 224, 256, 320, 384]
+Shapes:            10
+
+----------------------------------------------------------------------------------------------------
+Candidate 1/10: w4 (warps_per_block=4), phases=('fwd', 'bwd_input')
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.517755   0.516096 0.020423
+bwd_input 0.525138   0.525312 0.002144
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.474811   3.466240 0.018199
+bwd_input 3.479286   3.446784 0.044409
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.079409   1.078272 0.013860
+bwd_input 1.131653   1.131520 0.001258
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.924918   0.923648 0.012602
+bwd_input 0.932577   0.932864 0.000546
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.341573   1.340416 0.015515
+bwd_input 1.336934   1.337344 0.002342
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.053419   1.045504 0.017901
+bwd_input 1.082388   1.082368 0.001540
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.580352   0.580096 0.008445
+bwd_input 0.580403   0.580608 0.000651
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.702994   1.700864 0.011127
+bwd_input 1.738281   1.737728 0.000937
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.264335   0.263168 0.007083
+bwd_input 0.270828   0.270336 0.000609
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.673979   3.681280 0.015336
+bwd_input 3.776942   3.731968 0.088003
+
+----------------------------------------------------------------------------------------------------
+Candidate 2/10: w8 (warps_per_block=8), phases=('fwd', 'bwd_input')
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.436859   0.436224 0.010046
+bwd_input 0.439357   0.439296 0.001017
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.419566   3.414016 0.015761
+bwd_input 3.488082   3.394560 0.104795
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.014118   1.012736 0.013523
+bwd_input 1.035069   1.035264 0.001371
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.888648   0.887808 0.012030
+bwd_input 0.887747   0.888832 0.001715
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.339249   1.337344 0.012369
+bwd_input 1.323715   1.324032 0.000558
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.984709   0.985088 0.010506
+bwd_input 0.991611   0.991232 0.000557
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.575427   0.574464 0.010428
+bwd_input 0.577710   0.577536 0.001492
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.618545   1.619968 0.011900
+bwd_input 1.636311   1.637376 0.003465
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.253225   0.251904 0.010674
+bwd_input 0.252764   0.252928 0.000709
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.523860   3.523584 0.017017
+bwd_input 3.634022   3.655680 0.093751
+
+----------------------------------------------------------------------------------------------------
+Candidate 3/10: w16 (warps_per_block=16), phases=('fwd', 'bwd_input')
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.438374   0.437248 0.012214
+bwd_input 0.436408   0.436224 0.000589
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.435182   3.439616 0.015668
+bwd_input 3.470674   3.403776 0.078781
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.936018   0.934912 0.011599
+bwd_input 0.939203   0.939008 0.000738
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.880937   0.879616 0.011568
+bwd_input 0.878940   0.878592 0.001072
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.345341   1.342464 0.013783
+bwd_input 1.327851   1.328128 0.000740
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.938680   0.937984 0.010702
+bwd_input 0.939756   0.940032 0.001678
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.576594   0.575488 0.010049
+bwd_input 0.581612   0.581632 0.001182
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.598628   1.594368 0.015587
+bwd_input 1.606687   1.606656 0.002385
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.239882   0.238592 0.012818
+bwd_input 0.254720   0.254976 0.002920
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.489393   3.487744 0.016915
+bwd_input 3.568026   3.553280 0.086800
+
+----------------------------------------------------------------------------------------------------
+Candidate 4/10: b96 (bwdk_block=96), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.640143   0.638976 0.013107
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.216123   5.213184 0.014704
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.756326   0.755712 0.008904
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.06878   1.068032 0.008241
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.129449   2.127872 0.016797
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.797962   0.796672 0.00911
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.903782   0.902144 0.015408
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.828362   1.826816 0.01356
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.304425   0.303104 0.009005
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 4.457851   4.455424 0.016642
+
+----------------------------------------------------------------------------------------------------
+Candidate 5/10: b128 (bwdk_block=128), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.488417   0.487424 0.008957
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 4.103516   4.103168 0.013025
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.653619   0.653312 0.00787
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.880835   0.879616 0.01192
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.650063    1.64864 0.011057
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.699597   0.697856 0.017591
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.700621   0.699392 0.012005
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.519462   1.517568 0.012382
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.235418   0.234496 0.012856
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.242e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.530875   3.530752 0.015251
+
+----------------------------------------------------------------------------------------------------
+Candidate 6/10: b192 (bwdk_block=192), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.455096   0.454144 0.009298
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.898245   3.897344 0.008748
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.616366   0.615424 0.006863
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.806502   0.805888 0.010091
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.586237   1.585152 0.009059
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.657592   0.656384 0.010043
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.663194   0.662528 0.007922
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.378304    1.37728 0.012327
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.21975   0.219136 0.007935
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.476705   3.475456 0.010951
+
+----------------------------------------------------------------------------------------------------
+Candidate 7/10: b224 (bwdk_block=224), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.456141   0.453632 0.019616
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.925883   3.924992 0.012357
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.594964    0.59392 0.00821
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.777923   0.777216 0.008949
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.602857   1.601536 0.008182
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.644762   0.643072 0.019903
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.667484   0.666624 0.012138
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.333678   1.332224 0.016003
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.216965   0.216064 0.007895
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.242e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.493929   3.492864 0.014186
+
+----------------------------------------------------------------------------------------------------
+Candidate 8/10: b256 (bwdk_block=256), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.434637   0.433152 0.012044
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.777045   3.772416 0.020792
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.572365   0.571392 0.007623
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.792801   0.790528 0.007705
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.526641    1.52576 0.012138
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.62292   0.621568 0.011664
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.634204   0.631808 0.011643
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.369856   1.371136 0.011192
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.209684   0.208896 0.009969
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.191327   3.195904 0.015479
+
+----------------------------------------------------------------------------------------------------
+Candidate 9/10: b320 (bwdk_block=320), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.429169   0.428544 0.009748
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.791647   3.789824 0.013123
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.571003   0.570368 0.007516
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.812718   0.812032 0.008136
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.542666   1.544192 0.010691
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.611625   0.611328 0.007877
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.637645   0.635904 0.009605
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.394565   1.395712 0.010656
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.203028   0.201728 0.007437
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.454259      3.456 0.013501
+
+----------------------------------------------------------------------------------------------------
+Candidate 10/10: b384 (bwdk_block=384), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.451645    0.45056 0.010559
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.936553    3.93984 0.016744
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.599378   0.598016 0.009603
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.816865   0.815616 0.013355
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.595771   1.594368 0.014036
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.642109   0.642048 0.013085
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.661524   0.659968 0.010728
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.408317   1.406976 0.015087
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.211272   0.210944 0.00785
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.508132   3.506176 0.012507
+
+====================================================================================================
+EMPIRICAL PER-PATH ORACLE
+====================================================================================================
+                  config_id      phase winner_schedule_id  winner_mean_ms  winner_margin_vs_second_pct  paper_default_regret_pct
+holdout_b12288_h128_l28_k20        fwd                w16        1.598628                     1.245868                  0.000000
+holdout_b12288_h128_l28_k20  bwd_input                w16        1.606687                     1.843815                  0.000000
+holdout_b12288_h128_l28_k20 bwd_weight               b224        1.333678                     2.712639                 13.930221
+holdout_b12288_h192_l40_k32        fwd                 w8        3.419566                     0.456667                  0.456667
+holdout_b12288_h192_l40_k32  bwd_input                w16        3.470674                     0.248134                  0.000000
+holdout_b12288_h192_l40_k32 bwd_weight               b256        3.777045                     0.386604                  8.643572
+holdout_b12288_h256_l32_k24        fwd                w16        3.489393                     0.987786                  0.000000
+holdout_b12288_h256_l32_k24  bwd_input                w16        3.568026                     1.849673                  0.000000
+holdout_b12288_h256_l32_k24 bwd_weight               b256        3.191327                     8.238972                 10.639715
+ holdout_b12288_h64_l40_k40        fwd                 w8        1.339249                     0.173560                  0.454938
+ holdout_b12288_h64_l40_k40  bwd_input                 w8        1.323715                     0.312529                  0.312529
+ holdout_b12288_h64_l40_k40 bwd_weight               b256        1.526641                     1.049725                  8.084595
+ holdout_b12288_h96_l20_k12        fwd                w16        0.936018                     8.343903                  0.000000
+ holdout_b12288_h96_l20_k12  bwd_input                w16        0.939203                    10.207265                  0.000000
+ holdout_b12288_h96_l20_k12 bwd_weight               b320        0.571003                     0.238515                 14.468640
+ holdout_b2048_h192_l40_k32        fwd                 w8        0.575427                     0.202868                  0.202868
+ holdout_b2048_h192_l40_k32  bwd_input                 w8        0.577710                     0.466175                  0.675332
+ holdout_b2048_h192_l40_k32 bwd_weight               b256        0.634204                     0.542515                 10.472442
+ holdout_b4096_h192_l28_k24        fwd                w16        0.880937                     0.875287                  0.000000
+ holdout_b4096_h192_l28_k24  bwd_input                w16        0.878940                     1.001932                  0.000000
+ holdout_b4096_h192_l28_k24 bwd_weight               b224        0.777923                     1.912619                 13.229079
+ holdout_b4096_h256_l20_k16        fwd                w16        0.938680                     4.903567                  0.000000
+ holdout_b4096_h256_l20_k16  bwd_input                w16        0.939756                     5.517961                  0.000000
+ holdout_b4096_h256_l20_k16 bwd_weight               b320        0.611625                     1.846675                 14.383297
+  holdout_b4096_h64_l40_k12        fwd                w16        0.239882                     5.562196                  0.000000
+  holdout_b4096_h64_l40_k12  bwd_input                 w8        0.252764                     0.773782                  0.773782
+  holdout_b4096_h64_l40_k12 bwd_weight               b320        0.203028                     3.278358                 15.952995
+  holdout_b4096_h96_l40_k20        fwd                 w8        0.436859                     0.346911                  0.346911
+  holdout_b4096_h96_l40_k20  bwd_input                w16        0.436408                     0.675769                  0.000000
+  holdout_b4096_h96_l40_k20 bwd_weight               b320        0.429169                     1.274130                 13.805444
+
+COMBINED ORACLE
+                  config_id sweep_group     B   H  L  K          device_name  fwd_winner_warps  bwd_input_winner_warps  bwd_weight_winner_block  oracle_total_ms  paper_default_total_ms  paper_default_total_regret_pct
+holdout_b12288_h128_l28_k20     holdout 12288 128 28 20 Tesla V100-SXM3-32GB                16                      16                      224         4.538993                4.724777                        4.093074
+holdout_b12288_h192_l40_k32     holdout 12288 192 40 32 Tesla V100-SXM3-32GB                 8                      16                      256        10.667284               11.009372                        3.206885
+holdout_b12288_h256_l32_k24     holdout 12288 256 32 24 Tesla V100-SXM3-32GB                16                      16                      256        10.248745               10.588293                        3.313070
+ holdout_b12288_h64_l40_k40     holdout 12288  64 40 40 Tesla V100-SXM3-32GB                 8                       8                      256         4.189604                4.323256                        3.190098
+ holdout_b12288_h96_l20_k12     holdout 12288  96 20 12 Tesla V100-SXM3-32GB                16                      16                      320         2.446223                2.528840                        3.377302
+ holdout_b2048_h192_l40_k32     holdout  2048 192 40 32 Tesla V100-SXM3-32GB                 8                       8                      256         1.787341                1.858826                        3.999544
+ holdout_b4096_h192_l28_k24     holdout  4096 192 28 24 Tesla V100-SXM3-32GB                16                      16                      224         2.537800                2.640712                        4.055166
+ holdout_b4096_h256_l20_k16     holdout  4096 256 20 16 Tesla V100-SXM3-32GB                16                      16                      320         2.490061                2.578033                        3.532919
+  holdout_b4096_h64_l40_k12     holdout  4096  64 40 12 Tesla V100-SXM3-32GB                16                       8                      320         0.695675                0.730020                        4.936928
+  holdout_b4096_h96_l40_k20     holdout  4096  96 40 20 Tesla V100-SXM3-32GB                 8                      16                      320         1.302436                1.363200                        4.665424
+
+Saved below: results/pathtile_candidates/v100_holdout/trial1
+====================================================================================================
+PATHTILE FACTORIZED CANDIDATE SWEEP
+====================================================================================================
+GPU:        Tesla V100-SXM3-32GB
+Preset:     pathtile-holdout
+Trial:      2
+Protocol:   warmup=50, runs=100, strict FP32
+W candidates:     [4, 8, 16]
+BWDK candidates:  [96, 128, 192, 224, 256, 320, 384]
+Shapes:            10
+
+----------------------------------------------------------------------------------------------------
+Candidate 1/10: b384 (bwdk_block=384), phases=('bwd_weight',)
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.501865   3.490816 0.025475
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.210033   0.208896 0.008385
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.411164      1.408 0.013448
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.65964   0.659968 0.012236
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.644813   0.644096 0.009359
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.59746   1.596416 0.011838
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.816773   0.817152 0.014033
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.588298   0.590848 0.00921
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.915418   3.913728 0.013687
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.450775   0.449536 0.008419
+
+----------------------------------------------------------------------------------------------------
+Candidate 2/10: b320 (bwdk_block=320), phases=('bwd_weight',)
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.454792   3.465216 0.022609
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.201738   0.200704 0.011912
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight  1.39049   1.388544 0.01321
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.643871   0.642048 0.01011
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.60971   0.608256 0.009596
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.539983   1.534976 0.013379
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.807793    0.80896 0.009904
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.560957   0.557056 0.012156
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 3.792486   3.790848 0.01472
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.435302   0.434176 0.011922
+
+----------------------------------------------------------------------------------------------------
+Candidate 3/10: b256 (bwdk_block=256), phases=('bwd_weight',)
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.186586    3.19488 0.016788
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.208241   0.207872 0.008052
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.372232   1.371136 0.01222
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.634491   0.631808 0.014156
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.614246   0.612352 0.014564
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.526528    1.52576 0.011324
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.793805   0.791552 0.010477
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.569917    0.56832 0.012471
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.756769   3.755008 0.015002
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.438528   0.436224 0.019018
+
+----------------------------------------------------------------------------------------------------
+Candidate 4/10: b224 (bwdk_block=224), phases=('bwd_weight',)
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.242e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.494113   3.492864 0.013349
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.216965   0.216064 0.007074
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.331948   1.332224 0.009398
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.667177   0.666624 0.009896
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.643236   0.642048 0.011894
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.603482   1.601536 0.016369
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.777779   0.777216 0.009274
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.593367   0.592896 0.009489
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  3.93214   3.925504 0.014922
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.454011   0.453632 0.008469
+
+----------------------------------------------------------------------------------------------------
+Candidate 5/10: b192 (bwdk_block=192), phases=('bwd_weight',)
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.470582   3.469312 0.010862
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.219116   0.218112 0.007371
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.378171    1.37728 0.009661
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.663542   0.662528 0.00995
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.656824    0.65536 0.013206
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.586176   1.585152 0.010377
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.805386    0.80384 0.013199
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.613734   0.612352 0.011878
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.894692     3.8912 0.012022
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.455045   0.454656 0.006922
+
+----------------------------------------------------------------------------------------------------
+Candidate 6/10: b128 (bwdk_block=128), phases=('bwd_weight',)
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.242e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 3.526369   3.524608 0.01247
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.235459   0.234496 0.008006
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.519319    1.51808 0.011896
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.699443   0.698368 0.00758
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.697344    0.69632 0.007967
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.649674    1.64864 0.007593
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.880476   0.879616 0.009071
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.651346    0.65024 0.009645
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  4.10197   4.103168 0.007993
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.487383   0.487424 0.006279
+
+----------------------------------------------------------------------------------------------------
+Candidate 7/10: b96 (bwdk_block=96), phases=('bwd_weight',)
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 4.456018     4.4544 0.011791
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.304128   0.303104 0.007739
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.828219   1.826816 0.01079
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.901171   0.900096 0.007565
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.79786   0.797184 0.007476
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.128466   2.127872 0.008811
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.069373   1.069056 0.007863
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.755896   0.755712 0.00988
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.212426   5.211136 0.011753
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.628705   0.627712 0.009304
+
+----------------------------------------------------------------------------------------------------
+Candidate 8/10: w16 (warps_per_block=16), phases=('fwd', 'bwd_input')
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.502438   3.511808 0.017765
+bwd_input 3.579853   3.515392 0.091807
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.240466   0.239616 0.009147
+bwd_input 0.255744   0.256000 0.002912
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.595412   1.594368 0.011754
+bwd_input 1.608428   1.607680 0.002888
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.576092   0.574464 0.013022
+bwd_input 0.575355   0.575488 0.000806
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.944968   0.944128 0.009272
+bwd_input 0.940503   0.941056 0.001444
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.341993   1.340416 0.011357
+bwd_input 1.330043   1.328128 0.003915
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.880916   0.879616 0.011467
+bwd_input 0.879585   0.879616 0.001213
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.935066   0.933888 0.011587
+bwd_input 0.935127   0.934912 0.000702
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.435151   3.438592 0.015160
+bwd_input 3.510968   3.442176 0.121207
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.449915   0.448512 0.019061
+bwd_input 0.434002   0.434176 0.000618
+
+----------------------------------------------------------------------------------------------------
+Candidate 9/10: w8 (warps_per_block=8), phases=('fwd', 'bwd_input')
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.542159   3.532800 0.020316
+bwd_input 3.602668   3.625472 0.055002
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.249139   0.247808 0.012082
+bwd_input 0.264970   0.265216 0.002316
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.621535   1.621504 0.013524
+bwd_input 1.634601   1.633280 0.003835
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.575928   0.575488 0.010249
+bwd_input 0.573112   0.573440 0.000580
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.983214   0.978944 0.012161
+bwd_input 0.991703   0.992256 0.001466
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.342290   1.340416 0.009346
+bwd_input 1.330012   1.329152 0.001316
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.906895   0.906240 0.007196
+bwd_input 0.892856   0.888832 0.007849
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.010862   1.009664 0.010138
+bwd_input 1.032673   1.032192 0.000590
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.441101    3.44576 0.015719
+bwd_input 3.506862    3.46624 0.092673
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.439521   0.439296 0.006745
+bwd_input 0.440637   0.440320 0.000595
+
+----------------------------------------------------------------------------------------------------
+Candidate 10/10: w4 (warps_per_block=4), phases=('fwd', 'bwd_input')
+[1/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.679293   3.674112 0.019121
+bwd_input 3.773747   3.788800 0.053890
+[2/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.260813   0.260096 0.007520
+bwd_input 0.281467   0.281600 0.002004
+[3/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.703936   1.700864 0.013334
+bwd_input 1.740892   1.738752 0.004042
+[4/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.585318   0.584704 0.009058
+bwd_input 0.581591   0.581632 0.000860
+[5/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.044470   1.043456 0.011908
+bwd_input 1.082747   1.083392 0.001618
+[6/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.350267   1.349632 0.014105
+bwd_input 1.338143   1.338368 0.000818
+[7/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.929505   0.928768 0.013889
+bwd_input 0.932772   0.932864 0.000506
+[8/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.075917    1.07520 0.009568
+bwd_input 1.131684    1.13152 0.000613
+[9/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.493765   3.499008 0.017019
+bwd_input 3.597066   3.555328 0.131929
+[10/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.468419   0.467456 0.009387
+bwd_input 0.473907   0.474112 0.000504
+
+====================================================================================================
+EMPIRICAL PER-PATH ORACLE
+====================================================================================================
+                  config_id      phase winner_schedule_id  winner_mean_ms  winner_margin_vs_second_pct  paper_default_regret_pct
+holdout_b12288_h128_l28_k20        fwd                w16        1.595412                     1.637335                  0.000000
+holdout_b12288_h128_l28_k20  bwd_input                w16        1.608428                     1.627272                  0.000000
+holdout_b12288_h128_l28_k20 bwd_weight               b224        1.331948                     3.024452                 14.067485
+holdout_b12288_h192_l40_k32        fwd                w16        3.435151                     0.173193                  0.000000
+holdout_b12288_h192_l40_k32  bwd_input                 w8        3.506862                     0.117090                  0.117090
+holdout_b12288_h192_l40_k32 bwd_weight               b256        3.756769                     0.950741                  9.188763
+holdout_b12288_h256_l32_k24        fwd                w16        3.502438                     1.134091                  0.000000
+holdout_b12288_h256_l32_k24  bwd_input                w16        3.579853                     0.637309                  0.000000
+holdout_b12288_h256_l32_k24 bwd_weight               b256        3.186586                     8.416721                 10.662935
+ holdout_b12288_h64_l40_k40        fwd                w16        1.341993                     0.022130                  0.000000
+ holdout_b12288_h64_l40_k40  bwd_input                 w8        1.330012                     0.002310                  0.002310
+ holdout_b12288_h64_l40_k40 bwd_weight               b256        1.526528                     0.881432                  8.067080
+ holdout_b12288_h96_l20_k12        fwd                w16        0.935066                     8.106008                  0.000000
+ holdout_b12288_h96_l20_k12  bwd_input                w16        0.935127                    10.431334                  0.000000
+ holdout_b12288_h96_l20_k12 bwd_weight               b320        0.560957                     1.597265                 16.113251
+ holdout_b2048_h192_l40_k32        fwd                 w8        0.575928                     0.028449                  0.028449
+ holdout_b2048_h192_l40_k32  bwd_input                 w8        0.573112                     0.391291                  0.391291
+ holdout_b2048_h192_l40_k32 bwd_weight               b256        0.634491                     1.478326                 10.236923
+ holdout_b4096_h192_l28_k24        fwd                w16        0.880916                     2.949071                  0.000000
+ holdout_b4096_h192_l28_k24  bwd_input                w16        0.879585                     1.508783                  0.000000
+ holdout_b4096_h192_l28_k24 bwd_weight               b224        0.777779                     2.060428                 13.203869
+ holdout_b4096_h256_l20_k16        fwd                w16        0.944968                     4.047377                  0.000000
+ holdout_b4096_h256_l20_k16  bwd_input                w16        0.940503                     5.443894                  0.000000
+ holdout_b4096_h256_l20_k16 bwd_weight               b320        0.609710                     0.744016                 14.373050
+  holdout_b4096_h64_l40_k12        fwd                w16        0.240466                     3.606862                  0.000000
+  holdout_b4096_h64_l40_k12  bwd_input                w16        0.255744                     3.607606                  0.000000
+  holdout_b4096_h64_l40_k12 bwd_weight               b320        0.201738                     3.223188                 16.714890
+  holdout_b4096_h96_l40_k20        fwd                 w8        0.439521                     2.364754                  2.364754
+  holdout_b4096_h96_l40_k20  bwd_input                w16        0.434002                     1.528913                  0.000000
+  holdout_b4096_h96_l40_k20 bwd_weight               b320        0.435302                     0.741004                 11.964244
+
+COMBINED ORACLE
+                  config_id sweep_group     B   H  L  K          device_name  fwd_winner_warps  bwd_input_winner_warps  bwd_weight_winner_block  oracle_total_ms  paper_default_total_ms  paper_default_total_regret_pct
+holdout_b12288_h128_l28_k20     holdout 12288 128 28 20 Tesla V100-SXM3-32GB                16                      16                      224         4.535787                4.723159                        4.130959
+holdout_b12288_h192_l40_k32     holdout 12288 192 40 32 Tesla V100-SXM3-32GB                16                       8                      256        10.698783               11.048090                        3.264921
+holdout_b12288_h256_l32_k24     holdout 12288 256 32 24 Tesla V100-SXM3-32GB                16                      16                      256        10.268877               10.608660                        3.308868
+ holdout_b12288_h64_l40_k40     holdout 12288  64 40 40 Tesla V100-SXM3-32GB                16                       8                      256         4.198533                4.321710                        2.933809
+ holdout_b12288_h96_l20_k12     holdout 12288  96 20 12 Tesla V100-SXM3-32GB                16                      16                      320         2.431150                2.521539                        3.717931
+ holdout_b2048_h192_l40_k32     holdout  2048 192 40 32 Tesla V100-SXM3-32GB                 8                       8                      256         1.783532                1.850890                        3.776705
+ holdout_b4096_h192_l28_k24     holdout  4096 192 28 24 Tesla V100-SXM3-32GB                16                      16                      224         2.538281                2.640978                        4.045925
+ holdout_b4096_h256_l20_k16     holdout  4096 256 20 16 Tesla V100-SXM3-32GB                16                      16                      320         2.495181                2.582815                        3.512128
+  holdout_b4096_h64_l40_k12     holdout  4096  64 40 12 Tesla V100-SXM3-32GB                16                      16                      320         0.697948                0.731668                        4.831351
+  holdout_b4096_h96_l40_k20     holdout  4096  96 40 20 Tesla V100-SXM3-32GB                 8                      16                      320         1.308826                1.371300                        4.773305
+
+Saved below: results/pathtile_candidates/v100_holdout/trial2
+====================================================================================================
+PATHTILE FACTORIZED CANDIDATE SWEEP
+====================================================================================================
+GPU:        Tesla V100-SXM3-32GB
+Preset:     pathtile-holdout
+Trial:      3
+Protocol:   warmup=50, runs=100, strict FP32
+W candidates:     [4, 8, 16]
+BWDK candidates:  [96, 128, 192, 224, 256, 320, 384]
+Shapes:            10
+
+----------------------------------------------------------------------------------------------------
+Candidate 1/10: w4 (warps_per_block=4), phases=('fwd', 'bwd_input')
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd  0.51669   0.515072 0.011642
+bwd_input  0.52268   0.522240 0.000550
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.485348   3.482624 0.018876
+bwd_input 3.514563   3.478528 0.059724
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.078692    1.07776 0.011062
+bwd_input 1.131172    1.13152 0.000549
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.924580   0.923648 0.008102
+bwd_input 0.932618   0.932864 0.000566
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.351035   1.349632 0.011251
+bwd_input 1.338010   1.338368 0.000719
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.047316   1.046528 0.010904
+bwd_input 1.083515   1.083392 0.000801
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.583588   0.583680 0.010439
+bwd_input 0.584499   0.584704 0.001039
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.703752   1.701888 0.012794
+bwd_input 1.738568   1.738752 0.001023
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.269844   0.268288 0.009184
+bwd_input 0.271575   0.271360 0.000935
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.665480   3.663872 0.012579
+bwd_input 3.782574   3.788800 0.083634
+
+----------------------------------------------------------------------------------------------------
+Candidate 2/10: w8 (warps_per_block=8), phases=('fwd', 'bwd_input')
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.438528   0.437248 0.014364
+bwd_input 0.436849   0.436224 0.001715
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.423898   3.421184 0.012936
+bwd_input 3.527219   3.441152 0.145900
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.011978   1.011712 0.011252
+bwd_input 1.033318   1.033216 0.000554
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.888361   0.886784 0.011437
+bwd_input 0.887112   0.887808 0.001941
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.342290   1.342464 0.011839
+bwd_input 1.329275   1.329152 0.000639
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.980296   0.978944 0.013940
+bwd_input 0.990874   0.990208 0.001444
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.576195   0.575488 0.011466
+bwd_input 0.577864   0.577536 0.001546
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.618258   1.614848 0.016146
+bwd_input 1.635430   1.637376 0.004699
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.249221   0.247808 0.010327
+bwd_input 0.266271   0.265728 0.002880
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.530486   3.523584 0.016589
+bwd_input 3.669883   3.764736 0.114064
+
+----------------------------------------------------------------------------------------------------
+Candidate 3/10: w16 (warps_per_block=16), phases=('fwd', 'bwd_input')
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.438528   0.437248 0.012199
+bwd_input 0.436941   0.437248 0.000982
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.443896   3.439616 0.020843
+bwd_input 3.497144   3.418624 0.094570
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.941435   0.941056 0.012046
+bwd_input 0.941660   0.942080 0.000988
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.878899   0.877568 0.009809
+bwd_input 0.877978   0.877568 0.000728
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.344717   1.342464 0.017453
+bwd_input 1.327780   1.328128 0.000638
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.938803   0.937984 0.011208
+bwd_input 0.940564   0.941056 0.000855
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.580465   0.579584 0.009773
+bwd_input 0.581550   0.581632 0.001714
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.592504   1.590272 0.013992
+bwd_input 1.613670   1.613824 0.003136
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.245873   0.244736 0.007636
+bwd_input 0.240302   0.240640 0.000862
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.501414   3.504128 0.016651
+bwd_input 3.568619   3.554304 0.079279
+
+----------------------------------------------------------------------------------------------------
+Candidate 4/10: b96 (bwdk_block=96), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.62933   0.627712 0.014277
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.212692   5.211136 0.011863
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.754995   0.754688 0.009878
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.069507   1.069056 0.008773
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.129408   2.128896 0.011025
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.797819   0.796672 0.007291
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.901939   0.900096 0.014754
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.828362   1.826816 0.013027
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.304374   0.303104 0.008595
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  4.45609   4.455424 0.010631
+
+----------------------------------------------------------------------------------------------------
+Candidate 5/10: b128 (bwdk_block=128), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.490271   0.488448 0.01837
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 4.104653   4.104192 0.011841
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.652534   0.651264 0.009101
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.882094    0.88064 0.012298
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.650135    1.64864 0.011147
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.698132   0.697344 0.011754
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.69929   0.698368 0.008842
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.519217   1.517568 0.01056
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.234557   0.233472 0.008219
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.242e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.527496   3.525632 0.013678
+
+----------------------------------------------------------------------------------------------------
+Candidate 6/10: b192 (bwdk_block=192), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.454513   0.453632 0.008724
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.899177   3.897344 0.013699
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.614021   0.612864 0.011848
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.804997    0.80384 0.009012
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.586924   1.585152 0.016076
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.657039   0.656384 0.008474
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.663316   0.662528 0.008729
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.378294    1.37728 0.009849
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.220232   0.219136 0.007469
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.475343   3.475456 0.014304
+
+----------------------------------------------------------------------------------------------------
+Candidate 7/10: b224 (bwdk_block=224), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.454953   0.453632 0.016117
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.934904   3.933696 0.015081
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.594412   0.592896 0.014542
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.778117   0.777216 0.010996
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.603748    1.60256 0.016347
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.643615    0.64256 0.009999
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.667853   0.666624 0.015619
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.332787   1.332224 0.009687
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.217364   0.217088 0.007339
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.242e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.492956   3.492864 0.010919
+
+----------------------------------------------------------------------------------------------------
+Candidate 8/10: b256 (bwdk_block=256), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.434002   0.432128 0.01389
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.769129   3.762176 0.014957
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.58111   0.580608 0.007429
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.805652   0.804864 0.012349
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.529416   1.528832 0.01106
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.621701   0.621568 0.009746
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.636047   0.631808 0.012989
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.369979   1.369088 0.010586
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.209367   0.208896 0.008245
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.197215   3.195904 0.011074
+
+----------------------------------------------------------------------------------------------------
+Candidate 9/10: b320 (bwdk_block=320), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.429363   0.428032 0.007921
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.791708   3.790848 0.011342
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.562924   0.561152 0.008179
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.810117   0.812032 0.008624
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.547284    1.54624 0.010374
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.616131   0.615424 0.010403
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.637327    0.63488 0.011502
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.390541   1.389568 0.012414
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.200663    0.19968 0.007375
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.468831   3.467264 0.012695
+
+----------------------------------------------------------------------------------------------------
+Candidate 10/10: b384 (bwdk_block=384), phases=('bwd_weight',)
+[1/10] holdout_b4096_h96_l40_k20: B=4096, H=96, L=40, K=20
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.447027   0.442368 0.019404
+[2/10] holdout_b12288_h192_l40_k32: B=12288, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  3.94197   3.950592 0.018476
+[3/10] holdout_b12288_h96_l20_k12: B=12288, H=96, L=20, K=12
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.591002   0.589824  0.0088
+[4/10] holdout_b4096_h192_l28_k24: B=4096, H=192, L=28, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.818749   0.820224 0.010915
+[5/10] holdout_b12288_h64_l40_k40: B=12288, H=64, L=40, K=40
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.591972   1.589248 0.014507
+[6/10] holdout_b4096_h256_l20_k16: B=4096, H=256, L=20, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.643379   0.644096 0.009008
+[7/10] holdout_b2048_h192_l40_k32: B=2048, H=192, L=40, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight  0.66304    0.66048 0.01387
+[8/10] holdout_b12288_h128_l28_k20: B=12288, H=128, L=28, K=20
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.412721    1.41312 0.012822
+[9/10] holdout_b4096_h64_l40_k12: B=4096, H=64, L=40, K=12
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.211405   0.210944 0.007833
+[10/10] holdout_b12288_h256_l32_k24: B=12288, H=256, L=32, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.512105    3.51232 0.014275
+
+====================================================================================================
+EMPIRICAL PER-PATH ORACLE
+====================================================================================================
+                  config_id      phase winner_schedule_id  winner_mean_ms  winner_margin_vs_second_pct  paper_default_regret_pct
+holdout_b12288_h128_l28_k20        fwd                w16        1.592504                 1.617177e+00                  0.000000
+holdout_b12288_h128_l28_k20  bwd_input                w16        1.613670                 1.348477e+00                  0.000000
+holdout_b12288_h128_l28_k20 bwd_weight               b224        1.332787                 2.790521e+00                 13.987936
+holdout_b12288_h192_l40_k32        fwd                 w8        3.423898                 5.840904e-01                  0.584090
+holdout_b12288_h192_l40_k32  bwd_input                w16        3.497144                 4.980723e-01                  0.000000
+holdout_b12288_h192_l40_k32 bwd_weight               b256        3.769129                 5.990555e-01                  8.901890
+holdout_b12288_h256_l32_k24        fwd                w16        3.501414                 8.302726e-01                  0.000000
+holdout_b12288_h256_l32_k24  bwd_input                w16        3.568619                 2.837607e+00                  0.000000
+holdout_b12288_h256_l32_k24 bwd_weight               b256        3.197215                 8.495392e+00                 10.330268
+ holdout_b12288_h64_l40_k40        fwd                 w8        1.342290                 1.807994e-01                  0.180799
+ holdout_b12288_h64_l40_k40  bwd_input                w16        1.327780                 1.125978e-01                  0.000000
+ holdout_b12288_h64_l40_k40 bwd_weight               b256        1.529416                 1.168342e+00                  7.893174
+ holdout_b12288_h96_l20_k12        fwd                w16        0.941435                 7.493173e+00                  0.000000
+ holdout_b12288_h96_l20_k12  bwd_input                w16        0.941660                 9.733684e+00                  0.000000
+ holdout_b12288_h96_l20_k12 bwd_weight               b320        0.562924                 3.230680e+00                 15.918729
+ holdout_b2048_h192_l40_k32        fwd                 w8        0.576195                 7.410862e-01                  0.741086
+ holdout_b2048_h192_l40_k32  bwd_input                 w8        0.577864                 6.379383e-01                  0.637938
+ holdout_b2048_h192_l40_k32 bwd_weight               b256        0.636047                 2.012465e-01                  9.943013
+ holdout_b4096_h192_l28_k24        fwd                w16        0.878899                 1.076548e+00                  0.000000
+ holdout_b4096_h192_l28_k24  bwd_input                w16        0.877978                 1.040353e+00                  0.000000
+ holdout_b4096_h192_l28_k24 bwd_weight               b224        0.778117                 3.454489e+00                 13.362632
+ holdout_b4096_h256_l20_k16        fwd                w16        0.938803                 4.419723e+00                  0.000000
+ holdout_b4096_h256_l20_k16  bwd_input                w16        0.940564                 5.348822e+00                  0.000000
+ holdout_b4096_h256_l20_k16 bwd_weight               b320        0.616131                 9.041224e-01                 13.309180
+  holdout_b4096_h64_l40_k12        fwd                w16        0.245873                 1.361876e+00                  0.000000
+  holdout_b4096_h64_l40_k12  bwd_input                w16        0.240302                 1.080666e+01                  0.000000
+  holdout_b4096_h64_l40_k12 bwd_weight               b320        0.200663                 4.337621e+00                 16.891204
+  holdout_b4096_h96_l40_k20        fwd                w16        0.438528                 2.038797e-07                  0.000000
+  holdout_b4096_h96_l40_k20  bwd_input                 w8        0.436849                 2.109685e-02                  0.021097
+  holdout_b4096_h96_l40_k20 bwd_weight               b320        0.429363                 1.080372e+00                 14.185546
+
+COMBINED ORACLE
+                  config_id sweep_group     B   H  L  K          device_name  fwd_winner_warps  bwd_input_winner_warps  bwd_weight_winner_block  oracle_total_ms  paper_default_total_ms  paper_default_total_regret_pct
+holdout_b12288_h128_l28_k20     holdout 12288 128 28 20 Tesla V100-SXM3-32GB                16                      16                      224         4.538962                4.725391                        4.107314
+holdout_b12288_h192_l40_k32     holdout 12288 192 40 32 Tesla V100-SXM3-32GB                 8                      16                      256        10.690171               11.045693                        3.325694
+holdout_b12288_h256_l32_k24     holdout 12288 256 32 24 Tesla V100-SXM3-32GB                16                      16                      256        10.267249               10.597529                        3.216839
+ holdout_b12288_h64_l40_k40     holdout 12288  64 40 40 Tesla V100-SXM3-32GB                 8                      16                      256         4.199485                4.322632                        2.932414
+ holdout_b12288_h96_l20_k12     holdout 12288  96 20 12 Tesla V100-SXM3-32GB                16                      16                      320         2.446019                2.535629                        3.663515
+ holdout_b2048_h192_l40_k32     holdout  2048 192 40 32 Tesla V100-SXM3-32GB                 8                       8                      256         1.790106                1.861304                        3.977351
+ holdout_b4096_h192_l28_k24     holdout  4096 192 28 24 Tesla V100-SXM3-32GB                16                      16                      224         2.534994                2.638971                        4.101664
+ holdout_b4096_h256_l20_k16     holdout  4096 256 20 16 Tesla V100-SXM3-32GB                16                      16                      320         2.495498                2.577500                        3.285994
+  holdout_b4096_h64_l40_k12     holdout  4096  64 40 12 Tesla V100-SXM3-32GB                16                      16                      320         0.686838                0.720732                        4.934849
+  holdout_b4096_h96_l40_k20     holdout  4096  96 40 20 Tesla V100-SXM3-32GB                16                       8                      320         1.304740                1.365740                        4.675237
+
+Saved below: results/pathtile_candidates/v100_holdout/trial3
+====================================================================================================
+AGGREGATED PATHTILE CANDIDATE SWEEP
+====================================================================================================
+Trials: [1, 2, 3]
+
+PER-PATH ORACLE
+                  config_id      phase winner_schedule_id  winner_mean_ms  winner_margin_vs_second_pct  paper_default_regret_pct
+holdout_b12288_h128_l28_k20        fwd                w16        1.595515                     1.499885                  0.000000
+holdout_b12288_h128_l28_k20  bwd_input                w16        1.609595                     1.606156                  0.000000
+holdout_b12288_h128_l28_k20 bwd_weight               b224        1.332804                     2.842470                 13.995184
+holdout_b12288_h192_l40_k32        fwd                 w8        3.428188                     0.288444                  0.288444
+holdout_b12288_h192_l40_k32  bwd_input                w16        3.492929                     0.413949                  0.000000
+holdout_b12288_h192_l40_k32 bwd_weight               b256        3.767648                     0.644952                  8.910918
+holdout_b12288_h256_l32_k24        fwd                w16        3.497749                     0.984060                  0.000000
+holdout_b12288_h256_l32_k24  bwd_input                w16        3.572166                     1.773667                  0.000000
+holdout_b12288_h256_l32_k24 bwd_weight               b256        3.191709                     8.383747                 10.544116
+ holdout_b12288_h64_l40_k40        fwd                 w8        1.341276                     0.204348                  0.204348
+ holdout_b12288_h64_l40_k40  bwd_input                 w8        1.327667                     0.067102                  0.067102
+ holdout_b12288_h64_l40_k40 bwd_weight               b256        1.527528                     1.033252                  8.014875
+ holdout_b12288_h96_l20_k12        fwd                w16        0.937506                     7.980046                  0.000000
+ holdout_b12288_h96_l20_k12  bwd_input                w16        0.938663                    10.123309                  0.000000
+ holdout_b12288_h96_l20_k12 bwd_weight               b320        0.564961                     1.682013                 15.494578
+ holdout_b2048_h192_l40_k32        fwd                 w8        0.575850                     0.324234                  0.324234
+ holdout_b2048_h192_l40_k32  bwd_input                 w8        0.576229                     0.568664                  0.568664
+ holdout_b2048_h192_l40_k32 bwd_weight               b256        0.634914                     0.740285                 10.217197
+ holdout_b4096_h192_l28_k24        fwd                w16        0.880251                     1.634055                  0.000000
+ holdout_b4096_h192_l28_k24  bwd_input                w16        0.878834                     1.183821                  0.000000
+ holdout_b4096_h192_l28_k24 bwd_weight               b224        0.777940                     2.504033                 13.265205
+ holdout_b4096_h256_l20_k16        fwd                w16        0.940817                     4.455975                  0.000000
+ holdout_b4096_h256_l20_k16  bwd_input                w16        0.940274                     5.436869                  0.000000
+ holdout_b4096_h256_l20_k16 bwd_weight               b320        0.612489                     1.164737                 14.019729
+  holdout_b4096_h64_l40_k12        fwd                w16        0.242074                     3.492667                  0.000000
+  holdout_b4096_h64_l40_k12  bwd_input                w16        0.250255                     4.427348                  0.000000
+  holdout_b4096_h64_l40_k12 bwd_weight               b320        0.201810                     3.611056                 16.517829
+  holdout_b4096_h96_l40_k20        fwd                 w8        0.438303                     0.905699                  0.905699
+  holdout_b4096_h96_l40_k20  bwd_input                w16        0.435784                     0.726084                  0.000000
+  holdout_b4096_h96_l40_k20 bwd_weight               b320        0.431278                     1.030464                 13.312122
+
+WINNER FREQUENCY
+     phase  candidate_kind  winner_value  shapes_won
+ bwd_input warps_per_block            16           8
+ bwd_input warps_per_block             8           2
+bwd_weight      bwdk_block           256           4
+bwd_weight      bwdk_block           320           4
+bwd_weight      bwdk_block           224           2
+       fwd warps_per_block            16           6
+       fwd warps_per_block             8           4
+
+Saved below: results/pathtile_candidates/v100_holdout

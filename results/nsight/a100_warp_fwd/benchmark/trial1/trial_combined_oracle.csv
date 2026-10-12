@@ -1,0 +1,3 @@
+config_id,sweep_group,B,H,L,K,device_name,fwd_winner_warps,bwd_input_winner_warps,bwd_weight_winner_block,oracle_total_ms,paper_default_total_ms,paper_default_total_regret_pct
+smoke_b128_h16_l48_k48,smoke,128,16,48,48,NVIDIA A100-PCIE-40GB,16,16,128,0.5918719992041588,0.5918719992041588,0.0
+smoke_b64_h8_l16_k8,smoke,64,8,16,8,NVIDIA A100-PCIE-40GB,16,16,128,0.7664639875292778,0.7664639875292778,0.0

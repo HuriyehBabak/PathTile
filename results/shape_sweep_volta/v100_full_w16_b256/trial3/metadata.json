@@ -1,0 +1,32 @@
+{
+  "bwdk_block": 256,
+  "bwdk_btile": 64,
+  "compute_capability": "7.0",
+  "created_at_utc": "2026-08-30T17:00:42.966350+00:00",
+  "cudnn": 91002,
+  "cudnn_benchmark": true,
+  "cudnn_deterministic": false,
+  "fast_math": false,
+  "gpu": "Tesla V100-SXM3-32GB",
+  "hostname": "pascal-node10",
+  "measurement_contract": {
+    "aggregate_total_definition": "sum of separately timed phase events",
+    "backward_graph_construction_timed": false,
+    "config_order": "forward for odd trials; reverse for even trials",
+    "custom_bwd_weight_zero_fill_timed": false,
+    "pytorch_forward_includes_explicit_pad": true
+  },
+  "preset": "full",
+  "python": "3.14.6",
+  "pytorch": "2.10.0+cu128",
+  "runs": 100,
+  "seed": 42,
+  "sm_count": 80,
+  "tf32_cudnn": false,
+  "tf32_matmul": false,
+  "torch_cuda": "12.8",
+  "total_memory_bytes": 34072559616,
+  "trial_id": 3,
+  "warmup": 50,
+  "warps_per_block": 16
+}

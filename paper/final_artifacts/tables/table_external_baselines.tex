@@ -1,0 +1,9 @@
+\begin{tabular}{lrrrrrl}
+\toprule
+GPU & PyTorch (ms) & Triton (ms) & TVM-TIRx (ms) & PathTile (ms) & PT / best compiler & TVM evidence \\
+\midrule
+A100 & 47.424 & 21.774 & 11.518 & 11.283 & 1.021 & Pass \\
+RTX A6000 & 56.723 & 31.766 & 19.702 & 15.212 & 1.295 & Pass \\
+V100 & 54.886 & -- & 19.918 & 13.585 & 1.466 & Caveat \\
+\bottomrule
+\end{tabular}

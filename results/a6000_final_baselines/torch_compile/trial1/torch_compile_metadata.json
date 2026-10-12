@@ -1,0 +1,21 @@
+{
+  "technique": "torch_compile_inductor",
+  "backend": "inductor",
+  "mode": "max-autotune-no-cudagraphs",
+  "fullgraph": true,
+  "dynamic": false,
+  "backward_measurement": "phase-specific specializations; inactive operand detached",
+  "compile_overhead_timed": false,
+  "correctness_validation_batch": 256,
+  "warmup_runs": 50,
+  "measured_runs": 100,
+  "B": 16384,
+  "H": 128,
+  "L": 48,
+  "K": 48,
+  "dtype": "torch.float32",
+  "pytorch": "2.10.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91002,
+  "gpu": "NVIDIA RTX A6000"
+}

@@ -1,0 +1,62 @@
+{
+  "timestamp_utc": "2026-09-08T12:41:19.482028+00:00",
+  "hostname": "pascal-node10",
+  "python": "3.11.16",
+  "numpy": "1.26.4",
+  "tvm": "0.25.0.post1",
+  "gpu": {
+    "gpu": "Tesla V100-SXM3-32GB",
+    "compute_capability": "7.0",
+    "global_memory_bytes": 34072559616,
+    "multiprocessor_count": 80,
+    "max_threads_per_block": 1024
+  },
+  "target": {
+    "kind": "cuda",
+    "arch": "sm_70"
+  },
+  "dtype": "float32",
+  "B": 16384,
+  "H": 128,
+  "L": 48,
+  "K": 48,
+  "trial": 1,
+  "timing_samples_per_phase": 20,
+  "calls_per_timing_sample": 32,
+  "measured_calls_per_phase": 640,
+  "burnin_cycles": 500,
+  "warmup_cycles": 50,
+  "unmeasured_queue_lead_in_calls_per_phase": 64,
+  "compile_timed": false,
+  "validation_timed": false,
+  "allocation_timed": false,
+  "autotuning_in_remeasurement": false,
+  "schedule_selection_source": "independent initial run job 113124",
+  "selected_configs": {
+    "forward": {
+      "candidate": "fwd_bh4",
+      "BLOCK_BH": 4,
+      "num_warps": 4,
+      "threads": 128
+    },
+    "backward_input": {
+      "candidate": "bwd_input_bh1",
+      "BLOCK_BH": 1,
+      "num_warps": 1,
+      "threads": 32
+    },
+    "backward_weight": {
+      "candidate": "bwd_weight_t64",
+      "BLOCK_K": 4,
+      "N_PER_CTA": 4096,
+      "BLOCK_N": 64,
+      "num_warps": 2,
+      "partial_threads": 64,
+      "reduce_threads": 256
+    }
+  },
+  "backward_weight_launches_per_call": 2,
+  "timing": "amortized per-call CUDA-event time for fixed-size batches on the default stream, with an excluded same-stream queue lead-in",
+  "semantics": "explicit same padding; left=K//2; output length=L",
+  "cuda_visible_devices": "0"
+}

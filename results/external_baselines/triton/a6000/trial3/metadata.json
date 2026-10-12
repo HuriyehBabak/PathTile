@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-09-04T08:47:23.563535+00:00",
+  "hostname": "pascal-node14",
+  "technique": "triton_autotuned",
+  "python": "3.14.6",
+  "pytorch": "2.10.0+cu128",
+  "torch_cuda": "12.8",
+  "cudnn": 91002,
+  "triton": "3.6.0",
+  "gpu": "NVIDIA RTX A6000",
+  "compute_capability": "8.6",
+  "global_memory_bytes": 51033931776,
+  "multiprocessor_count": 84,
+  "dtype": "torch.float32",
+  "B": 16384,
+  "H": 128,
+  "L": 48,
+  "K": 48,
+  "warmup_runs": 50,
+  "measured_runs": 100,
+  "seed": 42,
+  "compile_and_autotune_timed": false,
+  "timing": "CUDA events on the current PyTorch stream",
+  "semantics": "explicit same padding; left=K//2; output length=L",
+  "selected_configs": {
+    "forward": {
+      "BLOCK_BH": 4,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "backward_input": {
+      "BLOCK_BH": 4,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "backward_weight_partial": {
+      "BLOCK_N": 128,
+      "num_warps": 4,
+      "num_stages": 1
+    },
+    "backward_weight_reduce": {
+      "BLOCK_K": 4,
+      "N_PER_PROGRAM": 4096,
+      "num_warps": 4,
+      "num_stages": 1
+    }
+  },
+  "workspace_shape": [
+    128,
+    48,
+    192
+  ],
+  "workspace_bytes": 4718592
+}

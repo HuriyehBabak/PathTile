@@ -1,0 +1,24 @@
+==========================================
+SLURM_JOB_ID = 111691
+SLURM_NODELIST = pascal-node10.l3s.intra
+==========================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/huriyeh.babak/s4convd-paper/kernels/warp_tiled_ampere.py", line 1677, in <module>
+    main()
+    ~~~~^^
+  File "/home/huriyeh.babak/s4convd-paper/kernels/warp_tiled_ampere.py", line 1625, in main
+    runtime = AmpereWarpRuntime(
+        warps_per_block=args.warps_per_block,
+    ...<2 lines>...
+        fast_math=args.fast_math,
+    )
+  File "/home/huriyeh.babak/s4convd-paper/kernels/warp_tiled_ampere.py", line 635, in __init__
+    self.profile = detect_gpu_profile(self.device_id)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/huriyeh.babak/s4convd-paper/kernels/warp_tiled_ampere.py", line 127, in detect_gpu_profile
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: This experiment currently supports A100/CC 8.0 and RTX A6000/CC 8.6; detected CC 7.0.

@@ -1,0 +1,13 @@
+config_id,B,H,L,K,sweep_group,trial_id,device_name,candidate_kind,candidate_value,schedule_id,warps_per_block,bwdk_btile,bwdk_block,run_id_requested,phase,run_id,runtime_ms
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,1,fwd,1,0.24371199309825897
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,2,fwd,2,0.20787200331687927
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,1,bwd_input,1,0.21196800470352173
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,2,bwd_input,2,0.20684799551963806
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,1,fwd,1,0.2099200040102005
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,2,fwd,2,0.20787200331687927
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,1,bwd_input,1,0.21401600539684296
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA A100-PCIE-40GB,warps_per_block,16,w16,16,64,128,2,bwd_input,2,0.19865599274635315
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA A100-PCIE-40GB,bwdk_block,128,b128,16,64,128,1,bwd_weight,1,0.34303998947143555
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA A100-PCIE-40GB,bwdk_block,128,b128,16,64,128,2,bwd_weight,2,0.319487988948822
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA A100-PCIE-40GB,bwdk_block,128,b128,16,64,128,1,bwd_weight,1,0.17919999361038208
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA A100-PCIE-40GB,bwdk_block,128,b128,16,64,128,2,bwd_weight,2,0.1740799993276596

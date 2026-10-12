@@ -1,0 +1,9 @@
+\begin{tabular}{lrrrr}
+\toprule
+Backend & Trials & Total latency (ms) & Between-trial std (ms) & PathTile speedup \\
+\midrule
+PyTorch eager & 3 & 56.723 & 0.307 & 3.729 \\
+torch.compile & 3 & 56.552 & 0.229 & 3.718 \\
+PathTile & 3 & 15.212 & 0.053 & 1.000 \\
+\bottomrule
+\end{tabular}

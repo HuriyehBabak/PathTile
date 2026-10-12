@@ -1,0 +1,2 @@
+technique,test_rmsle,epochs_total,saved_epochs,batch_size,data_fraction,train_backend,warps_per_block,bwdk_btile,bwdk_block,gpu_profile,device_name,compute_capability
+PyTorch-cuDNN-rtx_a6000,0.03800748661160469,5,2-5,16384,0.1,pytorch,,,,rtx_a6000,NVIDIA RTX A6000,8.6

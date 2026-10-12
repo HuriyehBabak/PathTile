@@ -1,0 +1,19 @@
+{
+  "gpu": "NVIDIA RTX A6000",
+  "pytorch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "seed": 42,
+  "B": 16384,
+  "H": 128,
+  "L": 48,
+  "K": 48,
+  "dtype": "float32",
+  "threads_per_block": 512,
+  "ttile": 32,
+  "htile": 16,
+  "bwd_k_b_tile": 64,
+  "fwd_bwd_input_shared_bytes": 5056,
+  "bwd_kernel_shared_bytes": 24576,
+  "warmup_runs": 50,
+  "measured_runs": 100
+}

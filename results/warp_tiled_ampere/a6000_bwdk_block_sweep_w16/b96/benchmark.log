@@ -1,0 +1,50 @@
+/home/huriyeh.babak/s4convd-paper/kernels/warp_tiled_ampere.py:628: UserWarning: The CUDA compiler succeeded, but said the following:
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function 'dwconv1d_warptile_bwd_weight' for 'sm_86'
+ptxas info    : Function properties for dwconv1d_warptile_bwd_weight
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 1 barriers, 24624 bytes smem, 396 bytes cmem[0]
+ptxas info    : Compile time = 68.824 ms
+ptxas info    : Compiling entry function 'dwconv1d_warptile_bwd_input' for 'sm_86'
+ptxas info    : Function properties for dwconv1d_warptile_bwd_input
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers, 3072 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 29.538 ms
+ptxas info    : Compiling entry function 'dwconv1d_warptile_fwd' for 'sm_86'
+ptxas info    : Function properties for dwconv1d_warptile_fwd
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 40 registers, used 0 barriers, 3072 bytes smem, 392 bytes cmem[0]
+ptxas info    : Compile time = 28.643 ms
+
+  self.module = SourceModule(source, options=options, no_extern_c=True)
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED AMPERE OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48           1.00 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48           1.00 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                 96                3               40                      3840              24624                     24832                           4                       12           0.25           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+NVIDIA RTX A6000 KERNEL MICROBENCHMARK
+========================================================================================
+B=16384, H=128, L=48, K=48, warmup=50, runs=50
+     phase  runs  mean_ms  median_ms   std_ms   p05_ms   p95_ms  algorithmic_bytes  algorithmic_bandwidth_gbps  pct_of_peak_algorithmic            technique gpu_profile      device_name  warps_per_block  bwdk_btile  bwdk_block
+       fwd    50 4.938445   4.909056 0.154815 4.682752 5.212723          805330944                  163.073797                21.233567 WarpThread-rtx_a6000   rtx_a6000 NVIDIA RTX A6000               16          64          96
+ bwd_input    50 4.821402   4.816896 0.013201 4.815872 4.862976          805330944                  167.032536                21.749028 WarpThread-rtx_a6000   rtx_a6000 NVIDIA RTX A6000               16          64          96
+bwd_weight    50 6.246810   6.207488 0.122066 6.181888 6.574029          805330944                  128.918760                16.786297 WarpThread-rtx_a6000   rtx_a6000 NVIDIA RTX A6000               16          64          96
+
+Sum of phase means:   16.0067 ms
+Sum of phase medians: 15.9334 ms
+Note: algorithmic bandwidth uses unique minimum bytes; Nsight Compute is required for actual DRAM traffic.

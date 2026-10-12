@@ -1,0 +1,44 @@
+{
+  "bwdk_block_candidates": [
+    128,
+    256
+  ],
+  "bwdk_btile": 64,
+  "compute_capability": "7.0",
+  "created_at_utc": "2026-08-30T18:33:42.750123+00:00",
+  "cudnn": 91002,
+  "factorization": {
+    "bwd_weight_axis": "BWDK_BLOCK",
+    "fwd_bwd_input_axis": "WARPS_PER_BLOCK",
+    "reason": "The compile-time axes affect disjoint kernel paths."
+  },
+  "fast_math": false,
+  "gpu": "Tesla V100-SXM3-32GB",
+  "hostname": "pascal-node10",
+  "measurement_contract": {
+    "allocation_timed": false,
+    "bwd_weight_zero_fill_timed": false,
+    "candidate_order": "listed on odd trials; fully reversed on even trials",
+    "compilation_timed": false,
+    "cuda_event_kernel_timing": true,
+    "shape_order": "listed on odd trials; fully reversed on even trials",
+    "strict_fp32": true,
+    "validation_timed": false
+  },
+  "preset": "pathtile-holdout",
+  "python": "3.14.6",
+  "pytorch": "2.10.0+cu128",
+  "runs": 2,
+  "seed": 42,
+  "sm_count": 80,
+  "tf32_cudnn": false,
+  "tf32_matmul": false,
+  "torch_cuda": "12.8",
+  "total_memory_bytes": 34072559616,
+  "trial_id": 1,
+  "warmup": 1,
+  "warps_candidates": [
+    8,
+    16
+  ]
+}

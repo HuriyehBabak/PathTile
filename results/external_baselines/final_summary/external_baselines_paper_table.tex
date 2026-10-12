@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering
+\caption{External compiler-framework baselines for the FP32 main workload ($B{=}16384$, $H{=}128$, $L{=}K{=}48$). Times are the sum of forward, input-gradient, and weight-gradient means in ms. Triton 3.6 does not support the V100 (sm\_70). $^{\dagger}$The V100 TVM--TIRx value uses 20 batched samples of 32 calls per phase and trial. Its between-trial total CV was 0.562\%; retained transient samples raised the maximum phase CV to 5.247\%, narrowly above the pre-specified 5\% diagnostic gate.}
+\label{tab:external-framework-baselines}
+\begin{tabular}{lrrrrr}
+\toprule
+GPU & PyTorch & Triton & TVM--TIRx & PathTile & PT / best compiler \\
+\midrule
+A100 & 47.424 & 21.774 & 11.518 & 11.283 & 1.02$\times$ \\
+RTX A6000 & 56.723 & 31.766 & 19.702 & 15.212 & 1.30$\times$ \\
+V100 & 54.886 & -- & 19.918$^{\dagger}$ & 13.585 & 1.47$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table*}

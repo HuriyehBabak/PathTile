@@ -1,0 +1,2 @@
+trials,warps_per_block,bwdk_btile,bwdk_block,fwd_mean_ms,fwd_between_trial_std_ms,dx_mean_ms,dx_between_trial_std_ms,dk_mean_ms,dk_between_trial_std_ms,total_mean_ms,total_between_trial_std_ms,sum_of_phase_medians_ms
+3,16,64,256,4.166973390579224,0.026265526879404262,4.1174596230189,0.016658289519980628,5.300773572921752,0.012917998864056231,13.58520658651988,0.001278218630763593,13.539157390594482

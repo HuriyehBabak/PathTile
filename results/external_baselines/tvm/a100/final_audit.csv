@@ -1,0 +1,4 @@
+trial,correctness_rows,correctness_pass,fwd_runs,bwd_input_runs,bwd_weight_runs,selected_configs_present
+1,11,True,100,100,100,True
+2,11,True,100,100,100,True
+3,11,True,100,100,100,True

@@ -1,0 +1,2 @@
+trials,fwd_mean_ms,fwd_between_trial_std_ms,dx_mean_ms,dx_between_trial_std_ms,dk_mean_ms,dk_between_trial_std_ms,total_mean_ms,total_between_trial_std_ms,sum_of_phase_medians_ms,warp_speedup,warp_reduction_pct
+3,7.601363628705343,0.00690102062527658,12.696599909464519,0.006455473038710043,34.58814977010091,0.0231100367885274,54.88611330827077,0.03528505619747603,54.86574959754944,4.0401382900376595,75.24837200583352

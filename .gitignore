@@ -1,0 +1,33 @@
+# Large local datasets
+/pre_preprocessed_data/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local environments and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+
+# Local backups
+/backups/
+/markdown_before_TACO_update.tar.gz
+/pathtile_markdown_review.tar.gz
+/pathtile_markdown_TACO_update.tar.gz
+
+# Temporary files
+/a100_validate.log
+*.swp
+*.tmp
+*~

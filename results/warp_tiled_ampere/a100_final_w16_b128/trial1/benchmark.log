@@ -1,0 +1,31 @@
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA A100-PCIE-40GB
+Compute capability: 8.0
+SM count:           108
+Total memory:       39.38 GiB
+Selected profile:   a100
+Peak BW reference:  1555.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED AMPERE OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers        a100                8.0                   0
+ bwd_input                512               16               32                     16384               3072                      3072                           4                       64          1.000 threads,warps,registers        a100                8.0                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           6                       24          0.375           shared_memory        a100                8.0                   0
+
+========================================================================================
+NVIDIA A100 40GB KERNEL MICROBENCHMARK
+========================================================================================
+B=16384, H=128, L=48, K=48, warmup=50, runs=100
+     phase  runs  mean_ms  median_ms   std_ms   p05_ms   p95_ms  algorithmic_bytes  algorithmic_bandwidth_gbps  pct_of_peak_algorithmic       technique gpu_profile           device_name  warps_per_block  bwdk_btile  bwdk_block
+       fwd   100 3.609928   3.608576 0.009558 3.607552 3.609600          805330944                  223.087829                14.346484 WarpThread-a100        a100 NVIDIA A100-PCIE-40GB               16          64         128
+ bwd_input   100 3.539139   3.542016 0.034945 3.501056 3.584000          805330944                  227.549988                14.633440 WarpThread-a100        a100 NVIDIA A100-PCIE-40GB               16          64         128
+bwd_weight   100 4.120801   4.128768 0.022848 4.081664 4.146176          805330944                  195.430668                12.567889 WarpThread-a100        a100 NVIDIA A100-PCIE-40GB               16          64         128
+
+Sum of phase means:   11.2699 ms
+Sum of phase medians: 11.2794 ms
+Note: algorithmic bandwidth uses unique minimum bytes; Nsight Compute is required for actual DRAM traffic.

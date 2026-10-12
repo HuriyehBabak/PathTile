@@ -1,0 +1,4 @@
+trial,correctness_rows,correctness_pass,fwd_samples,bwd_input_samples,bwd_weight_samples,calls_per_sample,measured_calls_per_phase,fixed_configs_match,fwd_within_trial_cv_pct,bwd_input_within_trial_cv_pct,bwd_weight_within_trial_cv_pct,max_phase_within_trial_cv_pct
+1,11,True,20,20,20,32,640,True,5.2466137807217885,3.6859167672989877,3.303936612283754,5.2466137807217885
+2,11,True,20,20,20,32,640,True,3.8794136964218695,3.6189444952772227,2.0353595663045687,3.8794136964218695
+3,11,True,20,20,20,32,640,True,0.0021269727208372696,0.002190752964285571,2.033920931578962,2.033920931578962

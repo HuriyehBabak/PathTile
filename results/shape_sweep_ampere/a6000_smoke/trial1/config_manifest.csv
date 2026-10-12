@@ -1,0 +1,3 @@
+config_id,B,H,L,K,sweep_group
+smoke_b64_h8_l16_k8,64,8,16,8,smoke
+smoke_b128_h16_l48_k48,128,16,48,48,smoke

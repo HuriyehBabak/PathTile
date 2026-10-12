@@ -1,0 +1,194 @@
+========================================================================
+SHARED MEMORY BENCHMARK
+========================================================================
+GPU: NVIDIA RTX A6000
+PyTorch: 2.10.0+cu128
+B=16384, H=128, L=48, K=48
+FP32
+TPB=512
+TTILE=32
+HTILE=16
+BWD_K_B_TILE=64
+FWD/BWD-IN shared=5056 bytes/block
+BWD-K shared=24576 bytes/block
+Warm-up=50
+Measured runs=100
+========================================================================
+
+Warm-up...
+  warm-up 1/50
+  warm-up 2/50
+  warm-up 3/50
+  warm-up 4/50
+  warm-up 5/50
+  warm-up 6/50
+  warm-up 7/50
+  warm-up 8/50
+  warm-up 9/50
+  warm-up 10/50
+  warm-up 11/50
+  warm-up 12/50
+  warm-up 13/50
+  warm-up 14/50
+  warm-up 15/50
+  warm-up 16/50
+  warm-up 17/50
+  warm-up 18/50
+  warm-up 19/50
+  warm-up 20/50
+  warm-up 21/50
+  warm-up 22/50
+  warm-up 23/50
+  warm-up 24/50
+  warm-up 25/50
+  warm-up 26/50
+  warm-up 27/50
+  warm-up 28/50
+  warm-up 29/50
+  warm-up 30/50
+  warm-up 31/50
+  warm-up 32/50
+  warm-up 33/50
+  warm-up 34/50
+  warm-up 35/50
+  warm-up 36/50
+  warm-up 37/50
+  warm-up 38/50
+  warm-up 39/50
+  warm-up 40/50
+  warm-up 41/50
+  warm-up 42/50
+  warm-up 43/50
+  warm-up 44/50
+  warm-up 45/50
+  warm-up 46/50
+  warm-up 47/50
+  warm-up 48/50
+  warm-up 49/50
+  warm-up 50/50
+
+Measured runs...
+  run  1/100 | fwd=5.896192 ms | bwd_in=5.865472 ms | bwd_k=9.803776 ms
+  run  2/100 | fwd=5.897216 ms | bwd_in=5.847040 ms | bwd_k=9.728000 ms
+  run  3/100 | fwd=5.820416 ms | bwd_in=5.787648 ms | bwd_k=9.700352 ms
+  run  4/100 | fwd=5.823488 ms | bwd_in=5.788672 ms | bwd_k=9.623552 ms
+  run  5/100 | fwd=5.773312 ms | bwd_in=5.741568 ms | bwd_k=9.622528 ms
+  run  6/100 | fwd=5.773312 ms | bwd_in=5.741568 ms | bwd_k=9.621504 ms
+  run  7/100 | fwd=5.807104 ms | bwd_in=5.696512 ms | bwd_k=9.545728 ms
+  run  8/100 | fwd=5.744640 ms | bwd_in=5.793792 ms | bwd_k=9.700352 ms
+  run  9/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.698304 ms
+  run 10/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.698304 ms
+  run 11/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.698304 ms
+  run 12/100 | fwd=5.818368 ms | bwd_in=5.789696 ms | bwd_k=9.698304 ms
+  run 13/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.654272 ms
+  run 14/100 | fwd=5.769216 ms | bwd_in=5.740544 ms | bwd_k=9.624576 ms
+  run 15/100 | fwd=5.780480 ms | bwd_in=5.747648 ms | bwd_k=9.623552 ms
+  run 16/100 | fwd=5.773312 ms | bwd_in=5.742592 ms | bwd_k=9.622528 ms
+  run 17/100 | fwd=5.771264 ms | bwd_in=5.741568 ms | bwd_k=9.620480 ms
+  run 18/100 | fwd=5.770208 ms | bwd_in=5.741568 ms | bwd_k=9.621504 ms
+  run 19/100 | fwd=5.772288 ms | bwd_in=5.741568 ms | bwd_k=9.622528 ms
+  run 20/100 | fwd=5.781504 ms | bwd_in=5.787648 ms | bwd_k=9.698304 ms
+  run 21/100 | fwd=5.817344 ms | bwd_in=5.787648 ms | bwd_k=9.696256 ms
+  run 22/100 | fwd=5.817344 ms | bwd_in=5.787648 ms | bwd_k=9.699328 ms
+  run 23/100 | fwd=5.816320 ms | bwd_in=5.787648 ms | bwd_k=9.699328 ms
+  run 24/100 | fwd=5.816320 ms | bwd_in=5.787648 ms | bwd_k=9.699296 ms
+  run 25/100 | fwd=5.818368 ms | bwd_in=5.787648 ms | bwd_k=9.655296 ms
+  run 26/100 | fwd=5.772288 ms | bwd_in=5.742592 ms | bwd_k=9.621504 ms
+  run 27/100 | fwd=5.770240 ms | bwd_in=5.741568 ms | bwd_k=9.619456 ms
+  run 28/100 | fwd=5.772288 ms | bwd_in=5.740544 ms | bwd_k=9.622528 ms
+  run 29/100 | fwd=5.770240 ms | bwd_in=5.739520 ms | bwd_k=9.619456 ms
+  run 30/100 | fwd=5.771264 ms | bwd_in=5.740544 ms | bwd_k=9.625600 ms
+  run 31/100 | fwd=5.771264 ms | bwd_in=5.740544 ms | bwd_k=9.622528 ms
+  run 32/100 | fwd=5.779456 ms | bwd_in=5.787648 ms | bwd_k=9.700352 ms
+  run 33/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.699328 ms
+  run 34/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.699328 ms
+  run 35/100 | fwd=5.860352 ms | bwd_in=5.797888 ms | bwd_k=9.681920 ms
+  run 36/100 | fwd=5.769216 ms | bwd_in=5.740512 ms | bwd_k=9.620480 ms
+  run 37/100 | fwd=5.771264 ms | bwd_in=5.740544 ms | bwd_k=9.632768 ms
+  run 38/100 | fwd=5.803008 ms | bwd_in=5.748736 ms | bwd_k=9.564160 ms
+  run 39/100 | fwd=5.727232 ms | bwd_in=5.700608 ms | bwd_k=9.544704 ms
+  run 40/100 | fwd=5.728256 ms | bwd_in=5.695488 ms | bwd_k=9.546752 ms
+  run 41/100 | fwd=5.726176 ms | bwd_in=5.695488 ms | bwd_k=9.546752 ms
+  run 42/100 | fwd=5.725184 ms | bwd_in=5.694464 ms | bwd_k=9.547776 ms
+  run 43/100 | fwd=5.724160 ms | bwd_in=5.739520 ms | bwd_k=9.622528 ms
+  run 44/100 | fwd=5.778432 ms | bwd_in=5.744640 ms | bwd_k=9.624576 ms
+  run 45/100 | fwd=5.773312 ms | bwd_in=5.843968 ms | bwd_k=9.943040 ms
+  run 46/100 | fwd=5.882880 ms | bwd_in=5.835776 ms | bwd_k=9.777152 ms
+  run 47/100 | fwd=5.865472 ms | bwd_in=5.834752 ms | bwd_k=9.781248 ms
+  run 48/100 | fwd=5.866496 ms | bwd_in=5.836800 ms | bwd_k=9.778176 ms
+  run 49/100 | fwd=5.866496 ms | bwd_in=5.839872 ms | bwd_k=9.721856 ms
+  run 50/100 | fwd=5.820416 ms | bwd_in=5.800960 ms | bwd_k=9.633792 ms
+  run 51/100 | fwd=5.771264 ms | bwd_in=5.742592 ms | bwd_k=9.622528 ms
+  run 52/100 | fwd=5.772288 ms | bwd_in=5.742592 ms | bwd_k=9.621504 ms
+  run 53/100 | fwd=5.769216 ms | bwd_in=5.738496 ms | bwd_k=9.619456 ms
+  run 54/100 | fwd=5.768192 ms | bwd_in=5.739520 ms | bwd_k=9.620480 ms
+  run 55/100 | fwd=5.774336 ms | bwd_in=5.785600 ms | bwd_k=9.701376 ms
+  run 56/100 | fwd=5.838848 ms | bwd_in=5.833728 ms | bwd_k=9.779200 ms
+  run 57/100 | fwd=5.863424 ms | bwd_in=5.834752 ms | bwd_k=9.779200 ms
+  run 58/100 | fwd=5.867520 ms | bwd_in=5.837824 ms | bwd_k=9.780192 ms
+  run 59/100 | fwd=5.865472 ms | bwd_in=5.835776 ms | bwd_k=9.780224 ms
+  run 60/100 | fwd=5.866496 ms | bwd_in=5.840896 ms | bwd_k=9.681920 ms
+  run 61/100 | fwd=5.771296 ms | bwd_in=5.742592 ms | bwd_k=9.622528 ms
+  run 62/100 | fwd=5.772288 ms | bwd_in=5.742592 ms | bwd_k=9.621504 ms
+  run 63/100 | fwd=5.771264 ms | bwd_in=5.749760 ms | bwd_k=9.622528 ms
+  run 64/100 | fwd=5.773312 ms | bwd_in=5.743616 ms | bwd_k=9.619456 ms
+  run 65/100 | fwd=5.770240 ms | bwd_in=5.746688 ms | bwd_k=9.621504 ms
+  run 66/100 | fwd=5.771264 ms | bwd_in=5.742592 ms | bwd_k=9.621504 ms
+  run 67/100 | fwd=5.782528 ms | bwd_in=5.786624 ms | bwd_k=9.699328 ms
+  run 68/100 | fwd=5.817344 ms | bwd_in=5.788672 ms | bwd_k=9.697280 ms
+  run 69/100 | fwd=5.819392 ms | bwd_in=5.789696 ms | bwd_k=9.700352 ms
+  run 70/100 | fwd=5.819392 ms | bwd_in=5.788672 ms | bwd_k=9.699328 ms
+  run 71/100 | fwd=5.817344 ms | bwd_in=5.788672 ms | bwd_k=9.699328 ms
+  run 72/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.654272 ms
+  run 73/100 | fwd=5.773312 ms | bwd_in=5.742592 ms | bwd_k=9.623552 ms
+  run 74/100 | fwd=5.771264 ms | bwd_in=5.740544 ms | bwd_k=9.623552 ms
+  run 75/100 | fwd=5.771264 ms | bwd_in=5.741568 ms | bwd_k=9.622528 ms
+  run 76/100 | fwd=5.768192 ms | bwd_in=5.739520 ms | bwd_k=9.620480 ms
+  run 77/100 | fwd=5.769216 ms | bwd_in=5.739520 ms | bwd_k=9.620480 ms
+  run 78/100 | fwd=5.770208 ms | bwd_in=5.739520 ms | bwd_k=9.619456 ms
+  run 79/100 | fwd=5.791744 ms | bwd_in=5.839872 ms | bwd_k=9.777152 ms
+  run 80/100 | fwd=5.863424 ms | bwd_in=5.834752 ms | bwd_k=9.776128 ms
+  run 81/100 | fwd=5.827584 ms | bwd_in=5.789696 ms | bwd_k=9.700352 ms
+  run 82/100 | fwd=5.818368 ms | bwd_in=5.789696 ms | bwd_k=9.697280 ms
+  run 83/100 | fwd=5.817344 ms | bwd_in=5.786624 ms | bwd_k=9.699328 ms
+  run 84/100 | fwd=5.818368 ms | bwd_in=5.787648 ms | bwd_k=9.646080 ms
+  run 85/100 | fwd=5.774336 ms | bwd_in=5.743616 ms | bwd_k=9.622528 ms
+  run 86/100 | fwd=5.772288 ms | bwd_in=5.742592 ms | bwd_k=9.622528 ms
+  run 87/100 | fwd=5.771264 ms | bwd_in=5.741568 ms | bwd_k=9.623552 ms
+  run 88/100 | fwd=5.771264 ms | bwd_in=5.741568 ms | bwd_k=9.624576 ms
+  run 89/100 | fwd=5.771264 ms | bwd_in=5.744640 ms | bwd_k=9.620480 ms
+  run 90/100 | fwd=5.770240 ms | bwd_in=5.740544 ms | bwd_k=9.621504 ms
+  run 91/100 | fwd=5.795840 ms | bwd_in=5.835776 ms | bwd_k=9.780224 ms
+  run 92/100 | fwd=5.864448 ms | bwd_in=5.843968 ms | bwd_k=9.774080 ms
+  run 93/100 | fwd=5.865472 ms | bwd_in=5.835776 ms | bwd_k=9.777120 ms
+  run 94/100 | fwd=5.866464 ms | bwd_in=5.840896 ms | bwd_k=9.777152 ms
+  run 95/100 | fwd=5.864448 ms | bwd_in=5.834752 ms | bwd_k=9.736192 ms
+  run 96/100 | fwd=5.818368 ms | bwd_in=5.788672 ms | bwd_k=9.643008 ms
+  run 97/100 | fwd=5.772288 ms | bwd_in=5.743616 ms | bwd_k=9.622528 ms
+  run 98/100 | fwd=5.770272 ms | bwd_in=5.742592 ms | bwd_k=9.623552 ms
+  run 99/100 | fwd=5.772288 ms | bwd_in=5.741568 ms | bwd_k=9.621504 ms
+  run 100/100 | fwd=5.771264 ms | bwd_in=5.741568 ms | bwd_k=9.622528 ms
+
+========================================================================
+RESULTS
+========================================================================
+
+Forward:
+Mean = 5.798768 ms
+Std  = 0.040036 ms
+95% CI = [5.790580, 5.806956]
+
+Backward Input:
+Mean = 5.772942 ms
+Std  = 0.040948 ms
+95% CI = [5.764568, 5.781317]
+
+Backward Kernel:
+Mean = 9.666784 ms
+Std  = 0.068734 ms
+95% CI = [9.652727, 9.680842]
+
+Saved:
+results/a6000_final_baselines/shared/current/shared_runtime_raw.csv
+results/a6000_final_baselines/shared/current/shared_runtime_summary.csv
+results/a6000_final_baselines/shared/current/shared_runtime_metadata.json

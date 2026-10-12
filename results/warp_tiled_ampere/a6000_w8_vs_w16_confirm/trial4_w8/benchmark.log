@@ -1,0 +1,31 @@
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED AMPERE OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                256                8               40                     10240               1536                      1536                           6                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                256                8               40                     10240               1536                      1536                           6                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+NVIDIA RTX A6000 KERNEL MICROBENCHMARK
+========================================================================================
+B=16384, H=128, L=48, K=48, warmup=50, runs=100
+     phase  runs  mean_ms  median_ms   std_ms   p05_ms   p95_ms  algorithmic_bytes  algorithmic_bandwidth_gbps  pct_of_peak_algorithmic            technique gpu_profile      device_name  warps_per_block  bwdk_btile  bwdk_block
+       fwd   100 5.026652   4.953088 0.156968 4.900813 5.373952          805330944                  160.212189                20.860962 WarpThread-rtx_a6000   rtx_a6000 NVIDIA RTX A6000                8          64         128
+ bwd_input   100 4.908053   4.904960 0.011520 4.903936 4.952115          805330944                  164.083603                21.365052 WarpThread-rtx_a6000   rtx_a6000 NVIDIA RTX A6000                8          64         128
+bwd_weight   100 5.521900   5.509120 0.061323 5.459968 5.665792          805330944                  145.843099                18.989987 WarpThread-rtx_a6000   rtx_a6000 NVIDIA RTX A6000                8          64         128
+
+Sum of phase means:   15.4566 ms
+Sum of phase medians: 15.3672 ms
+Note: algorithmic bandwidth uses unique minimum bytes; Nsight Compute is required for actual DRAM traffic.

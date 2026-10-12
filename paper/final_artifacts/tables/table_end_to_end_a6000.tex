@@ -1,0 +1,8 @@
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Backend & Trials & Epoch wall mean (s) & Epoch wall std (s) & Throughput (samples/s) & Model FWD (ms/batch) & Backward (ms/batch) & All GPU stages (ms/batch) & GPU utilization mean (\%) & GPU utilization std (\%) & Peak memory (GiB) & Test RMSLE \\
+\midrule
+PyTorch & 3 & 17.229 & 0.044 & 37086.740 & 96.865 & 256.693 & 354.214 & 79.765 & 0.217 & 9.041 & 0.038 \\
+PathTile & 3 & 16.727 & 0.140 & 38200.913 & 79.156 & 131.598 & 211.411 & 48.644 & 0.395 & 9.040 & 0.038 \\
+\bottomrule
+\end{tabular}

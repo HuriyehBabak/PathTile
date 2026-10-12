@@ -1,0 +1,58 @@
+{
+  "gpu": "NVIDIA RTX A6000",
+  "pytorch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "seed": 42,
+  "B": 16384,
+  "H": 128,
+  "L": 192,
+  "K": 192,
+  "dtype": "float32",
+  "warmup": 5,
+  "runs": 30,
+  "shared_bwd_k_b_tile": 32,
+  "shared_fwd_bwd_input_bytes": 14272,
+  "shared_bwd_kernel_bytes": 49152,
+  "summary": {
+    "gmc_forward": {
+      "mean_ms": 66.71830927530924,
+      "std_ms": 0.3380069472246852,
+      "ci95_low_ms": 66.59209540695686,
+      "ci95_high_ms": 66.84452314366162
+    },
+    "gmc_backward_input": {
+      "mean_ms": 70.68770980834961,
+      "std_ms": 0.3566802322056721,
+      "ci95_low_ms": 70.55452322079235,
+      "ci95_high_ms": 70.82089639590687
+    },
+    "gmc_backward_kernel": {
+      "mean_ms": 117.01166076660157,
+      "std_ms": 0.3532279705549911,
+      "ci95_low_ms": 116.87976327473028,
+      "ci95_high_ms": 117.14355825847285
+    },
+    "shared_forward": {
+      "mean_ms": 66.43595987955729,
+      "std_ms": 0.29806978065334183,
+      "ci95_low_ms": 66.3246587942864,
+      "ci95_high_ms": 66.54726096482817
+    },
+    "shared_backward_input": {
+      "mean_ms": 68.75088195800781,
+      "std_ms": 0.2648433665701544,
+      "ci95_low_ms": 68.65198781965725,
+      "ci95_high_ms": 68.84977609635837
+    },
+    "shared_backward_kernel": {
+      "mean_ms": 90.96079432169596,
+      "std_ms": 0.3651338159063606,
+      "ci95_low_ms": 90.82445111410746,
+      "ci95_high_ms": 91.09713752928445
+    }
+  },
+  "gmc_total_ms": 254.4176798502604,
+  "shared_total_ms": 226.14763615926108,
+  "overall_speedup": 1.1250070271399635,
+  "runtime_reduction_pct": 11.111666338454896
+}

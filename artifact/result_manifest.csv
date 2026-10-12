@@ -1,0 +1,9 @@
+category,inputs,outputs,producer
+main_three_gpu,"results/{a100_baselines,a6000_final_baselines,v100_final_baselines}/<method>/trial*/<summary>.csv; results/warp_tiled_{ampere,volta}/<final>/trial*/benchmark_summary.csv","results/{a100,a6000,v100}_final_summary/*_aggregate_summary.csv; results/cross_gpu_final_summary/cross_gpu_3gpu_*.csv",scripts/aggregate_main_results.py
+torch_compile,results/a6000_final_baselines/torch_compile/trial*/torch_compile_runtime_summary_a6000.csv; trial*/benchmark.log,results/a6000_final_baselines/torch_compile/final_*.csv,scripts/aggregate_main_results.py
+shape_generalization,"results/shape_sweep_{ampere,volta}/<final>/trial*/trial_summary.csv; trial*/correctness.csv","results/shape_sweep_{ampere,volta}/<final>/aggregate_*.csv",scripts/aggregate_shape_results.py
+pathtile_training_holdout,"results/pathtile_candidates/{a100,a6000,v100}_{train,holdout}/trial*/{trial_summary,correctness,metadata}.csv|json","results/pathtile_candidates/*/aggregate_*.csv; results/pathtile_selector/{architecture_static_training,frozen_policy,holdout_evaluation}/*",scripts/aggregate_pathtile_results.py
+nsight_a100,"results/nsight/a100_main/{fwd,bwd_input,bwd_weight}/*_details.csv",results/nsight/a100_main/a100_main_ncu_key_metrics.csv,scripts/extract_ncu_metrics.py
+end_to_end_a6000,"results/end_to_end/a6000_final_serial/trial*/{warp,pytorch}/training_*.csv",results/end_to_end/a6000_final_serial/final_*.csv,scripts/aggregate_end_to_end.py
+external_compiler_baselines,"results/external_baselines/{triton,tvm}/{a100,a6000,v100_stability_v3}/<trial and aggregate evidence>",results/external_baselines/final_summary/*,scripts/aggregate_external_baselines.py
+paper_figures_tables,canonical outputs above,"paper/final_artifacts/{figures,tables}; paper/final_artifacts/artifact_manifest.csv",paper/generate_final_figures.py

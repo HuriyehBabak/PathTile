@@ -1,0 +1,9 @@
+\begin{tabular}{llrrrrrrrr}
+\toprule
+GPU & Architecture & CC & PyTorch total (ms) & PathTile total (ms) & PathTile std (ms) & Speedup & Reduction (\%) & W & dK block \\
+\midrule
+A100 & Ampere & 8.000 & 47.424 & 11.283 & 0.013 & 4.203 & 76.209 & 16 & 128 \\
+RTX A6000 & Ampere & 8.600 & 56.723 & 15.212 & 0.053 & 3.729 & 73.182 & 16 & 128 \\
+V100 & Volta & 7.000 & 54.886 & 13.585 & 0.001 & 4.040 & 75.248 & 16 & 256 \\
+\bottomrule
+\end{tabular}

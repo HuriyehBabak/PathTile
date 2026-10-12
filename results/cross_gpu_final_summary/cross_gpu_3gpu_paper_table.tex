@@ -1,0 +1,9 @@
+\begin{tabular}{lllrrrrrrr}
+\toprule
+gpu & architecture & compute_capability & pytorch_total_ms & warp_total_ms & warp_total_between_trial_std_ms & warp_speedup_vs_pytorch & warp_reduction_vs_pytorch_pct & warp_w & warp_bwdk_block \\
+\midrule
+NVIDIA A100-PCIE-40GB & Ampere & 8.0 & 47.424 & 11.283 & 0.013 & 4.203 & 76.209 & 16 & 128 \\
+NVIDIA RTX A6000 & Ampere & 8.6 & 56.723 & 15.212 & 0.053 & 3.729 & 73.182 & 16 & 128 \\
+Tesla V100-SXM3-32GB & Volta & 7.0 & 54.886 & 13.585 & 0.001 & 4.040 & 75.248 & 16 & 256 \\
+\bottomrule
+\end{tabular}

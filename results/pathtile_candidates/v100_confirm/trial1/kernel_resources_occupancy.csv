@@ -1,0 +1,11 @@
+kernel,threads_per_block,warps_per_block,regs_per_thread,allocated_regs_per_block,static_smem_bytes,allocated_smem_bytes_est,resident_blocks_per_sm_est,active_warps_per_sm_est,occupancy_est,limiting_resources_est,gpu_profile,compute_capability,local_memory_bytes,trial_id,candidate_kind,candidate_value,schedule_id,bwdk_btile,bwdk_block
+fwd,256,8,32,8192,1536,1536,8,64,1.0,"threads,warps,registers",v100_sxm3_32gb,7.0,0,1,warps_per_block,8,w8,64,128
+bwd_input,256,8,32,8192,1536,1536,8,64,1.0,"threads,warps,registers",v100_sxm3_32gb,7.0,0,1,warps_per_block,8,w8,64,128
+fwd,512,16,32,16384,3072,3072,4,64,1.0,"threads,warps,registers",v100_sxm3_32gb,7.0,0,1,warps_per_block,16,w16,64,128
+bwd_input,512,16,32,16384,3072,3072,4,64,1.0,"threads,warps,registers",v100_sxm3_32gb,7.0,0,1,warps_per_block,16,w16,64,128
+bwd_weight,128,16,40,5120,24640,24832,3,12,0.1875,shared_memory,v100_sxm3_32gb,7.0,0,1,bwdk_block,128,b128,64,128
+bwd_weight,192,16,40,7680,24672,24832,3,18,0.28125,shared_memory,v100_sxm3_32gb,7.0,0,1,bwdk_block,192,b192,64,192
+bwd_weight,224,16,40,8960,24688,24832,3,21,0.328125,shared_memory,v100_sxm3_32gb,7.0,0,1,bwdk_block,224,b224,64,224
+bwd_weight,256,16,40,10240,24704,24832,3,24,0.375,shared_memory,v100_sxm3_32gb,7.0,0,1,bwdk_block,256,b256,64,256
+bwd_weight,320,16,40,12800,24736,24832,3,30,0.46875,shared_memory,v100_sxm3_32gb,7.0,0,1,bwdk_block,320,b320,64,320
+bwd_weight,384,16,40,15360,24768,24832,3,36,0.5625,shared_memory,v100_sxm3_32gb,7.0,0,1,bwdk_block,384,b384,64,384

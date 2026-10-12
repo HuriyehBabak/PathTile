@@ -1,0 +1,11 @@
+config_id,B,H,L,K,sweep_group,validation_B,fwd_max_abs,bwd_input_max_abs,bwd_weight_max_abs,fwd_normalized_max_abs,bwd_input_normalized_max_abs,bwd_weight_normalized_max_abs,fwd_allclose,bwd_input_allclose,bwd_weight_allclose,all_correct,trial_id
+kernel_b8192_h128_l48_k24,8192,128,48,24,kernel,128,0.0,0.0,3.814697265625e-05,0.0,0.0,1.2180514840154616e-07,True,True,True,True,2
+kernel_b8192_h128_l48_k8,8192,128,48,8,kernel,128,0.0,0.0,4.57763671875e-05,0.0,0.0,1.585506022703178e-07,True,True,True,True,2
+sequence_b8192_h128_l32_k32,8192,128,32,32,sequence,128,0.0,0.0,3.0517578125e-05,0.0,0.0,1.4841445865529377e-07,True,True,True,True,2
+sequence_b8192_h128_l24_k24,8192,128,24,24,sequence,128,0.0,0.0,3.0517578125e-05,0.0,0.0,1.713857739524473e-07,True,True,True,True,2
+sequence_b8192_h128_l16_k16,8192,128,16,16,sequence,128,0.0,0.0,1.52587890625e-05,0.0,0.0,1.1628478935649974e-07,True,True,True,True,2
+channel_b8192_h256_l48_k48,8192,256,48,48,channel,128,0.0,0.0,4.9591064453125e-05,0.0,0.0,1.8761708749468035e-07,True,True,True,True,2
+channel_b8192_h64_l48_k48,8192,64,48,48,channel,128,0.0,0.0,4.1961669921875e-05,0.0,0.0,1.461943070129356e-07,True,True,True,True,2
+batch_b8192_h128_l48_k48,8192,128,48,48,batch,128,0.0,0.0,4.57763671875e-05,0.0,0.0,1.543173361124171e-07,True,True,True,True,2
+batch_b2048_h128_l48_k48,2048,128,48,48,batch,128,0.0,0.0,4.57763671875e-05,0.0,0.0,1.7620042116599336e-07,True,True,True,True,2
+main_b16384_h128_l48_k48,16384,128,48,48,main,128,0.0,0.0,4.57763671875e-05,0.0,0.0,1.7145800341955843e-07,True,True,True,True,2

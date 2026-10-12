@@ -1,0 +1,17 @@
+==========================================
+SLURM_JOB_ID = 111832
+SLURM_NODELIST = pascal-node12.l3s.intra
+==========================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/huriyeh.babak/s4convd-paper/benchmark/benchmark_pathtile_candidate_sweep.py", line 865, in <module>
+    main()
+    ~~~~^^
+  File "/home/huriyeh.babak/s4convd-paper/benchmark/benchmark_pathtile_candidate_sweep.py", line 859, in main
+    run_trial(args)
+    ~~~~~~~~~^^^^^^
+  File "/home/huriyeh.babak/s4convd-paper/benchmark/benchmark_pathtile_candidate_sweep.py", line 497, in run_trial
+    raise ValueError("Use at least one warm-up and two measured runs")
+ValueError: Use at least one warm-up and two measured runs
+==ERROR== The application returned an error code (1).

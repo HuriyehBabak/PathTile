@@ -1,0 +1,6 @@
+phase,candidate_kind,winner_value,shapes_won
+bwd_input,warps_per_block,16,9
+bwd_input,warps_per_block,8,1
+bwd_weight,bwdk_block,128,10
+fwd,warps_per_block,16,8
+fwd,warps_per_block,8,2

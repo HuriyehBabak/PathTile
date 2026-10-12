@@ -1,0 +1,2163 @@
+==========================================
+SLURM_JOB_ID = 115224
+SLURM_NODELIST = pascal-node14.l3s.intra
+==========================================
+HOST:
+pascal-node14
+GPU:
+NVIDIA RTX A6000
+CACHE FILES BEFORE:
+9
+
+================================================================
+TRIAL 2
+================================================================
+====================================================================================================
+PATHTILE FACTORIZED CANDIDATE SWEEP
+====================================================================================================
+GPU:        NVIDIA RTX A6000
+Preset:     pathtile-train
+Trial:      2
+Protocol:   warmup=50, runs=100, strict FP32
+W candidates:     [4, 8, 16]
+BWDK candidates:  [96, 128, 192, 224, 256, 320, 384]
+Shapes:            20
+
+----------------------------------------------------------------------------------------------------
+Candidate 1/10: b384 (bwdk_block=384), phases=('bwd_weight',)
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.03337   1.031168 0.005575
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.582784    2.57536 0.015084
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.644777   2.634752 0.021931
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.763023   0.764928 0.018275
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.580544   1.580032 0.005074
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.654899   0.671744 0.042677
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.838533   0.836608 0.006408
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.670e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.057897   0.057344 0.002923
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.649469   1.648128 0.01786
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.213197   0.200704 0.017926
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.66398   1.667072 0.011089
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.784138   0.774144 0.015828
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.650483   1.652736 0.008245
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.132431   1.123328 0.015314
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.657808   0.674816 0.035716
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.954857   5.922816 0.120813
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.491763   1.488896 0.01047
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.958019   2.946048 0.023785
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.758743   0.754688 0.016182
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.962516   5.922816 0.147116
+
+----------------------------------------------------------------------------------------------------
+Candidate 2/10: b320 (bwdk_block=320), phases=('bwd_weight',)
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.043272   1.035264 0.01591
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.457375   2.455552 0.005832
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.513992   2.511872 0.007442
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.744049   0.756736 0.031692
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.596774     1.5872 0.015381
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.627364    0.64512 0.039269
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.792965     0.7936 0.009354
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.055429   0.055296 0.002813
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=6.104e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.644462    1.64352 0.011439
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.200561   0.197632 0.011683
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.647555   1.649152 0.010692
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.771338   0.771072 0.009138
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.57611   1.569792 0.018569
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.068216   1.058816 0.016304
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=1.907e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.622807   0.645632 0.04016
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.786552   5.757952 0.088494
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.005e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.462026   1.463296 0.008792
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 2.887496   2.891776 0.01062
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.722606   0.730112 0.021996
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.820078   5.812224 0.059188
+
+----------------------------------------------------------------------------------------------------
+Candidate 3/10: b256 (bwdk_block=256), phases=('bwd_weight',)
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.99242   0.987136 0.008288
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.283008   2.281472 0.006296
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.283069   2.282496 0.002653
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.722616   0.719872 0.018494
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.533573    1.52576 0.012189
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.565955   0.592896 0.047769
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.735826   0.738304 0.008695
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.056156   0.055296 0.003151
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.570703   1.565696 0.01078
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.194243   0.187904 0.008102
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.568481   1.564672 0.009117
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.719852   0.734208 0.033611
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.465702   1.462272 0.010907
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.029294   1.028096 0.012148
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.562074   0.581632 0.033938
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.569208   5.572608 0.013934
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.386711   1.384448  0.0059
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.771456   2.772992 0.007365
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.959e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.70527   0.707584 0.007866
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 5.569065   5.572608 0.01378
+
+----------------------------------------------------------------------------------------------------
+Candidate 4/10: b224 (bwdk_block=224), phases=('bwd_weight',)
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.01761   1.010688 0.012015
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  2.35136    2.35008 0.008285
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.337e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.252564   2.250752 0.007554
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.778056   0.774144 0.010369
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.538202   1.532928 0.01147
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.585871    0.60928 0.042003
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.758784   0.765952 0.009542
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.058009   0.057344 0.002552
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight   1.6175   1.615872 0.006292
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.194877   0.187392 0.015183
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.592719   1.584128 0.015371
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.789412   0.785408  0.0083
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.47925   1.477632 0.005719
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.012675   1.009664 0.013704
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.567859   0.571392 0.008888
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.638738   5.634048 0.030684
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.433641   1.431552 0.011306
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  2.81685   2.803712 0.026177
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.722237   0.718848 0.013146
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.637478      5.632 0.025988
+
+----------------------------------------------------------------------------------------------------
+Candidate 5/10: b192 (bwdk_block=192), phases=('bwd_weight',)
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.987791   0.982016 0.008649
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.297016   2.282496 0.017413
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.276618   2.276352 0.004095
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.740946   0.746496 0.018801
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.456067     1.4592 0.010966
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.58368   0.603136 0.041494
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.738263   0.748544 0.030067
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.054384   0.053248 0.00336
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.552148   1.552384 0.012882
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.188446   0.186368 0.018067
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.552589    1.55136 0.011809
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=6.104e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.74837    0.74752 0.010522
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.456691   1.449472 0.011062
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.982774   0.980992 0.010673
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=1.907e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.574157   0.579584 0.024163
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.494047    5.49376 0.003487
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.390664   1.393664 0.010891
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.746081   2.736128 0.021033
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.691671    0.70656 0.033269
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  5.47969   5.491712 0.022523
+
+----------------------------------------------------------------------------------------------------
+Candidate 6/10: b128 (bwdk_block=128), phases=('bwd_weight',)
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.998871   0.994304 0.008904
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.244762   2.235392 0.012718
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.018509   2.018304 0.003115
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.79276   0.792576 0.004345
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.384632   1.385472 0.011755
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.548157   0.561152 0.023368
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.711281     0.7168 0.009254
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.059217   0.058368 0.002657
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=6.104e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.574973   1.581056 0.012372
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight   0.1903    0.18432 0.011351
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.571236   1.560576 0.013607
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.794665   0.794624 0.005125
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.412229   1.417216 0.009736
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.943391   0.937984 0.009671
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=1.526e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.512563   0.523264 0.031099
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.959e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.418854    5.41696 0.009838
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.382246   1.379328 0.009692
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.723922   2.720768 0.010362
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.688865   0.695296 0.016194
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.456189   5.458944 0.012637
+
+----------------------------------------------------------------------------------------------------
+Candidate 7/10: b96 (bwdk_block=96), phases=('bwd_weight',)
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=5.341e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.111951    1.11104 0.00432
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.560451   2.562048 0.006852
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.422682   2.422784 0.004092
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.896748   0.897024 0.006118
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=2.670e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.502587    1.50016 0.006154
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.652216    0.65536 0.00588
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.814899   0.811008 0.006639
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.480e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.066437    0.06656 0.002514
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.771284    1.77152 0.002776
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.232345     0.2304 0.013992
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.769574   1.769472 0.004169
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.959e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.892867   0.888832 0.006484
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.606472   1.603584 0.007479
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.021553   1.015808 0.013397
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.601528   0.610304 0.016805
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.864e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 6.222213   6.185984 0.091109
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.558835   1.553408 0.009905
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.095245    3.10272 0.012351
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.780022   0.781312 0.003766
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 6.238802     6.1824 0.141713
+
+----------------------------------------------------------------------------------------------------
+Candidate 8/10: w16 (warps_per_block=16), phases=('fwd', 'bwd_input')
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.893368   0.892928 0.004748
+bwd_input 0.886979   0.891392 0.006000
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.553190   2.542592 0.012819
+bwd_input 2.559611   2.560000 0.001811
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.783311   3.782656 0.004560
+bwd_input 3.836037   3.808256 0.078734
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.964434   0.964608 0.003801
+bwd_input 0.967178   0.967168 0.001838
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.954970   1.950720 0.009441
+bwd_input 1.947832   1.947648 0.000589
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.652769   0.650240 0.004971
+bwd_input 0.647475   0.648192 0.002999
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.811827   0.809984 0.004901
+bwd_input 0.806748   0.808960 0.004100
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.085586   0.084992 0.002374
+bwd_input 0.089057   0.086016 0.018760
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.443000   1.442816 0.005558
+bwd_input 1.433487   1.437696 0.006489
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.248576   0.262144 0.021088
+bwd_input 0.260198   0.261120 0.001939
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.437696   1.443840 0.008997
+bwd_input 1.425357   1.425408 0.000469
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.958996   0.958464 0.002809
+bwd_input 0.958771   0.957440 0.003110
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.601464   1.600512 0.006244
+bwd_input 1.589555   1.585152 0.006869
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.279252   1.282048 0.007099
+bwd_input 1.264230   1.264640 0.000564
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.964710   0.965632 0.004435
+bwd_input 0.952771   0.952320 0.000588
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 4.921098   4.861952 0.128129
+bwd_input 4.897925   4.911104 0.021380
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.231206   1.238016 0.008627
+bwd_input 1.221212   1.222656 0.004293
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.432768   2.436096 0.009196
+bwd_input 2.436035   2.436096 0.003350
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.632617    0.62976 0.007051
+bwd_input 0.624609    0.62464 0.000471
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 4.948347   4.861952 0.163052
+bwd_input 4.893071   4.910080 0.025873
+
+----------------------------------------------------------------------------------------------------
+Candidate 9/10: w8 (warps_per_block=8), phases=('fwd', 'bwd_input')
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.898898   0.899072 0.009970
+bwd_input 0.887972   0.887808 0.000558
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.561259   2.561024 0.003943
+bwd_input 2.558597   2.558976 0.000518
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.890637   3.894272 0.011982
+bwd_input 3.980134   3.926016 0.120519
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.975258   0.974848 0.003742
+bwd_input 0.981719   0.982016 0.000605
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd  2.00660   2.001920 0.013941
+bwd_input  2.00492   2.004992 0.000510
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.661053   0.659456 0.008629
+bwd_input 0.654490   0.654336 0.000469
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.824115   0.820224 0.006814
+bwd_input 0.810168   0.809984 0.001998
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.092130   0.092160 0.002339
+bwd_input 0.097649   0.094208 0.016045
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.452749   1.463296 0.014545
+bwd_input 1.434778   1.434624 0.002195
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.251863   0.268288 0.025596
+bwd_input 0.267305   0.268288 0.001958
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd  1.43234   1.431552 0.003182
+bwd_input  1.42763   1.429504 0.004854
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.966523   0.969728 0.005653
+bwd_input 0.978053   0.977920 0.000428
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.616599   1.616896 0.005571
+bwd_input 1.611735   1.611776 0.000323
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.284219   1.290240 0.008931
+bwd_input 1.272597   1.272832 0.000561
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.984084   0.982016 0.005529
+bwd_input 0.974346   0.969728 0.005474
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.030154   4.952064 0.159806
+bwd_input 4.976947   4.954112 0.024659
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.244437    1.24416 0.002914
+bwd_input 1.244457    1.24416 0.000510
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.480476   2.480128 0.004026
+bwd_input 2.480568   2.480128 0.000550
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.629893   0.629760 0.003321
+bwd_input 0.628511   0.628736 0.000707
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.051525   4.952064 0.201931
+bwd_input 4.969124   4.953600 0.020705
+
+----------------------------------------------------------------------------------------------------
+Candidate 10/10: w4 (warps_per_block=4), phases=('fwd', 'bwd_input')
+[1/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.900383   0.901120 0.003209
+bwd_input 0.896870   0.897024 0.000512
+[2/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.636820   2.642944 0.013209
+bwd_input 2.657649   2.658304 0.007445
+[3/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 4.178534   4.177920 0.016780
+bwd_input 4.318874   4.285952 0.116634
+[4/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.973711   0.973824 0.002848
+bwd_input 1.000827   1.000448 0.001197
+[5/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.138798   2.138112 0.003878
+bwd_input 2.179133   2.179072 0.000541
+[6/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.673597   0.674816 0.006469
+bwd_input 0.671078   0.671744 0.001033
+[7/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.829788   0.828416 0.004391
+bwd_input 0.826010   0.825344 0.001597
+[8/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.095621   0.095232 0.002482
+bwd_input 0.101376   0.100352 0.004535
+[9/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.474447   1.474560 0.003994
+bwd_input 1.474202   1.477632 0.006892
+[10/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.265329   0.260096 0.008819
+bwd_input 0.282706   0.282624 0.001401
+[11/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.484657   1.483776 0.003645
+bwd_input 1.482988   1.489920 0.007952
+[12/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.969902   0.969728 0.003064
+bwd_input 0.998523   0.998400 0.000510
+[13/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.658122   1.657856 0.002913
+bwd_input 1.647493   1.647616 0.006136
+[14/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.319997   1.318912 0.003496
+bwd_input 1.328251   1.331200 0.005545
+[15/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.050368   1.049600 0.003405
+bwd_input 1.065759   1.065984 0.000495
+[16/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.127025   5.000192 0.234210
+bwd_input 5.032868   5.051392 0.029174
+[17/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.260401   1.256448 0.008438
+bwd_input 1.255977   1.256448 0.000553
+[18/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.516255   2.504704 0.013399
+bwd_input 2.504509   2.504704 0.000558
+[19/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.640748   0.641024 0.006470
+bwd_input 0.633815   0.633856 0.000503
+[20/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.128110   5.050368 0.183205
+bwd_input 5.052918   5.051392 0.014994
+
+====================================================================================================
+EMPIRICAL PER-PATH ORACLE
+====================================================================================================
+                  config_id      phase winner_schedule_id  winner_mean_ms  winner_margin_vs_second_pct  paper_default_regret_pct
+   batch_b2048_h128_l48_k48        fwd                 w8        0.629893                     0.432427                  0.432427
+   batch_b2048_h128_l48_k48  bwd_input                w16        0.624609                     0.624626                  0.000000
+   batch_b2048_h128_l48_k48 bwd_weight               b128        0.688865                     0.407303                  0.000000
+   batch_b8192_h128_l48_k48        fwd                w16        2.432768                     1.961069                  0.000000
+   batch_b8192_h128_l48_k48  bwd_input                w16        2.436035                     1.828129                  0.000000
+   batch_b8192_h128_l48_k48 bwd_weight               b128        2.723922                     0.813511                  0.000000
+ channel_b8192_h256_l48_k48        fwd                w16        4.921098                     2.216091                  0.000000
+ channel_b8192_h256_l48_k48  bwd_input                w16        4.897925                     1.613377                  0.000000
+ channel_b8192_h256_l48_k48 bwd_weight               b128        5.418854                     1.387607                  0.000000
+  channel_b8192_h64_l48_k48        fwd                w16        1.231206                     1.074565                  0.000000
+  channel_b8192_h64_l48_k48  bwd_input                w16        1.221212                     1.903421                  0.000000
+  channel_b8192_h64_l48_k48 bwd_weight               b128        1.382246                     0.323002                  0.000000
+  kernel_b8192_h128_l48_k24        fwd                 w8        1.432340                     0.373902                  0.373902
+  kernel_b8192_h128_l48_k24  bwd_input                w16        1.425357                     0.159491                  0.000000
+  kernel_b8192_h128_l48_k24 bwd_weight               b192        1.552589                     1.023611                  1.201026
+   kernel_b8192_h128_l48_k8        fwd                w16        0.958996                     0.784819                  0.000000
+   kernel_b8192_h128_l48_k8  bwd_input                w16        0.958771                     2.011106                  0.000000
+   kernel_b8192_h128_l48_k8 bwd_weight               b256        0.719852                     3.961707                 10.392898
+   main_b16384_h128_l48_k48        fwd                w16        4.948347                     2.085106                  0.000000
+   main_b16384_h128_l48_k48  bwd_input                w16        4.893071                     1.554288                  0.000000
+   main_b16384_h128_l48_k48 bwd_weight               b128        5.456189                     0.430718                  0.000000
+    mix_b16384_h128_l32_k24        fwd                w16        2.553190                     0.316038                  0.000000
+    mix_b16384_h128_l32_k24  bwd_input                 w8        2.558597                     0.039622                  0.039622
+    mix_b16384_h128_l32_k24 bwd_weight               b128        2.244762                     1.703803                  0.000000
+    mix_b16384_h256_l16_k16        fwd                w16        3.783311                     2.836816                  0.000000
+    mix_b16384_h256_l16_k16  bwd_input                w16        3.836037                     3.756413                  0.000000
+    mix_b16384_h256_l16_k16 bwd_weight               b128        2.018509                    11.595469                  0.000000
+      mix_b16384_h64_l48_k8        fwd                w16        0.964434                     0.961958                  0.000000
+      mix_b16384_h64_l48_k8  bwd_input                w16        0.967178                     1.503427                  0.000000
+      mix_b16384_h64_l48_k8 bwd_weight               b256        0.722616                     2.536563                  9.706951
+     mix_b2048_h256_l32_k32        fwd                w16        0.811827                     1.513619                  0.000000
+     mix_b2048_h256_l32_k32  bwd_input                w16        0.806748                     0.423944                  0.000000
+     mix_b2048_h256_l32_k32 bwd_weight               b128        0.711281                     3.450859                  0.000000
+       mix_b2048_h64_l24_k8        fwd                w16        0.085586                     7.646092                  0.000000
+       mix_b2048_h64_l24_k8  bwd_input                w16        0.089057                     9.647367                  0.000000
+       mix_b2048_h64_l24_k8 bwd_weight               b192        0.054384                     1.920554                  8.886094
+     mix_b4096_h128_l48_k32        fwd                w16        0.893368                     0.618959                  0.000000
+     mix_b4096_h128_l48_k32  bwd_input                w16        0.886979                     0.111986                  0.000000
+     mix_b4096_h128_l48_k32 bwd_weight               b192        0.987791                     0.468569                  1.121660
+     mix_b4096_h256_l48_k24        fwd                w16        1.443000                     0.675568                  0.000000
+     mix_b4096_h256_l48_k24  bwd_input                w16        1.433487                     0.090005                  0.000000
+     mix_b4096_h256_l48_k24 bwd_weight               b192        1.552148                     1.195431                  1.470538
+      mix_b4096_h64_l32_k16        fwd                w16        0.248576                     1.322345                  0.000000
+      mix_b4096_h64_l32_k16  bwd_input                w16        0.260198                     2.731206                  0.000000
+      mix_b4096_h64_l32_k16 bwd_weight               b192        0.188446                     0.983536                  0.983536
+     mix_b8192_h256_l24_k16        fwd                w16        1.954970                     2.640967                  0.000000
+     mix_b8192_h256_l24_k16  bwd_input                w16        1.947832                     2.930846                  0.000000
+     mix_b8192_h256_l24_k16 bwd_weight               b128        1.384632                     5.159076                  0.000000
+      mix_b8192_h64_l32_k24        fwd                w16        0.652769                     1.269079                  0.000000
+      mix_b8192_h64_l32_k24  bwd_input                w16        0.647475                     1.083344                  0.000000
+      mix_b8192_h64_l32_k24 bwd_weight               b128        0.548157                     3.246717                  0.000000
+sequence_b8192_h128_l16_k16        fwd                w16        0.964710                     2.008279                  0.000000
+sequence_b8192_h128_l16_k16  bwd_input                w16        0.952771                     2.264522                  0.000000
+sequence_b8192_h128_l16_k16 bwd_weight               b128        0.512563                     9.659379                  0.000000
+sequence_b8192_h128_l24_k24        fwd                w16        1.279252                     0.388231                  0.000000
+sequence_b8192_h128_l24_k24  bwd_input                w16        1.264230                     0.661758                  0.000000
+sequence_b8192_h128_l24_k24 bwd_weight               b128        0.943391                     4.174629                  0.000000
+sequence_b8192_h128_l32_k32        fwd                w16        1.601464                     0.945055                  0.000000
+sequence_b8192_h128_l32_k32  bwd_input                w16        1.589555                     1.395347                  0.000000
+sequence_b8192_h128_l32_k32 bwd_weight               b128        1.412229                     3.148366                  0.000000
+
+COMBINED ORACLE
+                  config_id sweep_group     B   H  L  K      device_name  fwd_winner_warps  bwd_input_winner_warps  bwd_weight_winner_block  oracle_total_ms  paper_default_total_ms  paper_default_total_regret_pct
+   batch_b2048_h128_l48_k48       batch  2048 128 48 48 NVIDIA RTX A6000                 8                      16                      128         1.943368                1.946092                        0.140160
+   batch_b8192_h128_l48_k48       batch  8192 128 48 48 NVIDIA RTX A6000                16                      16                      128         7.592724                7.592724                        0.000000
+ channel_b8192_h256_l48_k48     channel  8192 256 48 48 NVIDIA RTX A6000                16                      16                      128        15.237878               15.237878                        0.000000
+  channel_b8192_h64_l48_k48     channel  8192  64 48 48 NVIDIA RTX A6000                16                      16                      128         3.834665                3.834665                        0.000000
+  kernel_b8192_h128_l48_k24      kernel  8192 128 48 24 NVIDIA RTX A6000                 8                      16                      192         4.410286                4.434289                        0.544240
+   kernel_b8192_h128_l48_k8      kernel  8192 128 48  8 NVIDIA RTX A6000                16                      16                      256         2.637619                2.712433                        2.836400
+   main_b16384_h128_l48_k48        main 16384 128 48 48 NVIDIA RTX A6000                16                      16                      128        15.297608               15.297608                        0.000000
+    mix_b16384_h128_l32_k24       mixed 16384 128 32 24 NVIDIA RTX A6000                16                       8                      128         7.356549                7.357563                        0.013781
+    mix_b16384_h256_l16_k16       mixed 16384 256 16 16 NVIDIA RTX A6000                16                      16                      128         9.637857                9.637857                        0.000000
+      mix_b16384_h64_l48_k8       mixed 16384  64 48  8 NVIDIA RTX A6000                16                      16                      256         2.654228                2.724373                        2.642727
+     mix_b2048_h256_l32_k32       mixed  2048 256 32 32 NVIDIA RTX A6000                16                      16                      128         2.329856                2.329856                        0.000000
+       mix_b2048_h64_l24_k8       mixed  2048  64 24  8 NVIDIA RTX A6000                16                      16                      192         0.229028                0.233860                        2.110067
+     mix_b4096_h128_l48_k32       mixed  4096 128 48 32 NVIDIA RTX A6000                16                      16                      192         2.768138                2.779218                        0.400257
+     mix_b4096_h256_l48_k24       mixed  4096 256 48 24 NVIDIA RTX A6000                16                      16                      192         4.428636                4.451461                        0.515394
+      mix_b4096_h64_l32_k16       mixed  4096  64 32 16 NVIDIA RTX A6000                16                      16                      192         0.697221                0.699074                        0.265832
+     mix_b8192_h256_l24_k16       mixed  8192 256 24 16 NVIDIA RTX A6000                16                      16                      128         5.287434                5.287434                        0.000000
+      mix_b8192_h64_l32_k24       mixed  8192  64 32 24 NVIDIA RTX A6000                16                      16                      128         1.848402                1.848402                        0.000000
+sequence_b8192_h128_l16_k16    sequence  8192 128 16 16 NVIDIA RTX A6000                16                      16                      128         2.430044                2.430044                        0.000000
+sequence_b8192_h128_l24_k24    sequence  8192 128 24 24 NVIDIA RTX A6000                16                      16                      128         3.486874                3.486874                        0.000000
+sequence_b8192_h128_l32_k32    sequence  8192 128 32 32 NVIDIA RTX A6000                16                      16                      128         4.603249                4.603249                        0.000000
+
+Saved below: results/pathtile_selector/tuning_cost_v1/a6000/trial2
+
+================================================================================
+PATHTILE TUNING-COST TIMING
+================================================================================
+training_shapes: 20
+candidate_specs: 10
+unique_source_configs: 9
+path_candidate_evaluations: 260
+warmup_kernel_launches: 13000
+measured_kernel_launches: 26000
+cache_files_before: 9
+cache_files_after: 9
+module_build_seconds: 3.6502870169933885
+validation_seconds: 4.5799853029311635
+warmup_seconds: 21.228027407021727
+benchmark_seconds: 44.382112093793694
+other_wall_seconds: 26.423119619255885
+total_wall_seconds: 100.26353143999586
+
+Timing file:
+results/pathtile_selector/tuning_cost_v1/a6000/trial2/tuning_timing.json
+
+================================================================
+TRIAL 3
+================================================================
+====================================================================================================
+PATHTILE FACTORIZED CANDIDATE SWEEP
+====================================================================================================
+GPU:        NVIDIA RTX A6000
+Preset:     pathtile-train
+Trial:      3
+Protocol:   warmup=50, runs=100, strict FP32
+W candidates:     [4, 8, 16]
+BWDK candidates:  [96, 128, 192, 224, 256, 320, 384]
+Shapes:            20
+
+----------------------------------------------------------------------------------------------------
+Candidate 1/10: w4 (warps_per_block=4), phases=('fwd', 'bwd_input')
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.104702   5.000192 0.187777
+bwd_input 5.013678   5.001216 0.021497
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.638874   0.634880 0.007745
+bwd_input 0.633907   0.633856 0.000552
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.503967   2.503680 0.003025
+bwd_input 2.504397   2.504704 0.000573
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.259633   1.258496 0.006612
+bwd_input 1.256049   1.256448 0.000543
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.102469   5.000704 0.201403
+bwd_input 5.026529   5.016576 0.025130
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.052795   1.052672 0.002724
+bwd_input 1.066281   1.065984 0.001344
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.320192   1.319936 0.003566
+bwd_input 1.328097   1.331200 0.005570
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.658808   1.657856 0.003726
+bwd_input 1.645752   1.642496 0.006866
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.972892     0.9728 0.003900
+bwd_input 0.998728     0.9984 0.000522
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.483254   1.482752 0.003330
+bwd_input 1.479803   1.475584 0.007291
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.272445   0.274432 0.012207
+bwd_input 0.282982   0.283648 0.001329
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.479127   1.473536 0.009334
+bwd_input 1.478185   1.477632 0.000841
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.095570   0.095232 0.002487
+bwd_input 0.101417   0.100352 0.013141
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.836116   0.835584 0.002686
+bwd_input 0.834939   0.835584 0.001496
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.673833   0.668672 0.008839
+bwd_input 0.671734   0.671744 0.000749
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.141430   2.138112 0.018506
+bwd_input 2.179021   2.179072 0.000532
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.972831   0.971776 0.004658
+bwd_input 1.000059   1.000448 0.000596
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 4.180388   4.177920 0.013893
+bwd_input 4.343552   4.284416 0.119617
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.641244   2.643968 0.017597
+bwd_input 2.653829   2.657280 0.009243
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.900403    0.90112 0.003390
+bwd_input 0.900639    0.90112 0.000879
+
+----------------------------------------------------------------------------------------------------
+Candidate 2/10: w8 (warps_per_block=8), phases=('fwd', 'bwd_input')
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.070408   5.001216 0.160148
+bwd_input 4.984033   5.001216 0.029289
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.632064   0.629760 0.005080
+bwd_input 0.628695   0.628736 0.000503
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.491576   2.480128 0.013173
+bwd_input 2.480394   2.480128 0.000451
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.257062   1.256448 0.003284
+bwd_input 1.248277   1.244160 0.005778
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 5.070725   4.952064 0.222706
+bwd_input 4.989020   5.001216 0.031780
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.989532   0.991232 0.004631
+bwd_input 0.978514   0.978944 0.000528
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.288182   1.287168 0.004421
+bwd_input 1.282980   1.284096 0.004332
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.637243   1.642496 0.009245
+bwd_input 1.627085   1.627136 0.000607
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.979855   0.979968 0.002837
+bwd_input 0.979087   0.977920 0.002620
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.438536   1.433600 0.017210
+bwd_input 1.430907   1.430528 0.000594
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.240230   0.222208 0.026042
+bwd_input 0.259768   0.260096 0.000580
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.448868   1.447936 0.003571
+bwd_input 1.445612   1.447936 0.005743
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.092631   0.092160 0.002480
+bwd_input 0.101243   0.099328 0.018773
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.817818   0.817152 0.003590
+bwd_input 0.817336   0.817152 0.000469
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.654623   0.654336 0.006506
+bwd_input 0.648223   0.648192 0.000514
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.017925   2.020352 0.008838
+bwd_input 2.017147   2.022400 0.008555
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.976579   0.975872 0.002683
+bwd_input 0.989870   0.989184 0.001080
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.919585   3.929088 0.016239
+bwd_input 4.028641   3.974144 0.148218
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.582395   2.585600 0.009919
+bwd_input 2.583388   2.583552 0.000558
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.900536   0.900096 0.003890
+bwd_input 0.899615   0.899072 0.000992
+
+----------------------------------------------------------------------------------------------------
+Candidate 3/10: w16 (warps_per_block=16), phases=('fwd', 'bwd_input')
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 4.963113   4.909056 0.114765
+bwd_input 4.913418   4.910080 0.011826
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.627569    0.62464 0.005438
+bwd_input 0.624722    0.62464 0.000538
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.462085   2.459648 0.009525
+bwd_input 2.440069   2.436096 0.008640
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.243464   1.246720 0.007941
+bwd_input 1.234872   1.234944 0.000530
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 4.962703   4.909056 0.122477
+bwd_input 4.931871   4.911104 0.023831
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.966625   0.964608 0.005977
+bwd_input 0.960543   0.960512 0.000572
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.291909   1.291264 0.003334
+bwd_input 1.286963   1.287168 0.002735
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.615483   1.614848 0.002975
+bwd_input 1.604946   1.600512 0.007142
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.977603   0.976896 0.003614
+bwd_input 0.961556   0.961536 0.000823
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.461955   1.462272 0.006456
+bwd_input 1.454469   1.454080 0.000941
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.250337   0.260096 0.018259
+bwd_input 0.259441   0.260096 0.001222
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.470597   1.469440 0.003409
+bwd_input 1.460265   1.455104 0.006778
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.086671   0.086016 0.002472
+bwd_input 0.091136   0.087040 0.016764
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.816783   0.815104 0.005178
+bwd_input 0.813783   0.814080 0.000550
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.662149   0.657408 0.007827
+bwd_input 0.655421   0.655360 0.000579
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 1.985597   1.985536 0.003168
+bwd_input 1.982628   1.982464 0.000709
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.972728   0.972800 0.003317
+bwd_input 0.974193   0.973824 0.001045
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 3.817155   3.816448 0.003690
+bwd_input 3.957606   3.888128 0.146227
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 2.601288   2.591744 0.013032
+bwd_input 2.584177   2.584576 0.000562
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness fwd: max_abs=0.000e+00, ok=True
+  correctness bwd_input: max_abs=0.000e+00, ok=True
+    phase  mean_ms  median_ms   std_ms
+      fwd 0.901325    0.90112 0.003862
+bwd_input 0.901079    0.90112 0.001182
+
+----------------------------------------------------------------------------------------------------
+Candidate 4/10: b96 (bwdk_block=96), phases=('bwd_weight',)
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 6.383196   6.337536 0.151912
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.790958    0.79104 0.007845
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 3.147674   3.155968 0.016538
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.580022   1.580032 0.002952
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.864e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 6.375035    6.28736 0.195504
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.628029   0.630784 0.010624
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.027574   1.021952 0.00829
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.631867   1.631232 0.00517
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.959e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.91093   0.910336 0.007532
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.800448   1.800192 0.004466
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.242617   0.233472 0.01729
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.801452   1.801216 0.002749
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.480e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.066028   0.065536 0.002429
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.831447   0.830464 0.006924
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.655811   0.659456 0.008768
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=2.670e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.527286   1.524736 0.006849
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.905605    0.90624 0.006389
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.480681   2.484224 0.008918
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.602588   2.601984 0.002958
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=5.341e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.131991   1.129472 0.005585
+
+----------------------------------------------------------------------------------------------------
+Candidate 5/10: b128 (bwdk_block=128), phases=('bwd_weight',)
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.564836   5.561344 0.021114
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.694815    0.70144 0.01828
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.769644   2.768896 0.003084
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.405235    1.40288 0.008873
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.959e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.568635    5.56544 0.016902
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=1.526e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.515871     0.5376 0.039722
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.948101   0.943104 0.00793
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.431409   1.429504 0.005611
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.806226   0.806912 0.005483
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.594317   1.589248 0.01074
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.187248   0.187392 0.002491
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=6.104e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.611356   1.608704 0.008701
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.058962   0.058368 0.002766
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.722514   0.723968 0.006659
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.564398   0.585728 0.040557
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.40756   1.404928 0.007363
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.803942    0.80384 0.005376
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.073252   2.070528 0.006568
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 2.278379    2.27584 0.00773
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.012326    1.00864 0.011937
+
+----------------------------------------------------------------------------------------------------
+Candidate 6/10: b192 (bwdk_block=192), phases=('bwd_weight',)
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.607148    5.59616 0.058685
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.698593   0.705536 0.014006
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.805248   2.808832 0.010247
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.408113   1.406976  0.0067
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  5.60937   5.599232 0.050913
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=1.907e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.588462   0.600064 0.029172
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.002107     0.9984 0.011914
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.492224   1.491968 0.005852
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=6.104e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.76374    0.76032 0.009016
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.579889   1.579008 0.005197
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.189686    0.18944 0.00253
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.581599   1.580032 0.006141
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.055409   0.054272 0.003644
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.763126    0.75776 0.024387
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.597965   0.598016 0.013486
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.485537   1.480704 0.009834
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.760934   0.758784 0.008359
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.343741   2.342912 0.007801
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.347459   2.347008 0.005268
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.001257   0.997376 0.015655
+
+----------------------------------------------------------------------------------------------------
+Candidate 7/10: b224 (bwdk_block=224), phases=('bwd_weight',)
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.828075   5.794816 0.124489
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.732621     0.7424 0.018944
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.882888    2.88256 0.003039
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.443666   1.439744 0.009067
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.830625   5.794816 0.138913
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.57812   0.579584 0.007065
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.028895   1.027072 0.012589
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.51209   1.507328 0.010914
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.783084    0.79104 0.029394
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.648906   1.648128 0.00518
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.189891   0.188416  0.0092
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.649644   1.647616 0.006575
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.057999   0.057344 0.00263
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight  0.77228      0.768 0.01032
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.600146   0.621568 0.042426
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight   1.5663   1.562624 0.009772
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.788183   0.791552 0.020817
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.337e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.295695   2.292736 0.007858
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.394727   2.394112 0.002863
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.038899   1.032192 0.011749
+
+----------------------------------------------------------------------------------------------------
+Candidate 8/10: b256 (bwdk_block=256), phases=('bwd_weight',)
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.683395   5.679104 0.049781
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.959e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.71254   0.713728 0.007149
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.821192   2.825216 0.010703
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.417493   1.415168 0.008869
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  5.67809   5.680128 0.054963
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.599439   0.607232 0.027849
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  1.05474   1.045504 0.013415
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.491497    1.48992 0.005848
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.745902   0.748544 0.00887
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.600594   1.596416 0.010941
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.190188   0.190464 0.002761
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.196e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.610854     1.6128 0.01402
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.05632   0.055296 0.003542
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.747366   0.759808 0.029859
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.585728   0.607232 0.043677
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.570785   1.568768 0.006516
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.721828   0.735232 0.034418
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.327368   2.326528 0.004724
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.328853   2.327552 0.004121
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.021676   1.015808 0.016325
+
+----------------------------------------------------------------------------------------------------
+Candidate 9/10: b320 (bwdk_block=320), phases=('bwd_weight',)
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.970739   5.925888 0.156115
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.73727   0.743936 0.018946
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.959585    2.94912 0.015009
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=4.005e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.477652   1.470464 0.013635
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 5.982147   5.926912 0.176618
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=1.907e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.654602    0.67072 0.036321
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.090611    1.08032 0.014847
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.608284   1.606656 0.006136
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.786934   0.784896 0.010221
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.624e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.696532   1.697792 0.012855
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.210903    0.19968 0.020968
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=6.104e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.690911   1.687552 0.010019
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  0.05589   0.055296 0.003008
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.817193   0.812544 0.011018
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.647086   0.649216 0.005056
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.639987   1.636352 0.009932
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.782991   0.779264 0.011071
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.583726   2.583552 0.002951
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.527703   2.527232 0.006892
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.065267   1.059328 0.017523
+
+----------------------------------------------------------------------------------------------------
+Candidate 10/10: b384 (bwdk_block=384), phases=('bwd_weight',)
+[1/20] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 6.181693     6.0928 0.225967
+[2/20] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.767846   0.764928 0.004904
+[3/20] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  3.03488   3.030016 0.014921
+[4/20] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+  correctness bwd_weight: max_abs=3.815e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.517568   1.511424 0.011639
+[5/20] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 6.177608     6.0928 0.213703
+[6/20] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.703406   0.710656 0.009302
+[7/20] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.162332   1.149952 0.017134
+[8/20] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 1.691822   1.691648  0.0043
+[9/20] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.804526   0.804864 0.05007
+[10/20] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+  correctness bwd_weight: max_abs=3.433e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.704479   1.701888 0.008582
+[11/20] mix_b4096_h64_l32_k16: B=4096, H=64, L=32, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms  std_ms
+bwd_weight 0.205343   0.203776 0.01009
+[12/20] mix_b4096_h256_l48_k24: B=4096, H=256, L=48, K=24
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.704427   1.701888 0.008164
+[13/20] mix_b2048_h64_l24_k8: B=2048, H=64, L=24, K=8
+  correctness bwd_weight: max_abs=2.670e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.058266   0.057344 0.003037
+[14/20] mix_b2048_h256_l32_k32: B=2048, H=256, L=32, K=32
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.853832   0.854016 0.007845
+[15/20] mix_b8192_h64_l32_k24: B=8192, H=64, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.665651   0.667648 0.008785
+[16/20] mix_b8192_h256_l24_k16: B=8192, H=256, L=24, K=16
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.645517   1.644544 0.005906
+[17/20] mix_b16384_h64_l48_k8: B=16384, H=64, L=48, K=8
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 0.797952   0.795136 0.016234
+[18/20] mix_b16384_h256_l16_k16: B=16384, H=256, L=16, K=16
+  correctness bwd_weight: max_abs=2.289e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight  2.73196   2.735104 0.009777
+[19/20] mix_b16384_h128_l32_k24: B=16384, H=128, L=32, K=24
+  correctness bwd_weight: max_abs=3.052e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 2.672077   2.673664 0.007535
+[20/20] mix_b4096_h128_l48_k32: B=4096, H=128, L=48, K=32
+  correctness bwd_weight: max_abs=4.578e-05, ok=True
+     phase  mean_ms  median_ms   std_ms
+bwd_weight 1.088307   1.082368 0.017717
+
+====================================================================================================
+EMPIRICAL PER-PATH ORACLE
+====================================================================================================
+                  config_id      phase winner_schedule_id  winner_mean_ms  winner_margin_vs_second_pct  paper_default_regret_pct
+   batch_b2048_h128_l48_k48        fwd                w16        0.627569                     0.716317                  0.000000
+   batch_b2048_h128_l48_k48  bwd_input                w16        0.624722                     0.635987                  0.000000
+   batch_b2048_h128_l48_k48 bwd_weight               b128        0.694815                     0.543826                  0.000000
+   batch_b8192_h128_l48_k48        fwd                w16        2.462085                     1.197819                  0.000000
+   batch_b8192_h128_l48_k48  bwd_input                w16        2.440069                     1.652626                  0.000000
+   batch_b8192_h128_l48_k48 bwd_weight               b128        2.769644                     1.285520                  0.000000
+ channel_b8192_h256_l48_k48        fwd                w16        4.962703                     2.176669                  0.000000
+ channel_b8192_h256_l48_k48  bwd_input                w16        4.931871                     1.158777                  0.000000
+ channel_b8192_h256_l48_k48 bwd_weight               b128        5.568635                     0.731503                  0.000000
+  channel_b8192_h64_l48_k48        fwd                w16        1.243464                     1.093621                  0.000000
+  channel_b8192_h64_l48_k48  bwd_input                w16        1.234872                     1.085473                  0.000000
+  channel_b8192_h64_l48_k48 bwd_weight               b128        1.405235                     0.204766                  0.000000
+  kernel_b8192_h128_l48_k24        fwd                 w8        1.438536                     1.627972                  1.627972
+  kernel_b8192_h128_l48_k24  bwd_input                 w8        1.430907                     1.646661                  1.646661
+  kernel_b8192_h128_l48_k24 bwd_weight               b192        1.579889                     0.913239                  0.913239
+   kernel_b8192_h128_l48_k8        fwd                 w4        0.972892                     0.484162                  0.484162
+   kernel_b8192_h128_l48_k8  bwd_input                w16        0.961556                     1.823178                  0.000000
+   kernel_b8192_h128_l48_k8 bwd_weight               b256        0.745902                     2.391480                  8.087370
+   main_b16384_h128_l48_k48        fwd                w16        4.963113                     2.161842                  0.000000
+   main_b16384_h128_l48_k48  bwd_input                w16        4.913418                     1.437188                  0.000000
+   main_b16384_h128_l48_k48 bwd_weight               b128        5.564836                     0.760341                  0.000000
+    mix_b16384_h128_l32_k24        fwd                 w8        2.582395                     0.731600                  0.731600
+    mix_b16384_h128_l32_k24  bwd_input                 w8        2.583388                     0.030519                  0.030519
+    mix_b16384_h128_l32_k24 bwd_weight               b128        2.278379                     2.215307                  0.000000
+    mix_b16384_h256_l16_k16        fwd                w16        3.817155                     2.683432                  0.000000
+    mix_b16384_h256_l16_k16  bwd_input                w16        3.957606                     1.794895                  0.000000
+    mix_b16384_h256_l16_k16 bwd_weight               b128        2.073252                    10.729210                  0.000000
+      mix_b16384_h64_l48_k8        fwd                w16        0.972728                     0.010527                  0.000000
+      mix_b16384_h64_l48_k8  bwd_input                w16        0.974193                     1.609277                  0.000000
+      mix_b16384_h64_l48_k8 bwd_weight               b256        0.721828                     5.417712                 11.375919
+     mix_b2048_h256_l32_k32        fwd                w16        0.816783                     0.126624                  0.000000
+     mix_b2048_h256_l32_k32  bwd_input                w16        0.813783                     0.436639                  0.000000
+     mix_b2048_h256_l32_k32 bwd_weight               b128        0.722514                     3.439725                  0.000000
+       mix_b2048_h64_l24_k8        fwd                w16        0.086671                     6.876184                  0.000000
+       mix_b2048_h64_l24_k8  bwd_input                w16        0.091136                    11.089884                  0.000000
+       mix_b2048_h64_l24_k8 bwd_weight               b192        0.055409                     0.868601                  6.412865
+     mix_b4096_h128_l48_k32        fwd                 w4        0.900403                     0.014784                  0.102355
+     mix_b4096_h128_l48_k32  bwd_input                 w8        0.899615                     0.113827                  0.162773
+     mix_b4096_h128_l48_k32 bwd_weight               b192        1.001257                     1.105554                  1.105554
+     mix_b4096_h256_l48_k24        fwd                 w8        1.448868                     1.499741                  1.499741
+     mix_b4096_h256_l48_k24  bwd_input                 w8        1.445612                     1.013649                  1.013649
+     mix_b4096_h256_l48_k24 bwd_weight               b192        1.581599                     1.849755                  1.881478
+      mix_b4096_h64_l32_k16        fwd                 w8        0.240230                     4.207162                  4.207162
+      mix_b4096_h64_l32_k16  bwd_input                w16        0.259441                     0.126304                  0.000000
+      mix_b4096_h64_l32_k16 bwd_weight               b128        0.187248                     1.301886                  0.000000
+     mix_b8192_h256_l24_k16        fwd                w16        1.985597                     1.628106                  0.000000
+     mix_b8192_h256_l24_k16  bwd_input                w16        1.982628                     1.741074                  0.000000
+     mix_b8192_h256_l24_k16 bwd_weight               b128        1.407560                     5.539915                  0.000000
+      mix_b8192_h64_l32_k24        fwd                 w8        0.654623                     1.149732                  1.149732
+      mix_b8192_h64_l32_k24  bwd_input                 w8        0.648223                     1.110531                  1.110531
+      mix_b8192_h64_l32_k24 bwd_weight               b128        0.564398                     3.779232                  0.000000
+sequence_b8192_h128_l16_k16        fwd                w16        0.966625                     2.369777                  0.000000
+sequence_b8192_h128_l16_k16  bwd_input                w16        0.960543                     1.870944                  0.000000
+sequence_b8192_h128_l16_k16 bwd_weight               b128        0.515871                    12.066776                  0.000000
+sequence_b8192_h128_l24_k24        fwd                 w8        1.288182                     0.289351                  0.289351
+sequence_b8192_h128_l24_k24  bwd_input                 w8        1.282980                     0.310479                  0.310479
+sequence_b8192_h128_l24_k24 bwd_weight               b128        0.948101                     5.696202                  0.000000
+sequence_b8192_h128_l32_k32        fwd                w16        1.615483                     1.346964                  0.000000
+sequence_b8192_h128_l32_k32  bwd_input                w16        1.604946                     1.379414                  0.000000
+sequence_b8192_h128_l32_k32 bwd_weight               b128        1.431409                     4.197844                  0.000000
+
+COMBINED ORACLE
+                  config_id sweep_group     B   H  L  K      device_name  fwd_winner_warps  bwd_input_winner_warps  bwd_weight_winner_block  oracle_total_ms  paper_default_total_ms  paper_default_total_regret_pct
+   batch_b2048_h128_l48_k48       batch  2048 128 48 48 NVIDIA RTX A6000                16                      16                      128         1.947105                1.947105                        0.000000
+   batch_b8192_h128_l48_k48       batch  8192 128 48 48 NVIDIA RTX A6000                16                      16                      128         7.671798                7.671798                        0.000000
+ channel_b8192_h256_l48_k48     channel  8192 256 48 48 NVIDIA RTX A6000                16                      16                      128        15.463209               15.463209                        0.000000
+  channel_b8192_h64_l48_k48     channel  8192  64 48 48 NVIDIA RTX A6000                16                      16                      128         3.883571                3.883571                        0.000000
+  kernel_b8192_h128_l48_k24      kernel  8192 128 48 24 NVIDIA RTX A6000                 8                       8                      192         4.449331                4.510740                        1.380192
+   kernel_b8192_h128_l48_k8      kernel  8192 128 48  8 NVIDIA RTX A6000                 4                      16                      256         2.680351                2.745385                        2.426333
+   main_b16384_h128_l48_k48        main 16384 128 48 48 NVIDIA RTX A6000                16                      16                      128        15.441367               15.441367                        0.000000
+    mix_b16384_h128_l32_k24       mixed 16384 128 32 24 NVIDIA RTX A6000                 8                       8                      128         7.444162                7.463844                        0.264385
+    mix_b16384_h256_l16_k16       mixed 16384 256 16 16 NVIDIA RTX A6000                16                      16                      128         9.848013                9.848013                        0.000000
+      mix_b16384_h64_l48_k8       mixed 16384  64 48  8 NVIDIA RTX A6000                16                      16                      256         2.668749                2.750863                        3.076893
+     mix_b2048_h256_l32_k32       mixed  2048 256 32 32 NVIDIA RTX A6000                16                      16                      128         2.353080                2.353080                        0.000000
+       mix_b2048_h64_l24_k8       mixed  2048  64 24  8 NVIDIA RTX A6000                16                      16                      192         0.233216                0.236769                        1.523601
+     mix_b4096_h128_l48_k32       mixed  4096 128 48 32 NVIDIA RTX A6000                 4                       8                      192         2.801275                2.814730                        0.480330
+     mix_b4096_h256_l48_k24       mixed  4096 256 48 24 NVIDIA RTX A6000                 8                       8                      192         4.476078                4.542218                        1.477636
+      mix_b4096_h64_l32_k16       mixed  4096  64 32 16 NVIDIA RTX A6000                 8                      16                      128         0.686919                0.697026                        1.471335
+     mix_b8192_h256_l24_k16       mixed  8192 256 24 16 NVIDIA RTX A6000                16                      16                      128         5.375785                5.375785                        0.000000
+      mix_b8192_h64_l32_k24       mixed  8192  64 32 24 NVIDIA RTX A6000                 8                       8                      128         1.867243                1.881969                        0.788602
+sequence_b8192_h128_l16_k16    sequence  8192 128 16 16 NVIDIA RTX A6000                16                      16                      128         2.443039                2.443039                        0.000000
+sequence_b8192_h128_l24_k24    sequence  8192 128 24 24 NVIDIA RTX A6000                 8                       8                      128         3.519263                3.526974                        0.219101
+sequence_b8192_h128_l32_k32    sequence  8192 128 32 32 NVIDIA RTX A6000                16                      16                      128         4.651838                4.651838                        0.000000
+
+Saved below: results/pathtile_selector/tuning_cost_v1/a6000/trial3
+
+================================================================================
+PATHTILE TUNING-COST TIMING
+================================================================================
+training_shapes: 20
+candidate_specs: 10
+unique_source_configs: 9
+path_candidate_evaluations: 260
+warmup_kernel_launches: 13000
+measured_kernel_launches: 26000
+cache_files_before: 9
+cache_files_after: 9
+module_build_seconds: 1.2449977100477554
+validation_seconds: 1.5500572959717829
+warmup_seconds: 21.479209476936376
+benchmark_seconds: 45.0418289299123
+other_wall_seconds: 29.80190795811359
+total_wall_seconds: 99.1180013709818
+
+Timing file:
+results/pathtile_selector/tuning_cost_v1/a6000/trial3/tuning_timing.json
+
+CACHE FILES AFTER:
+9

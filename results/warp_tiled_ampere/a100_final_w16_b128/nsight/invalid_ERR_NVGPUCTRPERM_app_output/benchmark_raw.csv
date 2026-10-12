@@ -1,0 +1,4 @@
+technique,gpu_profile,device_name,warps_per_block,bwdk_btile,bwdk_block,run_id_requested,B,H,L,K,phase,run_id,runtime_ms
+WarpThread-a100,a100,NVIDIA A100-PCIE-40GB,16,64,128,1,16384,128,48,48,fwd,1,5.375999927520752
+WarpThread-a100,a100,NVIDIA A100-PCIE-40GB,16,64,128,1,16384,128,48,48,bwd_input,1,5.070847988128662
+WarpThread-a100,a100,NVIDIA A100-PCIE-40GB,16,64,128,1,16384,128,48,48,bwd_weight,1,88.87091064453125

@@ -1,0 +1,10 @@
+==========================================
+SLURM_JOB_ID = 111894
+SLURM_NODELIST = pascal-node14.l3s.intra
+==========================================
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import torch; import torch.nn.functional as F; conv=lambda x,w:F.conv1d(F.pad(x,(24,23)),w,groups=128); compiled=torch.compile(conv,fullgraph=True,dynamic=False); x=torch.randn(256,128,48).cuda().requires_grad_(); w=torch.randn(128,1,48).cuda().requires_grad_(); y=compiled(x,w); gy=torch.randn_like(y); gx,gw=torch.autograd.grad(y,(x,w),gy); torch.cuda.synchronize(); print(y.shape,gx.shape,gw.shape); print(COMPILE_PROBE_PASS)
+                                                                                                                                                                                                                                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^
+NameError: name 'COMPILE_PROBE_PASS' is not defined
+torch.Size([256, 128, 48]) torch.Size([256, 128, 48]) torch.Size([128, 1, 48])

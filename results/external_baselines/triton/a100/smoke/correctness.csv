@@ -1,0 +1,4 @@
+B,H,L,K,phase,max_abs,normalized_max_abs,relative_l2,atol,rtol,allclose
+8,8,16,8,fwd,0.0,0.0,0.0,0.002,0.002,True
+8,8,16,8,bwd_input,0.0,0.0,0.0,0.002,0.002,True
+8,8,16,8,bwd_weight,2.86102294921875e-06,7.446782314865048e-08,8.46719316882627e-08,0.02,0.002,True

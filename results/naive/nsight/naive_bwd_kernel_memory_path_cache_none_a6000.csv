@@ -1,0 +1,6 @@
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","529507","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","dram__bytes_write.sum","Mbyte","3.14"
+"0","529507","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","l1tex__m_l1tex2xbar_write_sectors_mem_lg_op_st.sum","sector","768"
+"0","529507","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum","Kbyte","24.58"
+"0","529507","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum","sector","768"
+"0","529507","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","lts__t_sectors_aperture_device_op_write.sum","sector","5,306"

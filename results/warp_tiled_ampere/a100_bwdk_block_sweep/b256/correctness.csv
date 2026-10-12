@@ -1,0 +1,6 @@
+B,H,L,K,fwd_max_abs,bwd_input_max_abs,bwd_weight_max_abs,fwd_normalized_max_abs,bwd_input_normalized_max_abs,bwd_weight_normalized_max_abs,fwd_allclose,bwd_input_allclose,bwd_weight_allclose
+2,4,16,8,0.0,0.0,1.9073486328125e-06,0.0,0.0,1.3132696375671286e-07,True,True,True
+4,8,31,16,0.0,0.0,3.814697265625e-06,0.0,0.0,1.4478162153678742e-07,True,True,True
+8,16,48,24,0.0,0.0,7.62939453125e-06,0.0,0.0,1.4213160163980073e-07,True,True,True
+32,64,48,48,0.0,0.0,1.52587890625e-05,0.0,0.0,1.2076901603263035e-07,True,True,True
+128,128,48,48,0.0,0.0,6.103515625e-05,0.0,0.0,2.393908412774685e-07,True,True,True

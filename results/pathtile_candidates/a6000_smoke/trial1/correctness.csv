@@ -1,0 +1,19 @@
+config_id,B,H,L,K,sweep_group,trial_id,device_name,candidate_kind,candidate_value,schedule_id,warps_per_block,bwdk_btile,bwdk_block,validation_B,phase,max_abs,normalized_max_abs,allclose
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,warps_per_block,4,w4,4,64,128,64,fwd,0.0,0.0,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,warps_per_block,4,w4,4,64,128,64,bwd_input,0.0,0.0,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,warps_per_block,4,w4,4,64,128,128,fwd,0.0,0.0,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,warps_per_block,4,w4,4,64,128,128,bwd_input,0.0,0.0,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,warps_per_block,8,w8,8,64,128,64,fwd,0.0,0.0,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,warps_per_block,8,w8,8,64,128,64,bwd_input,0.0,0.0,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,warps_per_block,8,w8,8,64,128,128,fwd,0.0,0.0,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,warps_per_block,8,w8,8,64,128,128,bwd_input,0.0,0.0,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,warps_per_block,16,w16,16,64,128,64,fwd,0.0,0.0,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,warps_per_block,16,w16,16,64,128,64,bwd_input,0.0,0.0,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,warps_per_block,16,w16,16,64,128,128,fwd,0.0,0.0,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,warps_per_block,16,w16,16,64,128,128,bwd_input,0.0,0.0,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,bwdk_block,96,b96,16,64,96,64,bwd_weight,1.1444091796875e-05,1.8219611176492523e-07,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,bwdk_block,96,b96,16,64,96,128,bwd_weight,4.57763671875e-05,1.6573444723087019e-07,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,bwdk_block,128,b128,16,64,128,64,bwd_weight,7.62939453125e-06,1.2146407450995016e-07,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,bwdk_block,128,b128,16,64,128,128,bwd_weight,3.910064697265625e-05,1.4156484034303494e-07,True
+smoke_b64_h8_l16_k8,64,8,16,8,smoke,1,NVIDIA RTX A6000,bwdk_block,192,b192,16,64,192,64,bwd_weight,8.58306884765625e-06,1.3664708382369394e-07,True
+smoke_b128_h16_l48_k48,128,16,48,48,smoke,1,NVIDIA RTX A6000,bwdk_block,192,b192,16,64,192,128,bwd_weight,4.1961669921875e-05,1.5192324329496433e-07,True

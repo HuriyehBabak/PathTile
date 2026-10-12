@@ -1,0 +1,194 @@
+
+PyTorch/cuDNN no-pad benchmark
+==============================
+GPU: NVIDIA RTX A6000
+PyTorch: 2.10.0+cu128
+cuDNN: 91002
+B=16384, H=128, L=48, K=48
+
+Original input shape: (16384, 128, 48)
+Padded input shape:   (16384, 128, 95)
+
+Warm-up...
+  warm-up 1/50
+  warm-up 2/50
+  warm-up 3/50
+  warm-up 4/50
+  warm-up 5/50
+  warm-up 6/50
+  warm-up 7/50
+  warm-up 8/50
+  warm-up 9/50
+  warm-up 10/50
+  warm-up 11/50
+  warm-up 12/50
+  warm-up 13/50
+  warm-up 14/50
+  warm-up 15/50
+  warm-up 16/50
+  warm-up 17/50
+  warm-up 18/50
+  warm-up 19/50
+  warm-up 20/50
+  warm-up 21/50
+  warm-up 22/50
+  warm-up 23/50
+  warm-up 24/50
+  warm-up 25/50
+  warm-up 26/50
+  warm-up 27/50
+  warm-up 28/50
+  warm-up 29/50
+  warm-up 30/50
+  warm-up 31/50
+  warm-up 32/50
+  warm-up 33/50
+  warm-up 34/50
+  warm-up 35/50
+  warm-up 36/50
+  warm-up 37/50
+  warm-up 38/50
+  warm-up 39/50
+  warm-up 40/50
+  warm-up 41/50
+  warm-up 42/50
+  warm-up 43/50
+  warm-up 44/50
+  warm-up 45/50
+  warm-up 46/50
+  warm-up 47/50
+  warm-up 48/50
+  warm-up 49/50
+  warm-up 50/50
+
+Measured runs...
+  run 1/100
+  run 2/100
+  run 3/100
+  run 4/100
+  run 5/100
+  run 6/100
+  run 7/100
+  run 8/100
+  run 9/100
+  run 10/100
+  run 11/100
+  run 12/100
+  run 13/100
+  run 14/100
+  run 15/100
+  run 16/100
+  run 17/100
+  run 18/100
+  run 19/100
+  run 20/100
+  run 21/100
+  run 22/100
+  run 23/100
+  run 24/100
+  run 25/100
+  run 26/100
+  run 27/100
+  run 28/100
+  run 29/100
+  run 30/100
+  run 31/100
+  run 32/100
+  run 33/100
+  run 34/100
+  run 35/100
+  run 36/100
+  run 37/100
+  run 38/100
+  run 39/100
+  run 40/100
+  run 41/100
+  run 42/100
+  run 43/100
+  run 44/100
+  run 45/100
+  run 46/100
+  run 47/100
+  run 48/100
+  run 49/100
+  run 50/100
+  run 51/100
+  run 52/100
+  run 53/100
+  run 54/100
+  run 55/100
+  run 56/100
+  run 57/100
+  run 58/100
+  run 59/100
+  run 60/100
+  run 61/100
+  run 62/100
+  run 63/100
+  run 64/100
+  run 65/100
+  run 66/100
+  run 67/100
+  run 68/100
+  run 69/100
+  run 70/100
+  run 71/100
+  run 72/100
+  run 73/100
+  run 74/100
+  run 75/100
+  run 76/100
+  run 77/100
+  run 78/100
+  run 79/100
+  run 80/100
+  run 81/100
+  run 82/100
+  run 83/100
+  run 84/100
+  run 85/100
+  run 86/100
+  run 87/100
+  run 88/100
+  run 89/100
+  run 90/100
+  run 91/100
+  run 92/100
+  run 93/100
+  run 94/100
+  run 95/100
+  run 96/100
+  run 97/100
+  run 98/100
+  run 99/100
+  run 100/100
+
+Results
+=======
+
+forward
+-------
+N:       100
+Mean:    6.817987 ms
+Median:  6.810624 ms
+Std:     0.084693 ms
+95% CI:  [6.801387, 6.834586] ms
+Min/Max: 6.685696 / 7.092224 ms
+
+backward_input
+--------------
+N:       100
+Mean:    13.258936 ms
+Median:  13.269504 ms
+Std:     0.098757 ms
+95% CI:  [13.239580, 13.278293] ms
+Min/Max: 13.047808 / 13.680640 ms
+
+backward_kernel
+---------------
+N:       100
+Mean:    34.101422 ms
+Median:  34.094593 ms
+Std:     0.166534 ms
+95% CI:  [34.068781, 34.134063] ms
+Min/Max: 33.760258 / 35.053570 ms

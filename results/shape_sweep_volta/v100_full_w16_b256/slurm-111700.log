@@ -1,0 +1,453 @@
+==========================================
+SLURM_JOB_ID = 111700
+SLURM_NODELIST = pascal-node10.l3s.intra
+==========================================
+================================================================================================
+AMPERE PYTORCH-vs-WARP SHAPE SWEEP
+================================================================================================
+GPU:       Tesla V100-SXM3-32GB
+Preset:    full
+Trial:     1
+Protocol:  warmup=50, runs=100, strict FP32
+Warp:      W=16, BWDK_BLOCK=256
+Cases:     10
+
+------------------------------------------------------------------------------------------------
+[1/10] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group     B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+main_b16384_h128_l48_k48        main 16384 128 48 48 total        54.854666     13.603144                 4.032499                      75.201483
+
+------------------------------------------------------------------------------------------------
+[2/10] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+batch_b2048_h128_l48_k48       batch 2048 128 48 48 total         6.786068      1.740483                 3.898958                      74.352122
+
+------------------------------------------------------------------------------------------------
+[3/10] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+batch_b8192_h128_l48_k48       batch 8192 128 48 48 total        27.144018      6.845061                  3.96549                      74.782432
+
+------------------------------------------------------------------------------------------------
+[4/10] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=6.104e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                config_id sweep_group    B  H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+channel_b8192_h64_l48_k48     channel 8192 64 48 48 total        13.647964      3.439043                 3.968536                      74.801791
+
+------------------------------------------------------------------------------------------------
+[5/10] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                 config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+channel_b8192_h256_l48_k48     channel 8192 256 48 48 total        54.278994     13.655542                 3.974869                       74.84194
+
+------------------------------------------------------------------------------------------------
+[6/10] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l16_k16    sequence 8192 128 16 16 total         5.419366      2.340352                  2.31562                      56.815026
+
+------------------------------------------------------------------------------------------------
+[7/10] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l24_k24    sequence 8192 128 24 24 total         8.203285      3.282606                 2.499016                      59.984248
+
+------------------------------------------------------------------------------------------------
+[8/10] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l32_k32    sequence 8192 128 32 32 total        11.477678      4.211118                 2.725565                      63.310366
+
+------------------------------------------------------------------------------------------------
+[9/10] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+kernel_b8192_h128_l48_k8      kernel 8192 128 48  8 total         7.145636      2.849731                 2.507478                      60.119286
+
+------------------------------------------------------------------------------------------------
+[10/10] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+kernel_b8192_h128_l48_k24      kernel 8192 128 48 24 total        14.616207      4.187515                 3.490425                      71.350195
+
+================================================================================================
+TRIAL TOTALS
+================================================================================================
+                  config_id sweep_group     B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+   batch_b2048_h128_l48_k48       batch  2048 128 48 48 total         6.786068      1.740483                 3.898958                      74.352122
+   batch_b8192_h128_l48_k48       batch  8192 128 48 48 total        27.144018      6.845061                 3.965490                      74.782432
+ channel_b8192_h256_l48_k48     channel  8192 256 48 48 total        54.278994     13.655542                 3.974869                      74.841940
+  channel_b8192_h64_l48_k48     channel  8192  64 48 48 total        13.647964      3.439043                 3.968536                      74.801791
+  kernel_b8192_h128_l48_k24      kernel  8192 128 48 24 total        14.616207      4.187515                 3.490425                      71.350195
+   kernel_b8192_h128_l48_k8      kernel  8192 128 48  8 total         7.145636      2.849731                 2.507478                      60.119286
+   main_b16384_h128_l48_k48        main 16384 128 48 48 total        54.854666     13.603144                 4.032499                      75.201483
+sequence_b8192_h128_l16_k16    sequence  8192 128 16 16 total         5.419366      2.340352                 2.315620                      56.815026
+sequence_b8192_h128_l24_k24    sequence  8192 128 24 24 total         8.203285      3.282606                 2.499016                      59.984248
+sequence_b8192_h128_l32_k32    sequence  8192 128 32 32 total        11.477678      4.211118                 2.725565                      63.310366
+
+Saved:
+results/shape_sweep_volta/v100_full_w16_b256/trial1/raw.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial1/trial_summary.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial1/trial_comparison.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial1/correctness.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial1/config_manifest.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial1/kernel_resources_occupancy.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial1/metadata.json
+================================================================================================
+AMPERE PYTORCH-vs-WARP SHAPE SWEEP
+================================================================================================
+GPU:       Tesla V100-SXM3-32GB
+Preset:    full
+Trial:     2
+Protocol:  warmup=50, runs=100, strict FP32
+Warp:      W=16, BWDK_BLOCK=256
+Cases:     10
+
+------------------------------------------------------------------------------------------------
+[1/10] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+                config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+kernel_b8192_h128_l48_k24      kernel 8192 128 48 24 total        14.604503      4.181719                 3.492464                       71.36692
+
+------------------------------------------------------------------------------------------------
+[2/10] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+kernel_b8192_h128_l48_k8      kernel 8192 128 48  8 total         7.156982      3.103109                 2.306391                       56.64221
+
+------------------------------------------------------------------------------------------------
+[3/10] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l32_k32    sequence 8192 128 32 32 total        11.461499      4.208067                 2.723697                      63.285199
+
+------------------------------------------------------------------------------------------------
+[4/10] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l24_k24    sequence 8192 128 24 24 total         8.205998      3.283282                 2.499328                      59.989245
+
+------------------------------------------------------------------------------------------------
+[5/10] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l16_k16    sequence 8192 128 16 16 total         5.416786      2.340936                 2.313941                      56.783678
+
+------------------------------------------------------------------------------------------------
+[6/10] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+                 config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+channel_b8192_h256_l48_k48     channel 8192 256 48 48 total        54.360514     13.704704                 3.966559                       74.78923
+
+------------------------------------------------------------------------------------------------
+[7/10] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=6.104e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+                config_id sweep_group    B  H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+channel_b8192_h64_l48_k48     channel 8192 64 48 48 total        13.654098      3.454638                 3.952396                      74.698892
+
+------------------------------------------------------------------------------------------------
+[8/10] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+batch_b8192_h128_l48_k48       batch 8192 128 48 48 total        27.170222      6.892493                 3.942002                       74.63218
+
+------------------------------------------------------------------------------------------------
+[9/10] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+batch_b2048_h128_l48_k48       batch 2048 128 48 48 total         6.789888       1.74935                 3.881377                      74.235946
+
+------------------------------------------------------------------------------------------------
+[10/10] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: Warp -> PyTorch-cuDNN
+
+Total comparison:
+               config_id sweep_group     B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+main_b16384_h128_l48_k48        main 16384 128 48 48 total        54.802094     13.734707                 3.990045                      74.937624
+
+================================================================================================
+TRIAL TOTALS
+================================================================================================
+                  config_id sweep_group     B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+   batch_b2048_h128_l48_k48       batch  2048 128 48 48 total         6.789888      1.749350                 3.881377                      74.235946
+   batch_b8192_h128_l48_k48       batch  8192 128 48 48 total        27.170222      6.892493                 3.942002                      74.632180
+ channel_b8192_h256_l48_k48     channel  8192 256 48 48 total        54.360514     13.704704                 3.966559                      74.789230
+  channel_b8192_h64_l48_k48     channel  8192  64 48 48 total        13.654098      3.454638                 3.952396                      74.698892
+  kernel_b8192_h128_l48_k24      kernel  8192 128 48 24 total        14.604503      4.181719                 3.492464                      71.366920
+   kernel_b8192_h128_l48_k8      kernel  8192 128 48  8 total         7.156982      3.103109                 2.306391                      56.642210
+   main_b16384_h128_l48_k48        main 16384 128 48 48 total        54.802094     13.734707                 3.990045                      74.937624
+sequence_b8192_h128_l16_k16    sequence  8192 128 16 16 total         5.416786      2.340936                 2.313941                      56.783678
+sequence_b8192_h128_l24_k24    sequence  8192 128 24 24 total         8.205998      3.283282                 2.499328                      59.989245
+sequence_b8192_h128_l32_k32    sequence  8192 128 32 32 total        11.461499      4.208067                 2.723697                      63.285199
+
+Saved:
+results/shape_sweep_volta/v100_full_w16_b256/trial2/raw.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial2/trial_summary.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial2/trial_comparison.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial2/correctness.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial2/config_manifest.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial2/kernel_resources_occupancy.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial2/metadata.json
+================================================================================================
+AMPERE PYTORCH-vs-WARP SHAPE SWEEP
+================================================================================================
+GPU:       Tesla V100-SXM3-32GB
+Preset:    full
+Trial:     3
+Protocol:  warmup=50, runs=100, strict FP32
+Warp:      W=16, BWDK_BLOCK=256
+Cases:     10
+
+------------------------------------------------------------------------------------------------
+[1/10] main_b16384_h128_l48_k48: B=16384, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group     B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+main_b16384_h128_l48_k48        main 16384 128 48 48 total        54.922731     13.720054                 4.003099                      75.019353
+
+------------------------------------------------------------------------------------------------
+[2/10] batch_b2048_h128_l48_k48: B=2048, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+batch_b2048_h128_l48_k48       batch 2048 128 48 48 total         6.802391      1.749719                 3.887705                      74.277882
+
+------------------------------------------------------------------------------------------------
+[3/10] batch_b8192_h128_l48_k48: B=8192, H=128, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+batch_b8192_h128_l48_k48       batch 8192 128 48 48 total        27.200297      6.886154                 3.949998                      74.683533
+
+------------------------------------------------------------------------------------------------
+[4/10] channel_b8192_h64_l48_k48: B=8192, H=64, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=6.104e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                config_id sweep_group    B  H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+channel_b8192_h64_l48_k48     channel 8192 64 48 48 total        13.651968       3.43595                 3.973273                      74.831833
+
+------------------------------------------------------------------------------------------------
+[5/10] channel_b8192_h256_l48_k48: B=8192, H=256, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                 config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+channel_b8192_h256_l48_k48     channel 8192 256 48 48 total        54.421197     13.701908                 3.971797                      74.822479
+
+------------------------------------------------------------------------------------------------
+[6/10] sequence_b8192_h128_l16_k16: B=8192, H=128, L=16, K=16
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l16_k16    sequence 8192 128 16 16 total         5.418711      2.341253                 2.314449                      56.793174
+
+------------------------------------------------------------------------------------------------
+[7/10] sequence_b8192_h128_l24_k24: B=8192, H=128, L=24, K=24
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l24_k24    sequence 8192 128 24 24 total         8.204216      3.284101                 2.498162                       59.97057
+
+------------------------------------------------------------------------------------------------
+[8/10] sequence_b8192_h128_l32_k32: B=8192, H=128, L=32, K=32
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.052e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                  config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+sequence_b8192_h128_l32_k32    sequence 8192 128 32 32 total        11.471554      4.208466                 2.725828                        63.3139
+
+------------------------------------------------------------------------------------------------
+[9/10] kernel_b8192_h128_l48_k8: B=8192, H=128, L=48, K=8
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+               config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+kernel_b8192_h128_l48_k8      kernel 8192 128 48  8 total         7.145277      3.038915                  2.35126                      57.469607
+
+------------------------------------------------------------------------------------------------
+[10/10] kernel_b8192_h128_l48_k24: B=8192, H=128, L=48, K=24
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=4.578e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+                config_id sweep_group    B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+kernel_b8192_h128_l48_k24      kernel 8192 128 48 24 total        14.625208      4.205404                 3.477718                      71.245509
+
+================================================================================================
+TRIAL TOTALS
+================================================================================================
+                  config_id sweep_group     B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+   batch_b2048_h128_l48_k48       batch  2048 128 48 48 total         6.802391      1.749719                 3.887705                      74.277882
+   batch_b8192_h128_l48_k48       batch  8192 128 48 48 total        27.200297      6.886154                 3.949998                      74.683533
+ channel_b8192_h256_l48_k48     channel  8192 256 48 48 total        54.421197     13.701908                 3.971797                      74.822479
+  channel_b8192_h64_l48_k48     channel  8192  64 48 48 total        13.651968      3.435950                 3.973273                      74.831833
+  kernel_b8192_h128_l48_k24      kernel  8192 128 48 24 total        14.625208      4.205404                 3.477718                      71.245509
+   kernel_b8192_h128_l48_k8      kernel  8192 128 48  8 total         7.145277      3.038915                 2.351260                      57.469607
+   main_b16384_h128_l48_k48        main 16384 128 48 48 total        54.922731     13.720054                 4.003099                      75.019353
+sequence_b8192_h128_l16_k16    sequence  8192 128 16 16 total         5.418711      2.341253                 2.314449                      56.793174
+sequence_b8192_h128_l24_k24    sequence  8192 128 24 24 total         8.204216      3.284101                 2.498162                      59.970570
+sequence_b8192_h128_l32_k32    sequence  8192 128 32 32 total        11.471554      4.208466                 2.725828                      63.313900
+
+Saved:
+results/shape_sweep_volta/v100_full_w16_b256/trial3/raw.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial3/trial_summary.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial3/trial_comparison.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial3/correctness.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial3/config_manifest.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial3/kernel_resources_occupancy.csv
+results/shape_sweep_volta/v100_full_w16_b256/trial3/metadata.json
+================================================================================================
+AGGREGATED PYTORCH-vs-WARP SHAPE SWEEP
+================================================================================================
+Trials: [1, 2, 3]
+                  config_id sweep_group     B   H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+   batch_b2048_h128_l48_k48       batch  2048 128 48 48 total         6.792782      1.746517                 3.889330                      74.288632
+   batch_b8192_h128_l48_k48       batch  8192 128 48 48 total        27.171512      6.874569                 3.952468                      74.699349
+ channel_b8192_h256_l48_k48     channel  8192 256 48 48 total        54.353568     13.687385                 3.971070                      74.817873
+  channel_b8192_h64_l48_k48     channel  8192  64 48 48 total        13.651343      3.443210                 3.964714                      74.777499
+  kernel_b8192_h128_l48_k24      kernel  8192 128 48 24 total        14.615306      4.191546                 3.486853                      71.320847
+   kernel_b8192_h128_l48_k8      kernel  8192 128 48  8 total         7.149298      2.997251                 2.385285                      58.076286
+   main_b16384_h128_l48_k48        main 16384 128 48 48 total        54.859831     13.685968                 4.008473                      75.052843
+sequence_b8192_h128_l16_k16    sequence  8192 128 16 16 total         5.418288      2.340847                 2.314670                      56.797295
+sequence_b8192_h128_l24_k24    sequence  8192 128 24 24 total         8.204500      3.283330                 2.498835                      59.981355
+sequence_b8192_h128_l32_k32    sequence  8192 128 32 32 total        11.470244      4.209217                 2.725030                      63.303162
+
+Saved:
+results/shape_sweep_volta/v100_full_w16_b256/all_trial_summaries.csv
+results/shape_sweep_volta/v100_full_w16_b256/aggregate_summary.csv
+results/shape_sweep_volta/v100_full_w16_b256/aggregate_comparison.csv

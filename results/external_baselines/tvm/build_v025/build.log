@@ -1,0 +1,76 @@
+[0/2] Re-checking globbed directories...
+[1/604] Creating directories for 'project_libbacktrace'
+[2/604] No download step for 'project_libbacktrace'
+[3/604] No update step for 'project_libbacktrace'
+[4/604] No checkout step for 'project_libbacktrace'
+[5/604] No patch step for 'project_libbacktrace'
+[6/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/builtin_fp16.cc.o
+[7/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/logging.cc.o
+[8/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/cpu_device_api.cc.o
+[9/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/module.cc.o
+[10/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/memory/memory_manager.cc.o
+[11/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/device_api.cc.o
+[12/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/static_library.cc.o
+[13/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/thread_pool.cc.o
+[14/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/const_loader_module.cc.o
+[15/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/timer.cc.o
+[16/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/threading_backend.cc.o
+[17/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/bytecode.cc.o
+[18/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/tensor.cc.o
+[19/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/file_utils.cc.o
+[20/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/attn_backend.cc.o
+[21/604] Performing configure step for 'project_libbacktrace'
+[22/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/rnn_state.cc.o
+[23/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/executable.cc.o
+[24/604] Performing build step for 'project_libbacktrace'
+[25/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/workspace_pool.cc.o
+[26/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/lm_support.cc.o
+[27/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_channel.cc.o
+[28/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/tensor_cache_support.cc.o
+[29/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/builtin.cc.o
+[30/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/kv_state.cc.o
+[31/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_device_api.cc.o
+[32/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_local_session.cc.o
+[33/604] Performing install step for 'project_libbacktrace'
+[34/604] Completed 'project_libbacktrace'
+[35/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_event_impl.cc.o
+[36/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/backtrace_win.cc.o
+[37/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/vm.cc.o
+[38/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_pipe_impl.cc.o
+[39/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/backtrace.cc.o
+[40/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/vm/paged_kv_cache.cc.o
+[41/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/error.cc.o
+[42/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_endpoint.cc.o
+[43/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/init_once.cc.o
+[44/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_server_env.cc.o
+[45/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/dtype.cc.o
+[46/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/tensor.cc.o
+[47/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/function.cc.o
+[48/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_module.cc.o
+[49/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/structural_equal.cc.o
+[50/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/structural_hash.cc.o
+[51/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/visit_error_context.cc.o
+[52/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/json_parser.cc.o
+[53/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/object.cc.o
+[54/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/json_writer.cc.o
+[55/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/library_module.cc.o
+[56/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/library_module_dynamic_lib.cc.o
+[57/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/container.cc.o
+[58/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/library_module_system_lib.cc.o
+[59/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/env_c_api.cc.o
+[60/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/env_context.cc.o
+[61/604] Building CXX object CMakeFiles/tvm_runtime_cuda_objs.dir/src/backend/cuda/runtime/cuda_device_api.cc.o
+FAILED: [code=1] CMakeFiles/tvm_runtime_cuda_objs.dir/src/backend/cuda/runtime/cuda_device_api.cc.o 
+/home/huriyeh.babak/tvm-build-env-v025/bin/x86_64-conda-linux-gnu-c++ -DNDEBUG=1 -DTVM_FFI_CMAKE_LITTLE_ENDIAN=1 -DTVM_FFI_EXPORTS -DTVM_INDEX_DEFAULT_I64=1 -DTVM_LLVM_HAS_AARCH64_TARGET=1 -DTVM_LLVM_VERSION=181 -DTVM_RUNTIME_EXPORTS -DTVM_THREADPOOL_USE_OPENMP=0 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/huriyeh.babak/third_party/apache-tvm-v0.25.0/include -I/home/huriyeh.babak/third_party/apache-tvm-v0.25.0/3rdparty/tvm-ffi/include -I/home/huriyeh.babak/third_party/apache-tvm-v0.25.0/3rdparty/tvm-ffi/3rdparty/dlpack/include -isystem /home/huriyeh.babak/third_party/apache-tvm-v0.25.0/3rdparty/compiler-rt -isystem /home/huriyeh.babak/micromamba/envs/s4convd/include -isystem /home/huriyeh.babak/tvm-build-env-v025/include -faligned-new -O2 -Wall -fPIC  -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -MD -MT CMakeFiles/tvm_runtime_cuda_objs.dir/src/backend/cuda/runtime/cuda_device_api.cc.o -MF CMakeFiles/tvm_runtime_cuda_objs.dir/src/backend/cuda/runtime/cuda_device_api.cc.o.d -o CMakeFiles/tvm_runtime_cuda_objs.dir/src/backend/cuda/runtime/cuda_device_api.cc.o -c /home/huriyeh.babak/third_party/apache-tvm-v0.25.0/src/backend/cuda/runtime/cuda_device_api.cc
+/home/huriyeh.babak/third_party/apache-tvm-v0.25.0/src/backend/cuda/runtime/cuda_device_api.cc:24:10: fatal error: cuda.h: No such file or directory
+   24 | #include <cuda.h>
+      |          ^~~~~~~~
+compilation terminated.
+[62/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/serialization.cc.o
+[63/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_session.cc.o
+[64/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/module.cc.o
+[65/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/reflection_extra.cc.o
+[66/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/testing.cc.o
+[67/604] Building CXX object CMakeFiles/tvm_runtime_objs.dir/src/runtime/rpc/rpc_socket_impl.cc.o
+[68/604] Building CXX object 3rdparty/tvm-ffi/CMakeFiles/tvm_ffi_objs.dir/src/ffi/extra/dataclass.cc.o
+ninja: build stopped: subcommand failed.

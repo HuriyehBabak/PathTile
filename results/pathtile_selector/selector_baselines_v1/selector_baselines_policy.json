@@ -1,0 +1,31 @@
+{
+  "selection_split": "training only",
+  "global_static_objective": "minimum summed mean latency over all training GPU-shape cases, independently per path",
+  "default_policy": {
+    "fwd_warps": 16,
+    "bwd_input_warps": 16,
+    "bwd_weight_block": 128
+  },
+  "global_static_policy": {
+    "fwd_warps": 16,
+    "bwd_input_warps": 16,
+    "bwd_weight_block": 256
+  },
+  "architecture_static_policies": {
+    "A100": {
+      "fwd_warps": 16,
+      "bwd_input_warps": 16,
+      "bwd_weight_block": 128
+    },
+    "A6000": {
+      "fwd_warps": 16,
+      "bwd_input_warps": 16,
+      "bwd_weight_block": 128
+    },
+    "V100": {
+      "fwd_warps": 16,
+      "bwd_input_warps": 16,
+      "bwd_weight_block": 256
+    }
+  }
+}

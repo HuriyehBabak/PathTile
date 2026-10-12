@@ -1,0 +1,43 @@
+phase,Section Name,Metric Name,Metric Unit,Metric Value
+Forward,GPU Speed Of Light Throughput,Memory Throughput,%,62.94
+Forward,GPU Speed Of Light Throughput,DRAM Throughput,%,8.32
+Forward,GPU Speed Of Light Throughput,Duration,ms,6.14
+Forward,GPU Speed Of Light Throughput,Compute (SM) Throughput,%,85.96
+Forward,Memory Workload Analysis,Memory Throughput,Gbyte/s,129.41
+Forward,Memory Workload Analysis,L1/TEX Hit Rate,%,81.60
+Forward,Memory Workload Analysis,L2 Hit Rate,%,63.00
+Forward,Scheduler Statistics,Active Warps Per Scheduler,warp,15.17
+Forward,Scheduler Statistics,Eligible Warps Per Scheduler,warp,5.05
+Forward,Warp State Statistics,Warp Cycles Per Issued Instruction,cycle,19.33
+Forward,Launch Statistics,Registers Per Thread,register/thread,32
+Forward,Launch Statistics,Waves Per SM,,303.41
+Forward,Occupancy,Theoretical Occupancy,%,100
+Forward,Occupancy,Achieved Occupancy,%,94.94
+Bwd-Input,GPU Speed Of Light Throughput,Memory Throughput,%,64.85
+Bwd-Input,GPU Speed Of Light Throughput,DRAM Throughput,%,8.57
+Bwd-Input,GPU Speed Of Light Throughput,Duration,ms,5.96
+Bwd-Input,GPU Speed Of Light Throughput,Compute (SM) Throughput,%,88.59
+Bwd-Input,Memory Workload Analysis,Memory Throughput,Gbyte/s,133.35
+Bwd-Input,Memory Workload Analysis,L1/TEX Hit Rate,%,81.61
+Bwd-Input,Memory Workload Analysis,L2 Hit Rate,%,62.81
+Bwd-Input,Scheduler Statistics,Active Warps Per Scheduler,warp,15.20
+Bwd-Input,Scheduler Statistics,Eligible Warps Per Scheduler,warp,5.23
+Bwd-Input,Warp State Statistics,Warp Cycles Per Issued Instruction,cycle,18.84
+Bwd-Input,Launch Statistics,Registers Per Thread,register/thread,32
+Bwd-Input,Launch Statistics,Waves Per SM,,303.41
+Bwd-Input,Occupancy,Theoretical Occupancy,%,100
+Bwd-Input,Occupancy,Achieved Occupancy,%,95.15
+Bwd-Weight,GPU Speed Of Light Throughput,Memory Throughput,%,44.05
+Bwd-Weight,GPU Speed Of Light Throughput,DRAM Throughput,%,7.40
+Bwd-Weight,GPU Speed Of Light Throughput,Duration,ms,7.02
+Bwd-Weight,GPU Speed Of Light Throughput,Compute (SM) Throughput,%,81.57
+Bwd-Weight,Memory Workload Analysis,Memory Throughput,Gbyte/s,115.09
+Bwd-Weight,Memory Workload Analysis,L1/TEX Hit Rate,%,0
+Bwd-Weight,Memory Workload Analysis,L2 Hit Rate,%,30.42
+Bwd-Weight,Scheduler Statistics,Active Warps Per Scheduler,warp,5.95
+Bwd-Weight,Scheduler Statistics,Eligible Warps Per Scheduler,warp,2.40
+Bwd-Weight,Warp State Statistics,Warp Cycles Per Issued Instruction,cycle,7.28
+Bwd-Weight,Launch Statistics,Registers Per Thread,register/thread,40
+Bwd-Weight,Launch Statistics,Waves Per SM,,50.57
+Bwd-Weight,Occupancy,Theoretical Occupancy,%,37.50
+Bwd-Weight,Occupancy,Achieved Occupancy,%,37.22

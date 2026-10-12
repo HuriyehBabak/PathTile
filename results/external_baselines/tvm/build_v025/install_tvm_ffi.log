@@ -1,0 +1,21 @@
+Processing /home/huriyeh.babak/third_party/apache-tvm-v0.25.0/3rdparty/tvm-ffi
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: typing-extensions>=4.5 in /home/huriyeh.babak/tvm-build-env-v025/lib/python3.11/site-packages (from apache-tvm-ffi==0.1.dev1+g59da4c0b8) (4.16.0)
+Building wheels for collected packages: apache-tvm-ffi
+  Building wheel for apache-tvm-ffi (pyproject.toml): started
+  Building wheel for apache-tvm-ffi (pyproject.toml): still running...
+  Building wheel for apache-tvm-ffi (pyproject.toml): finished with status 'done'
+  Created wheel for apache-tvm-ffi: filename=apache_tvm_ffi-0.1.dev1+g59da4c0b8-cp311-cp311-linux_x86_64.whl size=2778594 sha256=753b5e9f8894710f4bb3c96c6a2f33e7d9b540dfe5646251ac805522fb1dea55
+  Stored in directory: /tmp/pip-ephem-wheel-cache-mvkewbnh/wheels/1a/da/f6/de2536899c0f458cbb97562697afb71cbf1d450ea9a76dc10a
+Successfully built apache-tvm-ffi
+Installing collected packages: apache-tvm-ffi
+  Attempting uninstall: apache-tvm-ffi
+    Found existing installation: apache-tvm-ffi 0.1.dev1+g59da4c0b8
+    Uninstalling apache-tvm-ffi-0.1.dev1+g59da4c0b8:
+      Successfully uninstalled apache-tvm-ffi-0.1.dev1+g59da4c0b8
+Successfully installed apache-tvm-ffi-0.1.dev1+g59da4c0b8

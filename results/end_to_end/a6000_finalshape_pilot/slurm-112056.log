@@ -1,0 +1,46 @@
+==========================================
+SLURM_JOB_ID = 112056
+SLURM_NODELIST = pascal-node14.l3s.intra
+==========================================
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+Epoch 1/2: train=0.06927, val=0.21478, train_wall=11.89s, peak=10.26GiB
+Epoch 2/2: train=0.05997, val=0.21459, train_wall=2.37s, peak=9.04GiB
+Test RMSLE: 0.039941
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+Epoch 1/2: train=0.06927, val=0.21478, train_wall=11.91s, peak=10.26GiB
+Epoch 2/2: train=0.05997, val=0.21459, train_wall=2.81s, peak=9.04GiB
+Test RMSLE: 0.039941

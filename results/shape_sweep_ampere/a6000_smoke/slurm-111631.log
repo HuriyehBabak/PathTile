@@ -1,0 +1,51 @@
+==========================================
+SLURM_JOB_ID = 111631
+SLURM_NODELIST = pascal-node14.l3s.intra
+==========================================
+================================================================================================
+AMPERE PYTORCH-vs-WARP SHAPE SWEEP
+================================================================================================
+GPU:       NVIDIA RTX A6000
+Preset:    smoke
+Trial:     1
+Protocol:  warmup=5, runs=10, strict FP32
+Warp:      W=16, BWDK_BLOCK=128
+Cases:     2
+
+------------------------------------------------------------------------------------------------
+[1/2] smoke_b64_h8_l16_k8: B=64, H=8, L=16, K=8
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=7.629e-06, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+          config_id sweep_group  B  H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+smoke_b64_h8_l16_k8       smoke 64  8 16  8 total         0.347568      0.109498                 3.174207                      68.496064
+
+------------------------------------------------------------------------------------------------
+[2/2] smoke_b128_h16_l48_k48: B=128, H=16, L=48, K=48
+Correctness: fwd=0.000e+00, dx=0.000e+00, dk=3.910e-05, ok=True
+Warm-up PyTorch/cuDNN...
+Warm-up Warp...
+Measured method order: PyTorch-cuDNN -> Warp
+
+Total comparison:
+             config_id sweep_group   B  H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+smoke_b128_h16_l48_k48       smoke 128 16 48 48 total         0.345347      0.125126                 2.759987                      63.767941
+
+================================================================================================
+TRIAL TOTALS
+================================================================================================
+             config_id sweep_group   B  H  L  K phase  pytorch_mean_ms  warp_mean_ms  warp_speedup_vs_pytorch  warp_reduction_vs_pytorch_pct
+smoke_b128_h16_l48_k48       smoke 128 16 48 48 total         0.345347      0.125126                 2.759987                      63.767941
+   smoke_b64_h8_l16_k8       smoke  64  8 16  8 total         0.347568      0.109498                 3.174207                      68.496064
+
+Saved:
+results/shape_sweep_ampere/a6000_smoke/trial1/raw.csv
+results/shape_sweep_ampere/a6000_smoke/trial1/trial_summary.csv
+results/shape_sweep_ampere/a6000_smoke/trial1/trial_comparison.csv
+results/shape_sweep_ampere/a6000_smoke/trial1/correctness.csv
+results/shape_sweep_ampere/a6000_smoke/trial1/config_manifest.csv
+results/shape_sweep_ampere/a6000_smoke/trial1/kernel_resources_occupancy.csv
+results/shape_sweep_ampere/a6000_smoke/trial1/metadata.json

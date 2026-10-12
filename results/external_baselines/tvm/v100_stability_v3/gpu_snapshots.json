@@ -1,0 +1,74 @@
+[
+  {
+    "label": "before_burnin",
+    "timestamp_utc": "2026-09-08T12:40:54.248552+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:40:54.235, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 30, 71, 68.17, 350.00, 1522, 1522, 958",
+    "stderr": ""
+  },
+  {
+    "label": "after_burnin",
+    "timestamp_utc": "2026-09-08T12:41:04.308797+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:04.297, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 41, 100, 102.86, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  },
+  {
+    "label": "trial1_before",
+    "timestamp_utc": "2026-09-08T12:41:05.337020+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:05.325, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 42, 100, 100.19, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  },
+  {
+    "label": "trial1_after",
+    "timestamp_utc": "2026-09-08T12:41:19.476093+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:19.465, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 45, 91, 108.72, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  },
+  {
+    "label": "trial2_before",
+    "timestamp_utc": "2026-09-08T12:41:20.507747+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:20.496, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 47, 100, 106.72, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  },
+  {
+    "label": "trial2_after",
+    "timestamp_utc": "2026-09-08T12:41:34.582301+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:34.569, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 47, 100, 104.04, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  },
+  {
+    "label": "trial3_before",
+    "timestamp_utc": "2026-09-08T12:41:35.637580+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:35.628, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 47, 100, 114.42, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  },
+  {
+    "label": "trial3_after",
+    "timestamp_utc": "2026-09-08T12:41:49.682677+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:49.671, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 48, 100, 99.52, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  },
+  {
+    "label": "finished",
+    "timestamp_utc": "2026-09-08T12:41:49.723076+00:00",
+    "cuda_visible_devices": "0",
+    "returncode": 0,
+    "stdout": "2026/09/08 14:41:49.713, 0, GPU-8a324017-3f40-ea0c-6de5-7bf365c02be4, Tesla V100-SXM3-32GB, P0, 47, 100, 82.06, 350.00, 1597, 1597, 958",
+    "stderr": ""
+  }
+]

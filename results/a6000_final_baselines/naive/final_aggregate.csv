@@ -1,0 +1,2 @@
+trials,fwd_mean_ms,fwd_between_trial_std_ms,dx_mean_ms,dx_between_trial_std_ms,dk_mean_ms,dk_between_trial_std_ms,total_mean_ms,total_between_trial_std_ms
+3,6.264202340443929,0.023305550952392805,6.143025482495626,0.022779810696184895,32.73469483693441,0.08897818456941851,45.141922659873956,0.13486426968764278

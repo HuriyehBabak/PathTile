@@ -31,3 +31,28 @@ venv/
 *.swp
 *.tmp
 *~
+
+# Generated paper figures - keep locally, exclude from Git
+/paper/final_artifacts/figures/
+/paper/final_artifacts_TACO/figures/
+
+# Generated image files
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.webp
+
+# Ignore backup directories everywhere
+*_backup*/
+backup*/
+
+# Ignore backup files
+*.bak
+*.backup
+*.orig
+*_backup*.tar.gz
+backup*.tar.gz
+
+# Generated benchmark figures
+/results/*/*_runtime_stacked.pdf

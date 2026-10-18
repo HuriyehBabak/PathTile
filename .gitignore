@@ -65,3 +65,12 @@ backup*.tar.gz
 
 # Benchmark results and generated data
 /results/
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+/paper/final_artifacts/tables/

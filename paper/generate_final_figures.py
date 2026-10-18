@@ -1796,7 +1796,7 @@ def holdout_figure_detailed(
 
     ax_cdf.set_xlim(
         -0.03,
-        2.15,
+        2.25,
     )
 
     ax_cdf.set_ylim(

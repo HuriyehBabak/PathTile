@@ -1,2 +1,0 @@
-technique,epoch,fwd_mean_ms,bwd_input_mean_ms,bwd_weight_mean_ms,train_loss,val_loss,peak_memory_gib
-WarpThread-rtx_a6000,2,4.486807982126872,4.559189359347026,5.229056040445964,0.059968601912260056,0.21459290385246277,9.039793014526367

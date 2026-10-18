@@ -1,4 +1,0 @@
-trial,correctness_rows,correctness_pass,fwd_runs,bwd_input_runs,bwd_weight_runs,fixed_configs_match,fwd_within_trial_cv_pct,bwd_input_within_trial_cv_pct,bwd_weight_within_trial_cv_pct,max_phase_within_trial_cv_pct
-1,11,True,100,100,100,True,39.00560969110365,26.652834626243447,31.488319005561635,39.00560969110365
-2,11,True,100,100,100,True,39.14207696565548,26.657160794239967,25.111870103186313,39.14207696565548
-3,11,True,100,100,100,True,29.582861783363796,35.00509545102457,26.182415232634607,35.00509545102457

@@ -1,7 +1,0 @@
-config_id,sweep_group,B,H,L,K,device_name,phase,candidate_kind,winner_schedule_id,winner_value,winner_mean_ms,winner_within_trial_std_ms,winner_between_trial_std_ms,second_schedule_id,second_value,second_mean_ms,winner_margin_vs_second_pct,paper_default_value,paper_default_mean_ms,paper_default_regret_pct
-smoke_b128_h16_l48_k48,smoke,128,16,48,48,NVIDIA A100-PCIE-40GB,fwd,warps_per_block,w16,16,0.2088960036635399,0.0014481551781221913,,w16,16,0.2088960036635399,0.0,16,0.2088960036635399,0.0
-smoke_b128_h16_l48_k48,smoke,128,16,48,48,NVIDIA A100-PCIE-40GB,bwd_input,warps_per_block,w16,16,0.20633599907159805,0.010861169104272497,,w16,16,0.20633599907159805,0.0,16,0.20633599907159805,0.0
-smoke_b128_h16_l48_k48,smoke,128,16,48,48,NVIDIA A100-PCIE-40GB,bwd_weight,bwdk_block,b128,128,0.17663999646902084,0.003620382676949414,,b128,128,0.17663999646902084,0.0,128,0.17663999646902084,0.0
-smoke_b64_h8_l16_k8,smoke,64,8,16,8,NVIDIA A100-PCIE-40GB,fwd,warps_per_block,w16,16,0.22579199820756912,0.025342699812070154,,w16,16,0.22579199820756912,0.0,16,0.22579199820756912,0.0
-smoke_b64_h8_l16_k8,smoke,64,8,16,8,NVIDIA A100-PCIE-40GB,bwd_input,warps_per_block,w16,16,0.2094080001115799,0.003620393213661542,,w16,16,0.2094080001115799,0.0,16,0.2094080001115799,0.0
-smoke_b64_h8_l16_k8,smoke,64,8,16,8,NVIDIA A100-PCIE-40GB,bwd_weight,bwdk_block,b128,128,0.3312639892101288,0.016653779280049134,,b128,128,0.3312639892101288,0.0,128,0.3312639892101288,0.0

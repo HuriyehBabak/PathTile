@@ -1,3 +1,0 @@
-config_id,sweep_group,B,H,L,K,device_name,fwd_winner_warps,bwd_input_winner_warps,bwd_weight_winner_block,oracle_total_ms,paper_default_total_ms,paper_default_total_regret_pct
-smoke_b128_h16_l48_k48,smoke,128,16,48,48,NVIDIA RTX A6000,4,16,192,0.12020800039172172,0.12408000007271766,3.2210831794708072
-smoke_b64_h8_l16_k8,smoke,64,8,16,8,NVIDIA RTX A6000,4,16,128,0.12575360015034676,0.13217920064926147,5.109675183241258

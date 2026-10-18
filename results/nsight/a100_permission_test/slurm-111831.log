@@ -1,8 +1,0 @@
-==========================================
-SLURM_JOB_ID = 111831
-SLURM_NODELIST = pascal-node12.l3s.intra
-==========================================
-==PROF== Connected to process 64194 (/home/huriyeh.babak/micromamba/envs/s4convd/bin/python3.14)
-==PROF== Profiling "vectorized_elementwise_kernel" - 0 (1/1): 0%....50%....100% - 10 passes
-==PROF== Disconnected from process 64194
-==PROF== Report: /home/huriyeh.babak/s4convd-paper/results/nsight/a100_permission_test/permission_test_2.ncu-rep

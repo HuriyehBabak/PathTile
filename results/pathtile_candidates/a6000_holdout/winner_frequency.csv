@@ -1,8 +1,0 @@
-phase,candidate_kind,winner_value,shapes_won
-bwd_input,warps_per_block,16,8
-bwd_input,warps_per_block,8,2
-bwd_weight,bwdk_block,128,7
-bwd_weight,bwdk_block,224,2
-bwd_weight,bwdk_block,320,1
-fwd,warps_per_block,16,7
-fwd,warps_per_block,8,3

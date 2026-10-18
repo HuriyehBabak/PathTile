@@ -1,2 +1,0 @@
-technique,epoch,fwd_mean_ms,bwd_input_mean_ms,bwd_weight_mean_ms,train_loss,val_loss,peak_memory_gib
-PyTorch-cuDNN-rtx_a6000,2,,,,0.032645031809806824,0.20997774600982666,0.1669139862060547

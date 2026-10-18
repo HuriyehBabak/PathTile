@@ -1,5 +1,0 @@
-kernel,threads_per_block,warps_per_block,regs_per_thread,allocated_regs_per_block,static_smem_bytes,allocated_smem_bytes_est,resident_blocks_per_sm_est,active_warps_per_sm_est,occupancy_est,limiting_resources_est,gpu_profile,compute_capability,local_memory_bytes
-fwd,512,16,40,20480,3072,3072,3,48,1.0,"threads,warps,registers",rtx_a6000,8.6,0
-bwd_input,512,16,40,20480,3072,3072,3,48,1.0,"threads,warps,registers",rtx_a6000,8.6,0
-bwd_weight_partials,128,4,40,5120,24640,24832,4,16,0.3333333333333333,shared_memory,rtx_a6000,8.6,0
-bwd_weight_reduce,256,8,39,10240,0,0,6,48,1.0,"threads,warps,registers",rtx_a6000,8.6,0

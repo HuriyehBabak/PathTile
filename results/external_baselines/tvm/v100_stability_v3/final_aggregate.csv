@@ -1,2 +1,0 @@
-gpu_slug,method,trials,fwd_mean_ms,fwd_between_trial_std_ms,bwd_input_mean_ms,bwd_input_between_trial_std_ms,bwd_weight_mean_ms,bwd_weight_between_trial_std_ms,total_mean_ms,total_between_trial_std_ms
-v100,"TVM-TIRx (frozen schedule, batched timing)",3,4.982535982131958,0.04308851329572691,4.86793974240621,0.023379546659402898,10.067159461975098,0.054692272771261354,19.917635186513266,0.11193719949026283

@@ -56,3 +56,12 @@ backup*.tar.gz
 
 # Generated benchmark figures
 /results/*/*_runtime_stacked.pdf
+
+# Flash-DWC generated native builds
+/results/flashdwc/build_*/
+
+# Compiled shared libraries
+*.so
+
+# Benchmark results and generated data
+/results/

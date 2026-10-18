@@ -1,6 +1,0 @@
-==========================================
-SLURM_JOB_ID = 118169
-SLURM_NODELIST = pascal-node12.l3s.intra
-==========================================
-/var/lib/slurm/slurmd/job118169/slurm_script: line 14: /home/huriyeh.babak/micromamba/bin/micromamba: No such file or directory
-/var/lib/slurm/slurmd/job118169/slurm_script: line 15: micromamba: command not found

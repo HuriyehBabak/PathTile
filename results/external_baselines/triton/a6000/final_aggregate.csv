@@ -1,2 +1,0 @@
-gpu_slug,method,trials,fwd_mean_ms,fwd_between_trial_std_ms,bwd_input_mean_ms,bwd_input_between_trial_std_ms,bwd_weight_mean_ms,bwd_weight_between_trial_std_ms,total_mean_ms,total_between_trial_std_ms
-a6000,Triton,3,5.272135663032532,0.01525154610787816,5.846244770685832,0.009885517265180943,20.647205486297608,0.08989532176750223,31.76558592001597,0.09594167994101119

@@ -1,2 +1,0 @@
-trials,epoch_speedup_geomean,epoch_speedup_min,epoch_speedup_max,epoch_reduction_mean_pct,model_fwd_speedup_geomean,backward_speedup_geomean,gpu_stages_speedup_geomean,max_rmsle_abs_difference,max_abs_memory_delta_gib
-3,1.0269774260906175,1.000254026926589,1.0517104292083688,2.6062692450217195,1.2265445132742827,1.9550582688796627,1.6794651280597246,0.0,0.000732421875

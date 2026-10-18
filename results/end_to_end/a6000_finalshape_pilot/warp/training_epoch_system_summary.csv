@@ -1,2 +1,0 @@
-technique,epoch,train_wall_time_s,peak_memory_gib,util_gpu_avg_pct,util_gpu_min_pct,util_gpu_max_pct,util_mem_avg_pct,nvml_used_peak_gib,nvml_total_gib
-WarpThread-rtx_a6000,2,2.3657944099977612,9.039793014526367,66.95833333333333,0.0,100.0,22.958333333333332,10.5753173828125,47.98828125

@@ -1,5 +1,0 @@
-==========================================
-SLURM_JOB_ID = 111680
-SLURM_NODELIST = pascal-node14.l3s.intra
-==========================================
-/home/huriyeh.babak/micromamba/envs/s4convd/etc/conda/activate.d/activate-gcc_linux-64.sh: line 114: SYS_SYSROOT: unbound variable

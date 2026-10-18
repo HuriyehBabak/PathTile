@@ -1,6 +1,0 @@
-"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
-"0","525989","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","dram__bytes_read.sum","Mbyte","805.88"
-"0","525989","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","dram__bytes_read.sum.per_second","Gbyte/s","20.63"
-"0","525989","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","dram__bytes_write.sum","Mbyte","2.08"
-"0","525989","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","dram__bytes_write.sum.per_second","Mbyte/s","53.14"
-"0","525989","python3.14","127.0.0.1","dwconv1d_bwd_kernel_naive","1","7","(512, 1, 1)","(1, 128, 1)","0","8.6","Command line profiler metrics","dram__throughput.avg.pct_of_peak_sustained_elapsed","%","2.84"

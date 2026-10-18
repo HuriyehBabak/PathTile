@@ -1,4 +1,0 @@
-kernel,threads_per_block,warps_per_block,regs_per_thread,allocated_regs_per_block,static_smem_bytes,allocated_smem_bytes_est,resident_blocks_per_sm_est,active_warps_per_sm_est,occupancy_est,limiting_resources_est,gpu_profile,compute_capability,local_memory_bytes
-fwd,512,16,32,16384,3072,3072,4,64,1.0,"threads,warps,registers",a100,8.0,0
-bwd_input,512,16,32,16384,3072,3072,4,64,1.0,"threads,warps,registers",a100,8.0,0
-bwd_weight,256,8,40,10240,24704,24832,6,48,0.75,"registers,shared_memory",a100,8.0,0

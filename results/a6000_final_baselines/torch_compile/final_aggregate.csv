@@ -1,2 +1,0 @@
-trials,correctness_passes,fwd_mean_ms,fwd_between_trial_std_ms,dx_mean_ms,dx_between_trial_std_ms,dk_mean_ms,dk_between_trial_std_ms,total_mean_ms,total_between_trial_std_ms
-3,9,8.57179129600525,0.02583335501495933,14.212757972081503,0.05211555440817162,33.76733479817708,0.15161308189179934,56.55188406626383,0.22929674352569995

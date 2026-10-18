@@ -1,2 +1,0 @@
-technique,python,pytorch,torch_cuda,gpu,compute_capability,gpu_memory_gib,B,H,L,K,dtype,threads_per_block,warmup_runs,measured_runs,seed,fwd_unique_bytes,fwd_unique_mb,bwd_input_unique_bytes,bwd_input_unique_mb,bwd_kernel_unique_bytes,bwd_kernel_unique_mb
-naive,3.14.6,2.10.0+cu128,12.8,NVIDIA RTX A6000,8.6,47.529052734375,16384,128,48,48,torch.float32,512,50,100,42,805330944,805.330944,805330944,805.330944,805330944,805.330944

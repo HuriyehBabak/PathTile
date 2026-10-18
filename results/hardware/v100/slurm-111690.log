@@ -1,7 +1,0 @@
-==========================================
-SLURM_JOB_ID = 111690
-SLURM_NODELIST = pascal-node10.l3s.intra
-==========================================
-pascal-node10
-name, compute_cap, memory.total [MiB], driver_version
-Tesla V100-SXM3-32GB, 7.0, 32768 MiB, 570.124.06

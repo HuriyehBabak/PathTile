@@ -211,6 +211,115 @@ def static_total(
 
     return fwd + dx + dk
 
+def candidate_values_for_phase(
+    candidates: pd.DataFrame,
+    phase: str,
+) -> list[int]:
+    values = (
+        candidates.loc[
+            candidates["phase"] == phase,
+            "candidate_value",
+        ]
+        .drop_duplicates()
+        .astype(int)
+        .sort_values()
+        .tolist()
+    )
+    return values
+
+
+def enumerate_static_policies(
+    candidates: pd.DataFrame,
+) -> list[dict[str, int]]:
+    fwd_values = candidate_values_for_phase(
+        candidates,
+        "fwd",
+    )
+    dx_values = candidate_values_for_phase(
+        candidates,
+        "bwd_input",
+    )
+    dk_values = candidate_values_for_phase(
+        candidates,
+        "bwd_weight",
+    )
+
+    return [
+        {
+            "fwd_warps": fwd,
+            "bwd_input_warps": dx,
+            "bwd_weight_block": dk,
+        }
+        for fwd in fwd_values
+        for dx in dx_values
+        for dk in dk_values
+    ]
+
+
+# ---------------------------------------------------------------------
+# Heuristic
+# ---------------------------------------------------------------------
+
+def select_majority_winner_policy(
+    candidates: pd.DataFrame,
+) -> dict[str, int]:
+    policy = {}
+
+    for phase in PHASES:
+        subset = candidates[
+            candidates["phase"] == phase
+        ].copy()
+
+        # Best candidate for each training shape.
+        winners = (
+            subset
+            .sort_values(
+                ["config_id", "mean_ms", "candidate_value"],
+                kind="stable",
+            )
+            .groupby(
+                "config_id",
+                as_index=False,
+            )
+            .first()
+        )
+
+        # Candidate that wins on the largest number of shapes.
+        counts = (
+            winners["candidate_value"]
+            .value_counts()
+            .rename_axis("candidate_value")
+            .reset_index(name="wins")
+            .sort_values(
+                ["wins", "candidate_value"],
+                ascending=[False, True],
+                kind="stable",
+            )
+            .reset_index(drop=True)
+        )
+
+        winner = int(
+            counts.iloc[0]["candidate_value"]
+        )
+
+        policy[
+            phase_to_output[phase]
+        ] = winner
+
+    return policy
+
+majority_winner_policies = {}
+
+for gpu_label, (
+    train_candidates,
+    _,
+    _,
+) in training_data.items():
+    majority_winner_policies[gpu_label] = (
+        select_majority_winner_policy(
+            train_candidates
+        )
+    )
 
 # ---------------------------------------------------------------------
 # Evaluate all policies on HOLDOUT ONLY
@@ -227,6 +336,18 @@ for gpu_label, (
     pathtile_policy = architecture_policies[
         gpu_label
     ]
+    majority_winner_policy = majority_winner_policies[
+        gpu_label
+    ]
+    random_fixed_policies = enumerate_static_policies(
+        training_data[gpu_label][0]
+    )
+    
+    if len(random_fixed_policies) != 63:
+        raise RuntimeError(
+            f"Expected 63 random-fixed policies for {gpu_label}, "
+            f"got {len(random_fixed_policies)}"
+        )
 
     for oracle_row in oracle.itertuples(
         index=False
@@ -236,6 +357,25 @@ for gpu_label, (
         oracle_total = float(
             oracle_row.oracle_total_ms
         )
+        random_fixed_latencies = np.array(
+            [
+                static_total(
+                    candidates,
+                    config_id,
+                    policy,
+                )
+                for policy in random_fixed_policies
+            ],
+            dtype=float,
+        )
+
+        random_fixed_latency = float(
+            np.mean(random_fixed_latencies)
+        )
+
+        random_fixed_regret = (
+            random_fixed_latency / oracle_total - 1.0
+        ) * 100.0
 
         oracle_schedule = (
             f"fwd={int(oracle_row.fwd_winner_warps)},"
@@ -260,6 +400,15 @@ for gpu_label, (
                     candidates,
                     config_id,
                     global_policy,
+                ),
+            ),
+            (
+                "Majority-winner",
+                majority_winner_policy,
+                static_total(
+                    candidates,
+                    config_id,
+                    majority_winner_policy,
                 ),
             ),
             (
@@ -302,6 +451,29 @@ for gpu_label, (
                 }
             )
 
+        
+        rows.append(
+            {
+                "gpu": gpu_label,
+                "device_name": device_name,
+                "config_id": config_id,
+                "B": int(oracle_row.B),
+                "H": int(oracle_row.H),
+                "L": int(oracle_row.L),
+                "K": int(oracle_row.K),
+                "method": "Random-fixed (expected)",
+                "selected_schedule": (
+                    f"uniform over {len(random_fixed_policies)} "
+                    "fixed policies"
+                ),
+                "oracle_schedule": oracle_schedule,
+                "selected_latency_ms": random_fixed_latency,
+                "oracle_latency_ms": oracle_total,
+                "regret_pct": random_fixed_regret,
+            }
+        )
+
+        # ORACLE BLOCK
         rows.append(
             {
                 "gpu": gpu_label,
@@ -326,6 +498,8 @@ per_shape = pd.DataFrame(rows)
 method_order = [
     "Default",
     "Global-static",
+    "Random-fixed (expected)",
+    "Majority-winner",
     "PathTile",
     "Oracle",
 ]
@@ -439,13 +613,27 @@ policy_record = {
         "minimum summed mean latency over all "
         "training GPU-shape cases, independently per path"
     ),
+    "random_fixed_definition": (
+        "uniform expectation over all fixed configuration "
+        "triplets in the training candidate space"
+    ),
+    "random_fixed_evaluation": (
+        "no holdout measurements used for selection; "
+        "expected latency evaluated on holdout only"
+    ),
+    "majority_winner_definition": (
+        "for each GPU and execution path, select the candidate "
+        "that is fastest on the largest number of training shapes"
+    ),
+    "majority_winner_policies": (
+        majority_winner_policies
+    ),
     "default_policy": default_policy,
     "global_static_policy": global_policy,
     "architecture_static_policies": (
         architecture_policies
     ),
 }
-
 
 # ---------------------------------------------------------------------
 # Write outputs

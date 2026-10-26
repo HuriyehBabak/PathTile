@@ -439,7 +439,8 @@ def write_archive_manifest(root: Path) -> tuple[Path, int]:
             continue
         relative = path.relative_to(root)
         if (
-            "__pycache__" in relative.parts
+            ".git" in relative.parts 
+            or "__pycache__" in relative.parts
             or path.suffix == ".pyc"
             or path.name.endswith(".orig")
             or path == output_path

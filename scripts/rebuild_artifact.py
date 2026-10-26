@@ -14,7 +14,7 @@ from scripts.aggregate_pathtile_results import write_outputs as write_pathtile
 from scripts.aggregate_shape_results import write_outputs as write_shapes
 from scripts.artifact_common import resolve_project_root
 from scripts.extract_ncu_metrics import write_outputs as write_ncu
-
+from scripts.aggregate_dk_reduction import write_outputs as write_dk_reduction
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -33,6 +33,7 @@ def main() -> None:
 
     producers = [
         ("main/cross-GPU/torch.compile", write_main),
+        ("dK reduction statistics", write_dk_reduction),
         ("shape generalization", write_shapes),
         ("PathTile training and holdout", write_pathtile),
         ("Nsight Compute", write_ncu),
@@ -42,7 +43,7 @@ def main() -> None:
     for label, producer in producers:
         outputs = producer(root)
         total += len(outputs)
-        print(f"Rebuilt {label}: {len(outputs)} CSV files")
+        print(f"Rebuilt {label}: {len(outputs)} output files")
 
     subprocess.run(
         [

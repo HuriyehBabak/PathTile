@@ -5,7 +5,7 @@
 The verification was CPU-only and rebuilt every canonical aggregate from saved measurements. No GPU benchmark was executed.
 
 - Canonical CSVs reconstructed and compared: 61
-- Python source files syntax-checked: 93
+- Python source files syntax-checked: 131
 - Generated paper artifacts checked: 29
 - Main benchmark: 3 GPUs, 5 methods, 3 trials
 - Warp speedup range: 3.728881x to 4.203224x

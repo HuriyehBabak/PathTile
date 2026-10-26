@@ -30,9 +30,12 @@ The final measurements were collected on the Pascal cluster with the project at
 | CUDA toolkit used for TVM build | 12.9 |
 | System CUDA toolkit used by cluster tools | 12.4 |
 
-PyTorch and custom-kernel comparisons use FP32 with TF32 disabled.  Main,
-shape, and scheduling measurements use seed 42; end-to-end training uses seed
-0.  Main and sweep measurements use 50 warm-ups and 100 measured repetitions
+PyTorch and custom-kernel comparisons use FP32 with TF32 disabled.
+Main, shape, and scheduling measurements use seed 42.
+The actual training seeds of the original paired end-to-end trials
+could not be recovered from the available run records.
+Seed 0 in the remeasurement example is illustrative.
+Main and sweep measurements use 50 warm-ups and 100 measured repetitions
 per trial unless a saved metadata file states otherwise.
 
 These versions and GPU nodes describe the recorded evaluation environment,

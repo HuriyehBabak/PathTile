@@ -1,8 +1,9 @@
 # PathTile: Analysis and Offline Autotuning of CUDA Kernels for Short Depthwise Conv1D
 
-This repository contains CUDA/PyTorch implementations and experimental
-measurements for short depthwise one-dimensional convolution (Conv1D)
-in S4ConvD.
+This repository contains CUDA/PyTorch implementations, benchmark scripts,
+and analysis utilities for short depthwise one-dimensional convolution
+(Conv1D) in S4ConvD. Saved experimental measurements are maintained
+separately and are not included in the current Git checkout.
 
 The study evaluates three training paths separately:
 
@@ -32,6 +33,11 @@ evaluation on ten held-out shapes per GPU. Deployment performs no
 shape-dependent configuration search or selection.
 
 ## Reconstruct the primary results (CPU only)
+
+Reconstruction requires the saved measurement archive in addition to
+the source code. Cloning this repository alone is insufficient to run
+the reconstruction commands below. A download location for the
+measurement archive has not yet been provided.
 
 The following commands reconstruct aggregates from saved measurements,
 regenerate figures and tables, and run the artifact consistency checks.

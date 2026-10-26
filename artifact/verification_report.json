@@ -1,11 +1,11 @@
 {
   "status": "PASS",
-  "verified_at_utc": "2026-10-12T10:03:29.784863+00:00",
+  "verified_at_utc": "2026-10-23T14:26:19.754425+00:00",
   "gpu_benchmarks_executed": false,
   "verification_mode": "CPU-only reconstruction from saved measurements",
   "checks": {
     "reconstructed_canonical_csvs": 61,
-    "python_files_syntax_checked": 93,
+    "python_files_syntax_checked": 131,
     "paper_artifacts_checked": 29,
     "validation_metric_named_batch_mean_rmsle": true,
     "pytorch_empty_custom_event_csv_has_schema": true,

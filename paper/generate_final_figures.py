@@ -157,7 +157,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("paper/final_artifacts_TACO"),
+        default=Path("paper/final_artifacts"),
         help="Output directory, relative to project root unless absolute.",
     )
     return parser.parse_args()

@@ -35,12 +35,21 @@ shape-dependent configuration search or selection.
 ## Reconstruct the primary results (CPU only)
 
 Reconstruction requires the saved measurement archive in addition to
-the source code. Cloning this repository alone is insufficient to run
-the reconstruction commands below. A download location for the
-measurement archive has not yet been provided.
+the source code. Download `pathtile-measurements-20261028.tar.gz` from
+[release v1.0-artifact](https://github.com/HuriyehBabak/PathTile/releases/tag/v1.0-artifact).
+
+From the repository root, extract the archive using its actual local path:
+
+```bash
+tar -xzf /path/to/pathtile-measurements-20261028.tar.gz
+```
+
+The archive restores the `results/` directory.
+The matching source snapshot is tagged `v1.0-artifact`
+(commit `c4fd94c`).
 
 The following commands reconstruct aggregates from saved measurements,
-regenerate figures and tables, and run the artifact consistency checks.
+regenerate figures and tables, and run artifact consistency checks.
 They do not repeat GPU benchmarks or independently validate the GPU
 measurement procedure.
 
@@ -51,7 +60,7 @@ python -m pip install -r artifact/analysis-requirements.txt
 python -m scripts.rebuild_artifact --project-root .
 ```
 
-The documented successful completion messages are:
+Successful completion includes:
 
 ```text
 Artifact verification: PASS
@@ -64,20 +73,13 @@ The rebuild writes a verification report to:
 artifact/verification_report.md
 ```
 
-For the complete project snapshot, also run:
-
-```bash
-python -m scripts.check_archive_manifest --project-root .
-```
-
 See `artifact/REPRODUCIBILITY.md` for measurement commands and scope,
 and `artifact/ENVIRONMENT.md` for recorded software versions.
 
-The supplementary packing and Flash-DWC experiments described below
-have separate measurement outputs. A successful primary artifact rebuild
-should not be interpreted as verification of those outputs unless they
-are explicitly included in its manifest and checks.
-
+Supplementary experiments have separate measurement outputs.
+A successful primary artifact rebuild should not be interpreted as
+verification of those outputs unless they are explicitly covered
+by its producers and checks.
 ## Primary performance results
 
 The primary workload is:

@@ -6,8 +6,11 @@ This document separates CPU-only reconstruction from fresh GPU measurements.
 
 - CPU-only reconstruction requires the saved measurement archive in addition
   to the source code.
-- The current Git checkout does not include that measurement archive.
-  A download location has not yet been provided.
+- The measurement archive is available in
+  [release v1.0-artifact](https://github.com/HuriyehBabak/PathTile/releases/tag/v1.0-artifact).
+  Download `pathtile-measurements-20261028.tar.gz` and extract it
+  into the repository root before running reconstruction.
+  The matching source snapshot is commit `c4fd94c`.
 - GPU remeasurement requires a compatible GPU environment and the dependencies
   needed by the selected implementation.
 - End-to-end training additionally requires the preprocessed ASHRAE CSV files,

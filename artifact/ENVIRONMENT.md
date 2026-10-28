@@ -32,9 +32,10 @@ The final measurements were collected on the Pascal cluster with the project at
 
 PyTorch and custom-kernel comparisons use FP32 with TF32 disabled.
 Main, shape, and scheduling measurements use seed 42.
-The actual training seeds of the original paired end-to-end trials
-could not be recovered from the available run records.
-Seed 0 in the remeasurement example is illustrative.
+The original paired end-to-end trials used training seeds 0, 1,
+and 2 for trials 1, 2, and 3, respectively, with the same seed
+supplied to both backends within each pair. These settings are
+recorded in the Slurm submission command for job 112060.
 Main and sweep measurements use 50 warm-ups and 100 measured repetitions
 per trial unless a saved metadata file states otherwise.
 

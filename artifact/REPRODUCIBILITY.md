@@ -378,10 +378,13 @@ Example command for a new training run:
   --output-dir /new/end_to_end/trial1/warp
 ```
 
-This example uses training seed 0. The actual training seeds of the original
-paired trials could not be recovered from the available run records.
-The command therefore illustrates remeasurement rather than an exact
-reconstruction of the original random initialization.
+The example above uses seed 0, matching trial 1.
+The original paired trials used training seeds 0, 1, and 2
+for trials 1, 2, and 3, respectively. Both backends received
+the same seed within each pair, as recorded in the Slurm
+submission command for job 112060.
+For trials 2 and 3, use --seed 1 and --seed 2, respectively,
+with separate output directories for each trial and backend.
 
 Replace `warp` with `pytorch` and use a separate output directory for the
 paired backend. Use separate directories for subsequent trials and record

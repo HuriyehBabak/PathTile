@@ -1,0 +1,308 @@
+==========================================
+SLURM_JOB_ID = 125515
+SLURM_NODELIST = pascal-node14.l3s.intra
+==========================================
+START trial=1 seed=0 backend=warp
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+CORRECTNESS AGAINST PYTORCH FP32
+========================================================================================
+B=   2 H=  4 L=16 K= 8 | fwd=0.000e+00 dx=0.000e+00 dk=1.907e-06 | ok=True
+B=   4 H=  8 L=31 K=16 | fwd=0.000e+00 dx=0.000e+00 dk=3.815e-06 | ok=True
+B=   8 H= 16 L=48 K=24 | fwd=0.000e+00 dx=0.000e+00 dk=7.629e-06 | ok=True
+B=  32 H= 64 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=2.289e-05 | ok=True
+B= 128 H=128 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=4.578e-05 | ok=True
+Preparing train: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv
+Preparing val: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv
+Preparing test: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv
+Epoch 1/5: train=7.20571, val_global_rmsle=0.84852, train_wall=29.13s, peak=10.26GiB
+Epoch 2/5: train=0.52115, val_global_rmsle=0.60106, train_wall=14.69s, peak=9.04GiB
+Epoch 3/5: train=0.33442, val_global_rmsle=0.56902, train_wall=14.77s, peak=9.04GiB
+Epoch 4/5: train=0.30082, val_global_rmsle=0.55527, train_wall=14.84s, peak=9.04GiB
+Epoch 5/5: train=0.28949, val_global_rmsle=0.55189, train_wall=14.87s, peak=9.04GiB
+Test RMSLE: 0.510634
+FINISHED trial=1 backend=warp
+START trial=1 seed=0 backend=pytorch
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+CORRECTNESS AGAINST PYTORCH FP32
+========================================================================================
+B=   2 H=  4 L=16 K= 8 | fwd=0.000e+00 dx=0.000e+00 dk=1.907e-06 | ok=True
+B=   4 H=  8 L=31 K=16 | fwd=0.000e+00 dx=0.000e+00 dk=3.815e-06 | ok=True
+B=   8 H= 16 L=48 K=24 | fwd=0.000e+00 dx=0.000e+00 dk=7.629e-06 | ok=True
+B=  32 H= 64 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=2.289e-05 | ok=True
+B= 128 H=128 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=4.578e-05 | ok=True
+Preparing train: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv
+Preparing val: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv
+Preparing test: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv
+Epoch 1/5: train=7.20571, val_global_rmsle=0.84852, train_wall=33.54s, peak=10.26GiB
+Epoch 2/5: train=0.52115, val_global_rmsle=0.60105, train_wall=24.87s, peak=9.05GiB
+Epoch 3/5: train=0.33688, val_global_rmsle=0.56764, train_wall=24.94s, peak=9.05GiB
+Epoch 4/5: train=0.30304, val_global_rmsle=0.55870, train_wall=24.89s, peak=9.05GiB
+Epoch 5/5: train=0.29380, val_global_rmsle=0.55591, train_wall=24.89s, peak=9.05GiB
+Test RMSLE: 0.514504
+FINISHED trial=1 backend=pytorch
+warp {
+  "test_rmsle": 0.510634233263057,
+  "zero_baseline_rmsle": 4.685323517827812,
+  "persistence_baseline_rmsle": 0.5443247140062228,
+  "beats_zero": true,
+  "beats_persistence": true,
+  "prediction_nonpositive_fraction": 0.0202178697499071,
+  "parameter_change_l2": 0.6584961521853798
+}
+pytorch {
+  "test_rmsle": 0.5145035864611112,
+  "zero_baseline_rmsle": 4.685323517827812,
+  "persistence_baseline_rmsle": 0.5443247140062228,
+  "beats_zero": true,
+  "beats_persistence": true,
+  "prediction_nonpositive_fraction": 0.0251651662738775,
+  "parameter_change_l2": 0.6398003685023945
+}
+{
+  "paired_rmsle_absolute_difference": 0.0038693531980541485,
+  "paired_log_prediction_max_abs_difference": 0.24530029296875,
+  "paired_log_prediction_rmse_difference": 0.05032659929585267,
+  "epoch_speedup_pytorch_over_warp": 1.683002699687669
+}
+Inspect training_history.csv and correctness.csv too. This report does not establish numerical equivalence or convergence.
+START trial=2 seed=1 backend=pytorch
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+CORRECTNESS AGAINST PYTORCH FP32
+========================================================================================
+B=   2 H=  4 L=16 K= 8 | fwd=0.000e+00 dx=0.000e+00 dk=1.192e-06 | ok=True
+B=   4 H=  8 L=31 K=16 | fwd=0.000e+00 dx=0.000e+00 dk=1.907e-06 | ok=True
+B=   8 H= 16 L=48 K=24 | fwd=0.000e+00 dx=0.000e+00 dk=8.106e-06 | ok=True
+B=  32 H= 64 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=1.526e-05 | ok=True
+B= 128 H=128 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=4.578e-05 | ok=True
+Preparing train: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv
+Preparing val: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv
+Preparing test: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv
+Epoch 1/5: train=6.52757, val_global_rmsle=0.76602, train_wall=33.41s, peak=10.26GiB
+Epoch 2/5: train=0.48359, val_global_rmsle=0.60583, train_wall=24.69s, peak=9.05GiB
+Epoch 3/5: train=0.34557, val_global_rmsle=0.56989, train_wall=24.81s, peak=9.05GiB
+Epoch 4/5: train=0.31200, val_global_rmsle=0.55877, train_wall=24.83s, peak=9.05GiB
+Epoch 5/5: train=0.29721, val_global_rmsle=0.56043, train_wall=24.88s, peak=9.05GiB
+Test RMSLE: 0.515845
+FINISHED trial=2 backend=pytorch
+START trial=2 seed=1 backend=warp
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+CORRECTNESS AGAINST PYTORCH FP32
+========================================================================================
+B=   2 H=  4 L=16 K= 8 | fwd=0.000e+00 dx=0.000e+00 dk=1.192e-06 | ok=True
+B=   4 H=  8 L=31 K=16 | fwd=0.000e+00 dx=0.000e+00 dk=1.907e-06 | ok=True
+B=   8 H= 16 L=48 K=24 | fwd=0.000e+00 dx=0.000e+00 dk=8.106e-06 | ok=True
+B=  32 H= 64 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=1.526e-05 | ok=True
+B= 128 H=128 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=4.578e-05 | ok=True
+Preparing train: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv
+Preparing val: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv
+Preparing test: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv
+Epoch 1/5: train=6.52757, val_global_rmsle=0.76602, train_wall=23.64s, peak=10.26GiB
+Epoch 2/5: train=0.48359, val_global_rmsle=0.60585, train_wall=14.75s, peak=9.04GiB
+Epoch 3/5: train=0.34555, val_global_rmsle=0.56992, train_wall=14.85s, peak=9.04GiB
+Epoch 4/5: train=0.31181, val_global_rmsle=0.55752, train_wall=14.87s, peak=9.04GiB
+Epoch 5/5: train=0.29685, val_global_rmsle=0.55234, train_wall=14.87s, peak=9.04GiB
+Test RMSLE: 0.514355
+FINISHED trial=2 backend=warp
+warp {
+  "test_rmsle": 0.5143553577258339,
+  "zero_baseline_rmsle": 4.685323517827812,
+  "persistence_baseline_rmsle": 0.5443247140062228,
+  "beats_zero": true,
+  "beats_persistence": true,
+  "prediction_nonpositive_fraction": 0.0195020295812232,
+  "parameter_change_l2": 0.5977721858977252
+}
+pytorch {
+  "test_rmsle": 0.515844808278088,
+  "zero_baseline_rmsle": 4.685323517827812,
+  "persistence_baseline_rmsle": 0.5443247140062228,
+  "beats_zero": true,
+  "beats_persistence": true,
+  "prediction_nonpositive_fraction": 0.0298642775244647,
+  "parameter_change_l2": 0.5993493013263028
+}
+{
+  "paired_rmsle_absolute_difference": 0.0014894505522541346,
+  "paired_log_prediction_max_abs_difference": 0.2903718948364258,
+  "paired_log_prediction_rmse_difference": 0.08281214094832642,
+  "epoch_speedup_pytorch_over_warp": 1.6718771132760386
+}
+Inspect training_history.csv and correctness.csv too. This report does not establish numerical equivalence or convergence.
+START trial=3 seed=2 backend=warp
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+CORRECTNESS AGAINST PYTORCH FP32
+========================================================================================
+B=   2 H=  4 L=16 K= 8 | fwd=0.000e+00 dx=0.000e+00 dk=9.537e-07 | ok=True
+B=   4 H=  8 L=31 K=16 | fwd=0.000e+00 dx=0.000e+00 dk=2.861e-06 | ok=True
+B=   8 H= 16 L=48 K=24 | fwd=0.000e+00 dx=0.000e+00 dk=5.722e-06 | ok=True
+B=  32 H= 64 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=1.526e-05 | ok=True
+B= 128 H=128 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=4.578e-05 | ok=True
+Preparing train: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv
+Preparing val: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv
+Preparing test: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv
+Epoch 1/5: train=4.55875, val_global_rmsle=0.78302, train_wall=23.66s, peak=10.26GiB
+Epoch 2/5: train=0.45780, val_global_rmsle=0.62255, train_wall=14.77s, peak=9.04GiB
+Epoch 3/5: train=0.35515, val_global_rmsle=0.59077, train_wall=14.81s, peak=9.04GiB
+Epoch 4/5: train=0.33005, val_global_rmsle=0.57819, train_wall=14.86s, peak=9.04GiB
+Epoch 5/5: train=0.31629, val_global_rmsle=0.57004, train_wall=14.98s, peak=9.04GiB
+Test RMSLE: 0.527201
+FINISHED trial=3 backend=warp
+START trial=3 seed=2 backend=pytorch
+
+========================================================================================
+GPU
+========================================================================================
+Name:               NVIDIA RTX A6000
+Compute capability: 8.6
+SM count:           84
+Total memory:       47.53 GiB
+Selected profile:   rtx_a6000
+Peak BW reference:  768.0 GB/s
+
+========================================================================================
+COMPILER RESOURCES AND ESTIMATED GPU OCCUPANCY
+========================================================================================
+    kernel  threads_per_block  warps_per_block  regs_per_thread  allocated_regs_per_block  static_smem_bytes  allocated_smem_bytes_est  resident_blocks_per_sm_est  active_warps_per_sm_est  occupancy_est  limiting_resources_est gpu_profile compute_capability  local_memory_bytes
+       fwd                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+ bwd_input                512               16               40                     20480               3072                      3072                           3                       48       1.000000 threads,warps,registers   rtx_a6000                8.6                   0
+bwd_weight                128                4               40                      5120              24640                     24832                           4                       16       0.333333           shared_memory   rtx_a6000                8.6                   0
+
+========================================================================================
+CORRECTNESS AGAINST PYTORCH FP32
+========================================================================================
+B=   2 H=  4 L=16 K= 8 | fwd=0.000e+00 dx=0.000e+00 dk=9.537e-07 | ok=True
+B=   4 H=  8 L=31 K=16 | fwd=0.000e+00 dx=0.000e+00 dk=2.861e-06 | ok=True
+B=   8 H= 16 L=48 K=24 | fwd=0.000e+00 dx=0.000e+00 dk=5.722e-06 | ok=True
+B=  32 H= 64 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=1.526e-05 | ok=True
+B= 128 H=128 L=48 K=48 | fwd=0.000e+00 dx=0.000e+00 dk=4.578e-05 | ok=True
+Preparing train: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv
+Preparing val: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv
+Preparing test: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv
+Epoch 1/5: train=4.55875, val_global_rmsle=0.78302, train_wall=33.25s, peak=10.26GiB
+Epoch 2/5: train=0.45781, val_global_rmsle=0.62256, train_wall=24.70s, peak=9.05GiB
+Epoch 3/5: train=0.35721, val_global_rmsle=0.59150, train_wall=24.85s, peak=9.05GiB
+Epoch 4/5: train=0.33263, val_global_rmsle=0.57971, train_wall=24.96s, peak=9.05GiB
+Epoch 5/5: train=0.31823, val_global_rmsle=0.57115, train_wall=24.88s, peak=9.05GiB
+Test RMSLE: 0.529251
+FINISHED trial=3 backend=pytorch
+warp {
+  "test_rmsle": 0.5272007951670102,
+  "zero_baseline_rmsle": 4.685323517827812,
+  "persistence_baseline_rmsle": 0.5443247140062228,
+  "beats_zero": true,
+  "beats_persistence": true,
+  "prediction_nonpositive_fraction": 0.0241231983492602,
+  "parameter_change_l2": 0.5512528360210714
+}
+pytorch {
+  "test_rmsle": 0.5292509556560645,
+  "zero_baseline_rmsle": 4.685323517827812,
+  "persistence_baseline_rmsle": 0.5443247140062228,
+  "beats_zero": true,
+  "beats_persistence": true,
+  "prediction_nonpositive_fraction": 0.0249621055956549,
+  "parameter_change_l2": 0.5470358276377187
+}
+{
+  "paired_rmsle_absolute_difference": 0.0020501604890542646,
+  "paired_log_prediction_max_abs_difference": 0.09401702880859375,
+  "paired_log_prediction_rmse_difference": 0.012967591052798546,
+  "epoch_speedup_pytorch_over_warp": 1.672562830125134
+}
+Inspect training_history.csv and correctness.csv too. This report does not establish numerical equivalence or convergence.
+ALL THREE PAIRED TRIALS COMPLETED: results/end_to_end/imputed_final_125515

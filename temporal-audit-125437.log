@@ -1,0 +1,118 @@
+==========================================
+SLURM_JOB_ID = 125437
+SLURM_NODELIST = pascal-node14.l3s.intra
+==========================================
+test_duplicate_is_error (test_temporal.DatasetTests.test_duplicate_is_error) ... ok
+test_exact_minimum_and_empty (test_temporal.DatasetTests.test_exact_minimum_and_empty) ... ok
+test_exact_window_and_target (test_temporal.DatasetTests.test_exact_window_and_target) ... ok
+test_gap_and_invalid_row_break_windows (test_temporal.DatasetTests.test_gap_and_invalid_row_break_windows) ... ok
+test_negative_energy_breaks_window (test_temporal.DatasetTests.test_negative_energy_breaks_window) ... ok
+test_sampling_complete_windows_is_reproducible (test_temporal.DatasetTests.test_sampling_complete_windows_is_reproducible) ... ok
+test_shuffled_multi_series_never_crosses (test_temporal.DatasetTests.test_shuffled_multi_series_never_crosses) ... ok
+test_split_chronology_and_manifest (test_temporal.DatasetTests.test_split_chronology_and_manifest) ... Preparing train: /tmp/tmp22eqqr2k/train.csv
+Preparing val: /tmp/tmp22eqqr2k/val.csv
+Preparing test: /tmp/tmp22eqqr2k/test.csv
+Preparing train: /tmp/tmp22eqqr2k/train.csv
+Preparing val: /tmp/tmp22eqqr2k/val.csv
+ok
+test_train_scaler_reused_without_refit (test_temporal.DatasetTests.test_train_scaler_reused_without_refit) ... ok
+test_actual_loss_has_gradient_for_negative_prediction (test_temporal.MetricTests.test_actual_loss_has_gradient_for_negative_prediction) ... ok
+test_log_computation_matches_raw_energy_rmsle (test_temporal.MetricTests.test_log_computation_matches_raw_energy_rmsle) ... ok
+test_zero_baseline_and_nonfinite (test_temporal.MetricTests.test_zero_baseline_and_nonfinite) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 19.783s
+
+OK
+Preparing train: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv
+Preparing val: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv
+Preparing test: /home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv
+{
+  "protocol": "temporal_logmse_v1",
+  "sampling_seed": 42,
+  "sampling_unit": "complete_hourly_window",
+  "fraction": 0.1,
+  "input_length": 48,
+  "normalization_fit": "all_valid_training_rows",
+  "split_policy": "strictly_disjoint_global_time_ranges; no cross-split history",
+  "splits": {
+    "train": {
+      "split": "train",
+      "source_rows": 11637272,
+      "valid_rows": 6503281,
+      "dropped_invalid_rows": 5133991,
+      "date_min": "2016-01-01 00:00:00",
+      "date_max": "2016-07-31 23:00:00",
+      "series_count": 2314,
+      "valid_windows": 687838,
+      "selected_windows": 68784,
+      "selected_target_rows_sha256": "aa2cd5c15561b230fb8ccdf8faff57bdb7d0c12a2dc23c1e5e7daab139fbca3a",
+      "file": "/home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/train.csv",
+      "file_sha256": "99a3ff2aabd6c5f18c0a823d74daa0ccdc4ac4978185af65ea87f9d8b4160007"
+    },
+    "val": {
+      "split": "val",
+      "source_rows": 3415636,
+      "valid_rows": 2074295,
+      "dropped_invalid_rows": 1341341,
+      "date_min": "2016-08-01 00:00:00",
+      "date_max": "2016-09-30 23:00:00",
+      "series_count": 2317,
+      "valid_windows": 182497,
+      "selected_windows": 18250,
+      "selected_target_rows_sha256": "eb0b9c6b7a7294b12202fbd5596bc307f34d495c9750206fab8c4d98dfbe82b3",
+      "file": "/home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/val.csv",
+      "file_sha256": "f729e7b4361baa2da848e5e8823972f3431dd5082b33db3773480f7db29e292b",
+      "baselines": {
+        "test_rmsle": 4.45401544315276,
+        "zero_baseline_rmsle": 4.45401544315276,
+        "persistence_baseline_rmsle": 0.4907732698828741,
+        "prediction_nonpositive_fraction": 1.0,
+        "test_samples": 18250
+      }
+    },
+    "test": {
+      "split": "test",
+      "source_rows": 5108845,
+      "valid_rows": 2788970,
+      "dropped_invalid_rows": 2319875,
+      "date_min": "2016-10-01 00:00:00",
+      "date_max": "2016-12-31 00:00:00",
+      "series_count": 2319,
+      "valid_windows": 364600,
+      "selected_windows": 36460,
+      "selected_target_rows_sha256": "5dcafd713e1d6e2d15daf8930fb1c35193040ecd87dbad06f08a4b33f08f7068",
+      "file": "/home/huriyeh.babak/s4convd-paper/pre_preprocessed_data/test.csv",
+      "file_sha256": "54bd6344ee356fe8e26c67398d0e44d298d320ce706c6315b6b4cf908e8076cc",
+      "baselines": {
+        "test_rmsle": 4.625837297511078,
+        "zero_baseline_rmsle": 4.625837297511078,
+        "persistence_baseline_rmsle": 0.6121032517788899,
+        "prediction_nonpositive_fraction": 1.0,
+        "test_samples": 36460
+      }
+    }
+  },
+  "scaler": {
+    "mean": [
+      4.078761526825287,
+      16.764692652831698,
+      1.9303448520831255,
+      5.639813195831458
+    ],
+    "std": [
+      2.134492869664096,
+      11.659197389168083,
+      2.435460057142321,
+      10.517844681664176
+    ],
+    "features": [
+      "meter_reading",
+      "air_temperature",
+      "cloud_coverage",
+      "dew_temperature"
+    ],
+    "meter_transform": "log1p"
+  },
+  "training_batches_drop_last": 4
+}

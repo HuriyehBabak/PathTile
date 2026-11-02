@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Extract the canonical A100 Nsight Compute metrics from exported details CSVs."""
 
 from __future__ import annotations

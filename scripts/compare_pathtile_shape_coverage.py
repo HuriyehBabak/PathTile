@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Compare adaptive and metadata-only queries in cached development replay.
 
 Copy beside scripts/prototype_pathtile_shape_queries.py and run:

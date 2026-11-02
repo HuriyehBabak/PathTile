@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Rebuild PathTile candidate, frozen-policy, and holdout aggregates CPU-only."""
 
 from __future__ import annotations

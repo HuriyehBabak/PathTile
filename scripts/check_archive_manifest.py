@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Check the size and SHA-256 digest of every file in archive_manifest.csv."""
 
 from __future__ import annotations

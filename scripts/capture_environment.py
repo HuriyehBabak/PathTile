@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Capture software/hardware metadata; performs no benchmark measurements."""
 
 from __future__ import annotations

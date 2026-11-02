@@ -73,8 +73,8 @@ backup*.tar.gz
 *.tgz
 *.7z
 *.rar
-*.log
-*.sbatch
+/*.log
+/*.sbatch
 /paper/final_artifacts/tables/
 
 # Local Slurm logs

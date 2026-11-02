@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Rebuild A6000/V100 shape-sweep aggregates from saved trial summaries."""
 
 from __future__ import annotations

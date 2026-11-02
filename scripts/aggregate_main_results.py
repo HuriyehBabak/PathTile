@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Rebuild the main three-GPU and torch.compile aggregates without a GPU."""
 
 from __future__ import annotations

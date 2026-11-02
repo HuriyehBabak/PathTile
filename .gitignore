@@ -81,3 +81,5 @@ backup*.tar.gz
 /*.log
 /slurm-*.out
 /slurm-*.err
+
+*.sbatch

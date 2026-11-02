@@ -1,4 +1,3 @@
-#!/bin/bash
 #SBATCH --job-name=temporal-pilot
 #SBATCH --partition=ampere
 #SBATCH --gres=gpu:nvidia_rtx_a6000:1

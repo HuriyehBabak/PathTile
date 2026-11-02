@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Freeze metadata-coverage PathTile policies for prospective evaluation.
 
 Run:

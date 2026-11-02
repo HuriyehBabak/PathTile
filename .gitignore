@@ -76,7 +76,7 @@ backup*.tar.gz
 /*.log
 /*.sbatch
 /paper/final_artifacts/tables/
-
+scripts/*.sbatch
 # Local Slurm logs
 /*.log
 /slurm-*.out

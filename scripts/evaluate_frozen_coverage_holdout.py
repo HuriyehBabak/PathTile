@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Evaluate the locked budget-6 coverage policy on existing holdout data.
 
 This evaluation is CPU-only. It reuses the previously measured official

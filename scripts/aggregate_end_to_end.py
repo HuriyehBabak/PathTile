@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Rebuild the final paired A6000 end-to-end aggregates without a GPU."""
 
 from __future__ import annotations

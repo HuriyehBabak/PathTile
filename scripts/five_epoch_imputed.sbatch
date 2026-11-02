@@ -1,4 +1,3 @@
-#!/bin/bash
 #SBATCH --job-name=imputed-five
 #SBATCH --partition=ampere
 #SBATCH --gres=gpu:nvidia_rtx_a6000:1

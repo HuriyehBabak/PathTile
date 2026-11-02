@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Training-only development replay for selecting PathTile measurement shapes.
 
 Copy to scripts/ in the paper repository and run on the CPU:

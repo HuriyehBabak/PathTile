@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Rebuild and verify every paper artifact from saved measurements, CPU-only."""
 
 from __future__ import annotations

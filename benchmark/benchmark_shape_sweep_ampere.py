@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Controlled PyTorch/cuDNN versus Warp CUDA shape sweep on Ampere GPUs.
 
 This benchmark extends the paper workload without changing the measurement

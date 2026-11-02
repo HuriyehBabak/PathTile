@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Exploratory comparison of the existing Warp dK and a deferred atomic epilogue.
 
 Install this separate file in benchmark/ in the original s4convd-paper repo.

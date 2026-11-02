@@ -1,8 +1,0 @@
-{
-  "epoch_wall_s_speedup_geomean": 1.6758064930294911,
-  "gpu_stages_ms_speedup_geomean": 1.6830717841019949,
-  "forward_ms_speedup_geomean": 1.2186514972589009,
-  "backward_ms_speedup_geomean": 1.9648070302152232,
-  "epoch_reduction_from_geomean_pct": 40.32723920336297,
-  "max_rmsle_abs_difference": 0.0038693531980541485
-}

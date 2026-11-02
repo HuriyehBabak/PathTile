@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Controlled dK packing ablation for the existing PathTile CUDA kernel.
 
 Place in benchmark/ and run from the s4convd-paper repository root:

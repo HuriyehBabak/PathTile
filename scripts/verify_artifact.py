@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Verify every canonical PathTile result from saved measurements, CPU-only."""
 
 from __future__ import annotations

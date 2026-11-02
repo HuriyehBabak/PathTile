@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Pilot live four-shape calibration using the existing tuning-cost timer.
 
 Copy to benchmark/ and run on an allocated GPU:

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Supplementary dK timing-boundary experiment for PathTile.
 
 Self-contained *benchmark harness*; uses the project's existing CUDA kernels,

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Generate ACM TACO-ready figures and tables for the PathTile study.
 
 This script performs no benchmarking. It reads only explicitly selected final

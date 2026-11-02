@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 """Volta/Ampere implementation of the S4 depthwise-convolution experiment.
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Paired dK batch sweep using the existing Shared and Warp CUDA kernels.
 
 Place this file in benchmark/ in the s4convd-paper repository.

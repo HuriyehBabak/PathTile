@@ -74,3 +74,8 @@ backup*.tar.gz
 *.7z
 *.rar
 /paper/final_artifacts/tables/
+
+# Local Slurm logs
+/*.log
+/slurm-*.out
+/slurm-*.err

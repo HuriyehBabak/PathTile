@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Diagnose dK numerical differences without changing kernels or tolerances.
 
 Place in benchmark/ beside benchmark_dk_batch_compare.py. Run on the same
